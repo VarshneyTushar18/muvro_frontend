@@ -126,6 +126,10 @@ export default async function SolutionsPage() {
 
     const { sectionHeader, solution: solutions = [] } = pageData;
 
+    if (!sectionHeader) {
+        return notFound();
+    }
+
     const crumbs = [
         { label: "Home", link: "/" },
         { label: "Solutions" },
