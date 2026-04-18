@@ -1,0 +1,133 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.wrapper h2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: #ffffff;
+  width: 75%;
+  margin: auto
+}
+
+@media(max-width:767px) {
+  .wrapper p {
+    width: 100%
+  }
+}
+
+.KeyComponentsSection {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.KeyComponentsSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/images/product-single/key-components-bg.png') center/cover no-repeat;
+  filter: grayscale(100%);
+  z-index: 0;
+}
+
+.KeyComponentsSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.KeyComponentsSection>* {
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: #fff;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardImg {
+  border-bottom: 1px solid #7B7B7B;
+  overflow: hidden;
+}
+
+.cardImg img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  height: 235px;
+  width: 100%;
+}
+
+.card:hover .cardImg img {
+  transform: scale(1.05);
+}
+
+.cardBody {
+  padding: 20px;
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.card h3 {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 0.75rem;
+  color: #ff8811;
+}
+
+.card p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.RdBtn {
+  display: inline-block;
+  text-decoration: underline;
+  color: #000000;
+  background: transparent;
+  border: 0;
+  margin-top: 12px;
+  padding: 5px 10px;
+}
+
+.RdBtn:hover {
+  background: #ffc100;
+}
+
+.KeyPopup h5 {
+  font-size: 24px;
+  line-height: 32px;
+  width: 92%;
+}
+
+.KeyPopup p {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 24px;
+  color: #2B2B2B;
+}
+
+.KeyPopup :global(.close) {
+  background: #ffc100;
+  border: 0;
+  height: 24px;
+  width: 24px;
+  font-size: 16px;
+  position: absolute;
+  right: 15px;
+}

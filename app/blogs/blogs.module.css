@@ -1,0 +1,83 @@
+.Blog_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.searchForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchForm input{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #686868;
+  border-radius: 0;
+  padding: 12px 0;
+  margin-bottom: 0px;
+  outline: none;
+  width: 30%;
+}
+
+.searchForm :focus {
+  background: transparent;
+  border-bottom: 1px solid var(--color-primary);
+  outline: none;
+  box-shadow: none !important;
+}
+
+
+.searchForm select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #686868;
+  border-radius: 0;
+  padding: 12px 0;
+  margin-bottom: 0px;
+  outline: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--color-dark);
+  width: 33.33%;
+}
+
+.searchForm select option {
+  background: var(--color-primary);
+  font-family: var(--font-display);
+  text-transform: capitalize;
+  color: var(--color-dark);
+}
+
+
+.searchForm ::placeholder {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+@media (max-width:767px){
+    .Blog_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        align-items: start;
+    }
+
+    .searchForm{
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .searchForm input{
+        width: 100%;
+    }
+
+    .searchForm select{
+        width: 100%;
+    }
+}

@@ -1,0 +1,247 @@
+.muvroSection {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.muvroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 100px;
+    flex-wrap: nowrap;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 6px;
+    background: #555;
+    z-index: 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    margin: auto
+}
+
+.muvroItem {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    border: 10px solid var(--color-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: #d81c00;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.label {
+    background: var(--color-secondary);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 3px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.muvroItem.top .label.top {
+    top: -45px;
+}
+
+.muvroItem.bottom .label.bottom {
+    bottom: -45px;
+}
+
+.muvroItem.top .label.bottom {
+    display: none;
+}
+
+.muvroItem.bottom .label.top {
+    display: none;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 767px) {
+    .muvroSection {
+        padding: 0;
+    }
+
+    .muvroContainer {
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        padding: 24px
+    }
+
+    .line {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        height: 80%;
+    }
+
+    .muvroItem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px
+    }
+
+    .muvroItem.top .label.top {
+        top: 0;
+    }
+
+    .muvroItem.bottom .label.bottom {
+        bottom: 0;
+    }
+
+    .circle {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+        margin: unset;
+    }
+
+    .label {
+        position: relative;
+        left: unset;
+        top: unset;
+        transform: none;
+        margin: 10px 0;
+    }
+
+    /* Alternate label positions for vertical layout */
+    .muvroItem .label {
+        order: 1;
+    }
+
+    /* Hide desktop line in mobile mode and use vertical bar instead */
+    .muvroSection::before {
+        content: "";
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        left: 18%;
+        width: 6px;
+        background: #555;
+        border-radius: 3px;
+        transform: translateX(-50%);
+        z-index: 0;
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+/* --- Triangle Pointer for Labels --- */
+.label::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+/* Top labels – triangle points down */
+.muvroItem.top .label.top::after {
+    bottom: -6px;
+    border-top: 8px solid var(--color-secondary);
+}
+
+/* Bottom labels – triangle points up */
+.muvroItem.bottom .label.bottom::after {
+    top: -6px;
+    border-bottom: 8px solid var(--color-secondary);
+}
+
+/* ---------- Responsive Triangles ---------- */
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .muvroContainer {
+        gap: 55px
+    }
+}
+
+.circle {
+    transition: 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 430px) {
+    .muvroSection:before {
+        left: 16%
+    }
+}
+
+@media (max-width:767px) {
+    .label::after {
+        content: "";
+        position: absolute;
+        left: -15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        transform: rotate(90deg) translateY(-50%);
+    }
+
+    .muvroItem.top .label.top::after {
+        top: 50%;
+        bottom: unset;
+        border-top: 8px solid var(--color-secondary);
+    }
+
+    .muvroItem.bottom .label.bottom::after {
+        top: 50%;
+        bottom: unset;
+        border-top: 8px solid var(--color-secondary);
+        border-bottom: 0;
+    }
+}
+
+
+@media(min-width:768px) and (max-width:1399px) {
+    .line {
+        width: 75%;
+    }
+}
+
+@media(min-width:1400px) {
+    .line {
+        width: 60%;
+    }
+}
+
+
+@media (min-width:768px) and (max-width:1180px) {
+    
+}

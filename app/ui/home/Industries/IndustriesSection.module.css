@@ -1,0 +1,134 @@
+.wrapper {
+    max-width: 1080px;
+    margin-bottom: 3rem;
+}
+
+.wrapper span {
+    margin-bottom: 1.5rem;
+}
+
+.wrapper h2 {
+    margin-bottom: 2rem;
+}
+
+.wrapper p {
+    color: #686868
+}
+
+.industriesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card:hover .image {
+    transform: scale(1.08);
+    filter: brightness(0.9);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-sizing: border-box;
+}
+
+.overlay p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 0;
+    transform: translateY(10px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    outline: 2px solid #fff;
+    outline-offset: -12px;
+}
+
+.card:hover .overlay p {
+    transform: translateY(0);
+}
+
+.titleBar {
+    background: var(--color-primary);
+    text-align: center;
+    padding: 0.6rem 1.2rem;
+    color: #000;
+    width: 85%;
+    margin: -1.4rem auto 0 auto;
+    font-size: 28px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .titleBar {
+    background: var(--color-secondary);
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+    .overlay p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titleBar {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) {
+    .titleBar {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1599px) {
+    .titleBar {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,95 @@
+.CTABanner {
+    background: var(--color-primary);
+    padding: 50px 80px;
+    position: relative;
+}
+
+.CTABanner p {
+    margin-top: 15px;
+    color: var(--color-dark);
+
+}
+
+.tagline {
+    font-size: 20px;
+    color: #000000;
+    line-height: 28px;
+}
+
+.phone {
+    color: #000000;
+    font-size: 42px;
+    line-height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-block: 10px;
+}
+
+.ctaWrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.bannerShape {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background: #E6AE00;
+    display: flex;
+    align-items: center;
+    right: 0;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    justify-content: flex-end;
+    padding-right: 4%;
+    z-index: 0;
+}
+
+
+@media (min-width:768px) and (max-width:1180px) {
+    .CTABanner {
+        padding: 30px 40px;
+    }
+
+
+    .phone {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width:767px) {
+    .CTABanner {
+        padding: 30px;
+    }
+
+    .CTABanner h5 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .bannerShape {
+        clip-path: polygon(80% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .phone {
+        color: #000000;
+        font-size: 28px;
+        line-height: 38px;
+        margin-top: 0;
+    }
+
+    .bannerShape {
+        z-index: -1;
+    }
+
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .phone {
+        color: #000000;
+        font-size: 38px;
+        line-height: 46px;
+        margin-top: 0;
+    }
+}

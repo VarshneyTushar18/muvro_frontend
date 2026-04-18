@@ -1,0 +1,26 @@
+.cursor {
+    width: 18px;
+    height: 18px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 99999999;
+    transition: background 200ms ease-out,
+        opacity 200ms ease-out,
+        transform 200ms ease-out;
+    will-change: transform;
+}
+
+.cursorHover {
+    transform: scale(1.8);
+    opacity: 0.4;
+    background: #fff;
+}
+
+@media (hover: none),
+(pointer: coarse) {
+    .cursor {
+        display: none;
+    }
+}

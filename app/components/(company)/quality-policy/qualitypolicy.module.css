@@ -1,0 +1,90 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+}
+
+.wrapper h2 {
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: #686868
+}
+
+
+.quality_policy ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.quality_policy ul li {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+
+}
+
+.quality_policy ul img {
+  margin-right: 10px;
+  height: 38px;
+  width: 38px;
+  ;
+}
+
+.quality_policy .image_block {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.quality_policy .image_block:before {
+  content: "";
+  background: var(--color-primary);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all .3s cubic-bezier(.4, 0, .2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-7deg);
+}
+
+.quality_policy .image_block .image_hover {
+  overflow: hidden;
+}
+
+.quality_policy .image_block .image_hover img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quality_policy .image_block:hover .image_hover img {
+  transform: scale(1.1);
+}
+
+.image_block:hover::before {
+  background: var(--color-secondary);
+  transform: rotate(7deg);
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+  .quality_policy .image_block {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width:767px) {
+  .quality_policy .image_block {
+    margin-bottom: 50px;
+  }
+
+  .quality_policy ul li {
+    font-size: 14px;
+  }
+
+  .quality_policy ul img {
+    margin-right: 8px;
+    height: 28px;
+    width: 28px;
+  }
+
+}

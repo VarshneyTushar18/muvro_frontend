@@ -1,0 +1,74 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.wrapper h2 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: #ffffff
+}
+
+.industryApplication {
+  padding: 4rem 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/case-study-testimonial-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.industryApplicationCard {
+  text-align: center;
+  padding: 20px 25px;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #FFFFFF;
+  backdrop-filter: blur(7px);
+  height: 100%;
+}
+
+.industryApplicationCard .card_num {
+  background: var(--color-primary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-dark);
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0 auto 10px auto;
+}
+
+.industryApplicationCard h3 {
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.industryApplicationCard p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+
+
+@media (max-width:767px) {
+  .industryApplicationCard h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .industryApplicationCard p {
+    font-size:14px;
+    line-height: 22px;
+  }
+
+}

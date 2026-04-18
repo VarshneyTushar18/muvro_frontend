@@ -1,0 +1,140 @@
+.banner_muvro {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner_muvro img {
+  width: 100%;
+  height: 600px;
+  display: block;
+  position: relative;
+}
+
+.banner_muvro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff8a08 20% 20%, #ffd50000 0%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner_muvro_text {
+  background: #fff;
+  position: absolute;
+  top: 15%;
+  right: 6%;
+  width: 35%;
+  padding: 50px 40px;
+  z-index: 9;
+}
+
+.banner_muvro_text h5 {
+  margin-bottom: 16px;
+  width: 90%;
+}
+
+.banner_muvro_text p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+
+.imgbox img {
+  width: 100%;
+  height: 335px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 24px;
+}
+
+.imgbox h5 {
+  margin-bottom: 24px;
+}
+
+.imgbox p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+/* Small Screens */
+
+@media (min-width:1200px) and (max-width:1400px) {
+
+  .banner_muvro img {
+    height: 500px;
+  }
+
+  .banner_muvro_text {
+    top: 10%;
+  }
+
+  .banner_muvro_text h5 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .banner_muvro_text p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .imgbox img {
+    height: 265px;
+  }
+
+  .imgbox h5 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .imgbox p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0px;
+  }
+}
+
+/* Small Screens */
+
+@media (max-width:767px) {
+
+  .banner_muvro_text h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .imgbox h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .banner_muvro img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .banner_muvro_text {
+    background: #fff;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 90%;
+    padding: 35px 25px;
+    z-index: 9;
+  }
+
+  .imgbox {
+    margin-bottom: 24px;
+  }
+
+  .imgbox img {
+    height: 215px;
+  }
+}

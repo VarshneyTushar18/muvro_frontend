@@ -1,0 +1,266 @@
+.wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.wrapper span {
+    margin-bottom: 1.5rem;
+}
+
+.wrapper h2 {
+    margin-bottom: 2rem;
+}
+
+.wrapper p {
+    color: #686868
+}
+
+/* Base Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardHeader {
+    margin-bottom: 0.8rem;
+}
+
+.cardBody {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardContent {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.cardImage {
+    flex-shrink: 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+.cardImage img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 14px;
+    background: var(--color-primary);
+    color: #000000;
+    padding: 0.3rem 0.6rem;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--color-secondary);
+}
+
+/* Font sizes per card type (desktop only ≥1366px) */
+.card h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.card1 {
+    padding-inline: 3rem;
+}
+
+.card1 h3 {
+    font-size: 36px;
+    line-height: 44px;
+}
+
+.card2 h3 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.card3 h3 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.card4 h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.card5 h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* ----------------------------------- */
+/* Slider layout (≤1366px) */
+/* Image on top, equal fonts */
+/* ----------------------------------- */
+/* Slider layout (≤1366px) */
+@media (max-width: 1400px) {
+    .cardBody {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Image wrapper consistent */
+    .cardImage {
+        width: 100%;
+        max-width: 280px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 1rem auto;
+        order: 1;
+    }
+
+    .cardImage img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .cardContent {
+        padding: 0;
+        order: 2
+    }
+
+    .card h3 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        font-size: 15px !important;
+        line-height: 22px !important;
+        margin-bottom: 1rem;
+    }
+
+    /* reset desktop-only padding */
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5 {
+        padding-inline: 1.5rem !important;
+    }
+
+    .card1 h3,
+    .card2 h3,
+    .card3 h3,
+    .card4 h3,
+    .card5 h3 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+    }
+
+    /* Center tag & link */
+    .cardHeader {
+        text-align: center;
+    }
+
+    .link {
+        margin-top: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.categoryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.navButtons {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 99;
+    padding: 15px 20px;
+    background: #fff;
+    color: #000;
+}
+
+.navButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 1rem;
+}
+
+.navButton:global(.swiper-button-disabled) {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.WrapperSlider {
+    position: relative;
+}
+
+
+@media (max-width:767px) {
+    .navButtons {
+        top: 0;
+        padding: 5px 20px;
+    }
+
+    .categoryHeader h3 {
+        width: 80%;
+    }
+}
+
+.imageOnTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+.imageOnTop .cardContent {
+    padding: 0;
+    order: 2
+}
+
+.imageOnTop .cardImage {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    max-width: 280px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto;
+    order: 1;
+    margin-bottom: 10px;
+}

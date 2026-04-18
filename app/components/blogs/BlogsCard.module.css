@@ -1,0 +1,91 @@
+.card {
+  display: block;
+  background: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border: 2px solid #c1c1c1;
+  transition: all 0.3s ease;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.linkIcon {
+  color: var(--color-dark);
+  background: var(--color-primary);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Responsive font sizes */
+.category {
+  background: var(--color-primary);
+  color: var(--color-dark);
+  padding: 5px 15px;
+  font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  font-size: clamp(12px, 1.2vw, 16px);
+  color: #000;
+}
+
+.title {
+  font-size: clamp(20px, 2.5vw, 32px);
+  color: #000;
+  line-height: clamp(26px, 3vw, 36px);
+  transition: all 0.3s ease;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card:hover .title {
+  color: var(--color-secondary);
+}

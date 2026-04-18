@@ -1,0 +1,159 @@
+.contextBlock a {
+    color: var(--color-dark-alt);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contextBlock a:hover {
+    color: var(--color-secondary);
+}
+
+.careerTableSection {
+    margin-top: 60px;
+}
+
+.careerTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border: 1px solid var(--color-dark-alt);
+}
+
+.careerTable th,
+.careerTable td {
+    padding: 12px 15px;
+    border: 1px solid var(--color-dark-alt);
+}
+
+.careerTable th {
+    background-color: #f4f4f4;
+    color: var(--color-dark);
+    font-weight: 600;
+    text-align: left;
+}
+
+.careerTable td {
+    background-color: #fff;
+    color: var(--color-dark-alt);
+    vertical-align: middle;
+}
+
+.readMoreBtn {
+    padding: 6px 16px;
+    font-size: 14px;
+}
+
+.subRow {
+    background-color: #f9f9f9;
+}
+
+
+
+.subTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.subTable th,
+.subTable td {
+    padding: 8px 10px;
+    border: 1px solid var(--color-dark-alt);
+    text-align: left;
+}
+
+.subTable th {
+    width: 25%;
+    font-weight: 600;
+    color: var(--color-dark);
+    background-color: #e6e6e6;
+}
+
+.subTable td {
+    color: var(--color-dark-alt);
+    background-color: #fff;
+}
+
+.applyBtnWrapper {
+    margin-top: 15px;
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.applyForm input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.form_block {
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_block ::placeholder {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    color: var(--color-dark);
+}
+
+
+.form_block input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #686868;
+    border-radius: 0;
+    padding: 12px 0;
+    outline: none;
+}
+
+.form_block :focus {
+    background: transparent;
+    border-bottom: 1px solid var(--color-primary);
+    outline: none;
+    box-shadow: none !important;
+}
+
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .form_block input {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+
+.errorText {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}

@@ -1,0 +1,36 @@
+.section {
+    background-color: #FFF3CC;
+}
+.featuresGrid{
+    margin-top: 3rem;
+}
+.featureCard {
+    background-color: #fff;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0.65em 0.65em #000;
+    transition: all 0.4s ease;
+}
+.featureCard:hover{
+    box-shadow: 0.65em 0.65em var(--color-primary);
+}
+
+.title {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin: 0;
+    background-color: var(--color-primary);
+    color: #000000;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+    display:inline-block;
+}
+
+.desc {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    margin: 0;
+    color: #000000;
+}

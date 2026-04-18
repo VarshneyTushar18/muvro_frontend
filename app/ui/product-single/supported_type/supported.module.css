@@ -1,0 +1,97 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+  color: var(--color-dark);
+}
+
+.wrapper h2 {
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: var(--color-dark);
+}
+
+.supportedType{
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.supportedType :global(.section-label-center:before){
+  background-color: var(--color-dark);
+}
+
+.supportedType :global(.section-label-center:after){
+  background-color: var(--color-dark);
+}
+
+
+.supportedTypeCard {
+  text-align: left;
+  transition: all 0.4s ease;
+  background: var(--color-gray-light);
+  border: 1px solid var(--color-gray-dark);
+  margin-bottom: 20px;
+  height: 100%;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 20%, 80% 0%);
+}
+
+.supportedTypeCard h5 {
+    background: var(--color-primary);
+    width: max-content;
+    margin-bottom: 12px;
+    padding: 8px 20px;
+    font-size: 28px;
+    line-height: 36px;
+    margin-left: 20px;
+    margin-top: -20px;
+    z-index: 99;
+    position: relative;
+}
+
+.supportedTypeCard .image{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.supportedTypeCard ul{
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+
+.supportedTypeCard p{
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--color-dark-alt);
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+@media (min-width:768px) and (max-width:1180px) {
+   .supportedType :global(.col-md-4) {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50% !important;
+  }
+
+  .supportedTypeCard h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+}
+
+@media (max-width:767px){
+
+  .supportedTypeCard {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 15%, 85% 0%);
+  }
+
+  .supportedTypeCard h5 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+}

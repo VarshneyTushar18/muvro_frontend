@@ -1,0 +1,129 @@
+.AmazingIconBox {
+    position: relative;
+    width: 280px;
+    padding: 50px 20px 20px;
+    border-radius: 12px;
+
+    text-align: center;
+    background: #f6f6f6;
+    margin-bottom: 30px;
+    border: 4px solid #e4e4e4;
+    transition: all 0.3s ease;
+}
+
+.AmazingIconBox .icon {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffc100;
+    color: black;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.AmazingIconBox h5 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.AmazingIconBox p {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 0;
+}
+
+.AmazingIconBox:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    border: 4px solid #ff8a08;
+}
+
+.AmazingIconBox:hover .icon {
+    background: #ff8a08;
+    ;
+}
+
+.HistorySection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .HistorySection {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .HistorySection {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .HistorySection {
+        grid-template-columns: 1fr;
+    }
+}
+.DiagonalSection {
+    position: relative;
+    height: 1000px; /* increase for more items */
+}
+
+.DiagonalSection .Line {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 5px;
+    height: 100%;
+    background: #cfcfcf;
+    transform: rotate(-50deg);
+    transform-origin: top;
+}
+
+.DiagonalSection h6{
+    font-size: 20px;
+}
+
+.DiagonalSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.DiagonalSection ul li {
+    position: absolute;
+    width: 300px;
+    transform: rotate(50deg);
+    color: #333;
+}
+
+/* LEFT SIDE */
+.DiagonalSection ul li:nth-child(odd) {
+    left: 5%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+/* RIGHT SIDE */
+.DiagonalSection ul li:nth-child(even) {
+    right: 5%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.DiagonalSection ul li:nth-child(1) { top: 100px; }
+.DiagonalSection ul li:nth-child(2) { top: 0px; }
+.DiagonalSection ul li:nth-child(3) { top: 300px; }
+.DiagonalSection ul li:nth-child(4) { top: 200px; }
+.DiagonalSection ul li:nth-child(5) { top: 500px; }
+.DiagonalSection ul li:nth-child(6) { top: 400px; }
+.DiagonalSection ul li:nth-child(7) { top: 700px; }
+.DiagonalSection ul li:nth-child(8) { top: 600px; }
+.DiagonalSection ul li:nth-child(9) { top: 900px; }
+.DiagonalSection ul li:nth-child(10) { top: 800px; }

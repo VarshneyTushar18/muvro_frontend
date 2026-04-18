@@ -1,0 +1,73 @@
+.eventsSection {
+    padding: 60px 0;
+}
+
+.card {
+    background: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.imageWrapper img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    padding: 15px;
+    position: relative;
+    background: var(--color-gray-light);
+    width: 90%;
+    margin-inline: auto;
+    margin-top: -40px;
+}
+
+.content .title {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.date {
+    background: var(--color-secondary);
+    color: #000;
+    font-size: 16px;
+    padding: 3px 8px;
+    display: inline-block;
+}
+
+.link {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: var(--primary-color);
+}
+
+.navButtons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.navButtons button {
+    background: transparent;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.navButtons button:hover {
+    background: var(--color-gray-light);
+}
+
+.eventsSection :global(.mbtn-primary) {
+    display: flex;
+    width: max-content;
+}

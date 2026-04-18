@@ -1,0 +1,306 @@
+/* Banner */
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.bannerWrapper {
+    background-color: var(--color-primary);
+    padding: 8px;
+}
+
+.overlay {
+    width: 100%;
+    padding: 2rem 0;
+    padding-top: 12rem;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.9) 100%);
+}
+
+.bannerContent {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* helps stack on smaller devices */
+}
+
+.bannerContent p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.bannerContent a {
+    flex-shrink: 0;
+}
+
+/* Slider wrapper */
+.sliderWrapper {
+    padding: 0;
+}
+
+/* Each card */
+.card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    outline: 2px solid #fff;
+    outline-offset: -8px;
+}
+
+/* Overlay inside card */
+.cardOverlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cardOverlay h3 {
+    color: #fff;
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+    margin: 0
+}
+
+.card.active {
+    filter: none;
+    outline-color: #000;
+}
+
+.card.active .cardOverlay {
+    background: rgba(255, 193, 0, 1);
+}
+
+.card.active .cardOverlay h3 {
+    color: #000;
+    margin: 0;
+}
+
+.cardOverlay .arrow {
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.card.active .cardOverlay .arrow {
+    color: #000;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .banner {
+        min-height: 420px;
+    }
+
+    .bannerContent {
+        gap: 1.5rem;
+    }
+
+    .bannerContent p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .cardOverlay h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .cardOverlay .arrow {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .banner {
+        min-height: 360px;
+    }
+
+    .overlay {
+        padding-top: 8rem;
+    }
+
+    .bannerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bannerContent p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .bannerContent a {
+        margin-top: 0.5rem;
+    }
+
+    .card {
+        height: 120px;
+    }
+
+    .cardOverlay h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .cardOverlay .arrow {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+    .banner {
+        min-height: 280px;
+    }
+
+    .overlay {
+        padding-top: 6rem;
+    }
+
+    .bannerContent p {
+        font-size: 0.85rem;
+    }
+
+    .card {
+        height: 100px;
+    }
+
+    .cardOverlay h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cardOverlay .arrow {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.navButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.navButtons button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+
+.WrapperSlider {
+    position: relative;
+}
+
+.categoryTabs {
+    margin-top: 30px;
+    padding: 6px 10px 0 0;
+}
+
+.categoryTabs :global(.swiper-wrapper .swiper-slide) {
+    width: auto !important;
+    flex: 1;
+}
+
+.tabButton {
+    background: #f2f2f2;
+    border: none;
+    padding: 0.8rem 1.5rem 0.4rem 1.5rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: #cfcfcf;
+    width: 100%;
+}
+
+.tabButton:hover {
+    background: #bebebe;
+    color: #000;
+}
+
+.activeTab {
+    background: var(--color-primary) !important;
+    color: #000 !important;
+}
+
+.activeTab:before,
+.activeTab:after {
+  position: absolute;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  content: " ";
+}
+.activeTab:before {
+  left: -6px;
+}
+.activeTab:after {
+  right: -6px;
+}
+.activeTab:after, .activeTab:before {
+  border: 1px solid var(--color-primary);
+}
+
+.activeTab:before {
+  border-bottom-right-radius: 6px;
+  border-width: 0 1px 1px 0;
+}
+.activeTab:after {
+  border-bottom-left-radius: 6px;
+  border-width: 0 0 1px 1px;
+}
+.activeTab:before {
+  box-shadow: 2px 2px 0 var(--color-primary);
+}
+.activeTab:after {
+  box-shadow: -2px 2px 0 var(--color-primary);
+}
+.activeTab:before {
+  box-shadow: 2px 2px 0 var(--color-primary);
+}
+.activeTab:after {
+  box-shadow: -2px 2px 0 var(--color-primary);
+}
+.activeTab:before {
+  box-shadow: 2px 2px 0 var(--color-primary);
+}
+.activeTab:after {
+  box-shadow: -2px 2px 0 var(--color-primary);
+}

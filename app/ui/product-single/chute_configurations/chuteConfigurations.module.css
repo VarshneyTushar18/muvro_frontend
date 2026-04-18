@@ -1,0 +1,104 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+  color: var(--color-dark);
+}
+
+.wrapper h2 {
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: var(--color-dark);
+}
+
+.chuteConfigurations {
+  padding: 4rem 0;
+  background: #FFF3CC;
+}
+
+.chuteConfigurations :global(.section-label-center:before) {
+  background-color: var(--color-dark);
+}
+
+.chuteConfigurations :global(.section-label-center:after) {
+  background-color: var(--color-dark);
+}
+
+.gridview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 50px;
+}
+
+@media (min-width: 1200px) {
+  .gridview>div:nth-child(n+6) {
+    grid-column: span 5;
+    width: auto;
+  }
+}
+
+  .configcard {
+    padding: 25px 35px;
+    transition: all 0.4s ease;
+    background: var(--color-primary);
+    text-align: center;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .configcard h5 {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+  }
+
+  .configcard p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-dark);
+    margin-bottom: 0px;
+  }
+
+  .configcard:hover {
+    background: var(--color-secondary);
+    color: #ffffff;
+  }
+
+  .configcard:hover h5 {
+    color: #ffffff;
+  }
+
+  .configcard:hover p {
+    color: #ffffff;
+  }
+
+  @media (min-width:768px) and (max-width:1024px) {
+    .gridview {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 25px;
+    }
+  }
+
+  @media (max-width:767px) {
+
+    .gridview {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 25px;
+    }
+
+    .configcard {
+      margin-bottom: 0px;
+    }
+
+    .configcard h5 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+  }

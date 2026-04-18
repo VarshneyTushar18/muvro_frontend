@@ -1,0 +1,62 @@
+.locationsList .locationItem {
+    display: flex;
+    gap: 20px;
+}
+
+.locationsList .locationItem .mapFrame,
+.locationsList .locationItem .locationDetails {
+    width: 50%;
+}
+
+.locationsList .locationItem .mapFrame iframe {
+    border-block: 1px solid #46505A;
+}
+
+.locationsList .locationItem .locationDetails .locationTitle {
+    font-size: 14px;
+    font-family: var(--font-display);
+    line-height: 16px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.locationsList .locationItem .locationDetails .locationAddress {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 6px;
+}
+
+.locationsList .locationItem .locationDetails .locationContacts {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.locationsList .locationItem .locationDetails .locationContact {
+    margin-bottom: 0
+}
+
+.locationsList .locationItem .locationDetails .locationContact a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.locationsList .locationItem .locationDetails .locationContact svg {
+    background-color: var(--color-primary);
+    padding: 4px;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+}
+
+.locationFlag {
+    width: 25px;
+}
+
+.locationsList :global(.swiper-pagination) {
+    margin-top: 10px;
+}

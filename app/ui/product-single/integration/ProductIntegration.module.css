@@ -1,0 +1,86 @@
+.wrapper span {
+  margin-bottom: 1.5rem;
+  color: var(--color-dark);
+}
+
+.wrapper h2 {
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+}
+
+.wrapper p {
+  color: var(--color-dark);
+}
+
+.integration {
+  padding: 4rem 0;
+  background: var(--color-primary);
+}
+
+.integration :global(.section-label-center:before) {
+  background-color: var(--color-dark);
+}
+
+.integration :global(.section-label-center:after) {
+  background-color: var(--color-dark);
+}
+
+
+.integrationCard {
+  text-align: left;
+  padding: 0px 35px 20px 35px;
+  transition: all 0.4s ease;
+  background: #ffffff;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+
+.integrationCard h5 {
+  font-size: 24px;
+  line-height: 32px;
+  background: var(--color-secondary);
+  width: fit-content;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.integrationCard ul {
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+
+.integrationCard p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #000;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+}
+
+@media (min-width:768px) and (max-width:1180px) {
+  .integration :global(.col-md-8) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100% !important;
+  }
+
+  .integrationCard h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+
+@media (max-width:767px) {
+
+  .integrationCard {
+    padding: 0px 30px 20px 30px;
+  }
+
+  .integrationCard h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

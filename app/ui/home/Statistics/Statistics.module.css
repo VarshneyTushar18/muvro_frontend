@@ -1,0 +1,144 @@
+/*
+  Project: Muvro
+  Page: Home
+  Module: Statistics Section
+  Scope: Statistics Section CSS
+
+  Author: Tech2Globe Web Solutions
+  Creation Date: 2025-AUG-29
+  Last Modified Date: 2025-AUG-29
+  Version: 1.0
+*/
+.statisticCard {
+    position: relative;
+    background: var(--color-primary);
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 480px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.wrapper {
+    max-width: 1080px;
+    margin-bottom: 3rem;
+}
+
+.wrapper h4 {
+    margin-bottom: 2rem;
+}
+
+.wrapper p {
+    color: #686868
+}
+
+.statisticCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+/* Overlay using ::after */
+.statisticCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 18, 18, 0.65);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.statisticCard:hover {
+    background: transparent;
+}
+
+.statisticCard:hover::before,
+.statisticCard:hover::after {
+    opacity: 1;
+}
+
+.statisticCard:hover p,
+.statisticCard:hover span {
+    color: #fff;
+}
+
+.statisticCard p,
+.statisticCard span {
+    position: relative;
+    z-index: 1;
+}
+
+.statisticCard p {
+    font-size: clamp(2rem, 6vw, 80px);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.statisticCard p svg {
+    width: clamp(2rem, 6vw, 80px);
+    height: clamp(2rem, 6vw, 80px);
+}
+
+.statisticCard span {
+    margin-top: 0.5rem;
+    font-size: clamp(0.9rem, 2vw, 20px);
+    font-weight: 500;
+    line-height: 24px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 576px) {
+    .statisticCard {
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .statisticCard {
+        max-width: 265px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .statisticCard {
+        max-width: 340px;
+        margin-bottom: 12px;
+    }
+    .statisticCard span {
+        font-size:16px
+    }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+    .statisticCard {
+        max-width: 300px;
+        margin-bottom: 12px;
+    }
+    .statisticCard span {
+        font-size:16px
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1365px) {
+    .statisticCard {
+        max-width: 360px;
+        margin-bottom: 0
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1599px) {
+    .statisticCard {
+        max-width: 420px;
+        margin-bottom: 0;
+    }
+}

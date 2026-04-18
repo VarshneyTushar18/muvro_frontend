@@ -1,0 +1,50 @@
+.wrapper :global(.section-label) {
+  margin-bottom: 1.5rem;
+}
+
+.wrapper h2 {
+  margin-bottom: 2rem;
+}
+
+section.configOptionsWithGallery.repeated {
+    padding-top: 0;
+}
+
+
+.image {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 20%, 80% 0%);
+  position:sticky;
+  top:10px;
+}
+
+.customList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.customList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.icon {
+  color: var(--color-secondary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.listBlock {
+  margin-bottom: 2rem;
+}
+
+.listTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0.75rem;
+}
