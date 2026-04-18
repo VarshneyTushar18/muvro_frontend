@@ -18,6 +18,10 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
+const frontendBaseUrl =
+  process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata = {
   title: "MUVRO | Warehouse & Logistics Automation Solutions",
   description:
@@ -34,19 +38,19 @@ export const metadata = {
     "e-commerce fulfillment",
     "distribution center solutions",
   ],
-  authors: [{ name: "MUVRO", url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL }],
+  authors: [{ name: "MUVRO", url: frontendBaseUrl }],
   creator: "MUVRO",
   publisher: "MUVRO",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_BASE_URL),
+  metadataBase: new URL(frontendBaseUrl),
   openGraph: {
     title: "MUVRO | Warehouse & Logistics Automation Solutions",
     description:
       "Discover MUVRO's precision-engineered automation systems that power the future of smart warehouses and logistics efficiency.",
-    url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL,
+    url: frontendBaseUrl,
     siteName: "MUVRO",
     images: [
       {
-        url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + `/images/og-image.jpg`,
+        url: frontendBaseUrl + `/images/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "MUVRO Warehouse Automation Systems",
@@ -60,14 +64,14 @@ export const metadata = {
     title: "MUVRO | Warehouse & Logistics Automation Solutions",
     description:
       "Leading provider of high-speed, modular warehouse automation and intralogistics systems.",
-    images: [process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + `/images/og-image.jpg`],
+    images: [frontendBaseUrl + `/images/og-image.jpg`],
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL,
+    canonical: frontendBaseUrl,
   },
 };
 

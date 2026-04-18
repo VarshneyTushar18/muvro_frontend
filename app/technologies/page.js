@@ -5,6 +5,10 @@ import styles from "./TechnologiesPage.module.css";
 
 export const dynamic = "force-dynamic";
 
+const frontendBaseUrl =
+  process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata = {
   title: "MUVRO Technologies | MUVRO Intelligent Automation & Robotics",
   description:
@@ -21,15 +25,15 @@ export const metadata = {
     "automated material handling",
     "intelligent warehouse solutions",
   ],
-  authors: [{ name: "MUVRO", url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL }],
+  authors: [{ name: "MUVRO", url: frontendBaseUrl }],
   creator: "MUVRO",
   publisher: "MUVRO",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_BASE_URL),
+  metadataBase: new URL(frontendBaseUrl),
   openGraph: {
     title: "MUVRO Technologies | Smart Automation & Robotics Solutions",
     description:
       "Discover how MUVRO leverages cutting-edge technologies — from robotics and AI to data-driven controls — powering the next generation of warehouse and logistics automation.",
-    url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + "/technologies",
+    url: frontendBaseUrl + "/technologies",
     siteName: "MUVRO",
     locale: "en_IN",
     type: "website",
@@ -45,7 +49,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + "/technologies",
+    canonical: frontendBaseUrl + "/technologies",
   },
 };
 

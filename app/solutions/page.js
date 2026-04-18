@@ -3,6 +3,10 @@ import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStri
 import styles from "./SolutionsPage.module.css";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import TabsWithActive from "./TabsWithActive";
+const frontendBaseUrl =
+    process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata = {
     title: "Solutions | MUVRO Warehouse Automation & Intralogistics Systems",
     description:
@@ -19,15 +23,15 @@ export const metadata = {
         "warehouse management",
         "logistics optimization",
     ],
-    authors: [{ name: "MUVRO", url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL }],
+    authors: [{ name: "MUVRO", url: frontendBaseUrl }],
     creator: "MUVRO",
     publisher: "MUVRO",
-    metadataBase: new URL(process.env.NEXT_PUBLIC_FRONTEND_BASE_URL),
+    metadataBase: new URL(frontendBaseUrl),
     openGraph: {
         title: "MUVRO Solutions | Smart Warehouse & Logistics Automation",
         description:
             "Discover MUVRO’s comprehensive range of automation solutions — engineered to streamline material flow, reduce costs, and deliver unmatched efficiency in logistics and fulfillment operations.",
-        url: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + "/solutions",
+        url: frontendBaseUrl + "/solutions",
         siteName: "MUVRO",
         locale: "en_IN",
         type: "website",
@@ -43,7 +47,7 @@ export const metadata = {
         follow: true,
     },
     alternates: {
-        canonical: process.env.NEXT_PUBLIC_FRONTEND_BASE_URL + "/solutions",
+        canonical: frontendBaseUrl + "/solutions",
     },
 };
 
