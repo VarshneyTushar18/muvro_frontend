@@ -59,7 +59,7 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
                         <p className={styles.productName}>{prod.productName}</p>
                         <div className={styles.productFooter}>
                           <p className={styles.productSubtitle}>{prod.tagline}</p>
-                          <a href={prod.slug} className={styles.arrow}><RiArrowRightUpLine /></a>
+                          <a href={`/${prod.slug}`} className={styles.arrow}><RiArrowRightUpLine /></a>
                         </div>
                       </div>
                     </div>

@@ -52,15 +52,20 @@ export const metadata = {
 };
 
 async function getSolutions() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/solution-page`,
+ const res = await fetch(
+        `${process.env.STRAPI_BACKEND_BASE_URL}/solution-page?populate=*`,
         { next: { revalidate: 60 } }
     );
 
-    if (!res.ok) throw new Error("Failed to fetch solutions");
+    if (!res.ok) {
+        console.error("Fetch failed:", res.status);
+        return null;
+    }
 
     const data = await res.json();
-    return data.data;
+
+    // ✅ FIX: no .attributes in your API
+    return data?.data;
 }
 
 function ProductsModal({ item, modalId }) {
