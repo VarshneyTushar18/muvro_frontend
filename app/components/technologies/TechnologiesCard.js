@@ -52,7 +52,7 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
                   {products.map((prod) => (
                     <div className={styles.productCard} key={prod.name}>
                       <div className={styles.productCardImage}>
-                        <a href={`/${prod.slug}`}>
+                        <a href={`/${prod.slug}`} className="text-center">
                         <img src={`${process.env.STRAPI_ASSETS_BASE_URL}${prod.transparentImage.url}`}
                           alt={prod.productName} />
                         </a>

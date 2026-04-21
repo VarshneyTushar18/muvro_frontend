@@ -101,7 +101,7 @@ function ProductsModal({ item, modalId }) {
                                 return (
                                     <div className={styles.productCard} key={prod.id}>
                                         <div className={styles.productCardImage}>
-                                            <a href={`/${prod.slug}`}>
+                                            <a href={`/${prod.slug}`} className="text-center">
                                             {imageUrl && (
                                                 <img src={imageUrl} alt={prod.productName} loading="lazy" />
                                             )}
