@@ -269,7 +269,7 @@ export default function Industries() {
                     <h5>{industry.title}</h5>
                     <p>{industry.description}</p>
                   </div>
-                  {industry.products ? (
+                  {/* {industry.products ? (
                     <button
                       className={`${Style.linkblock} btn border-radius-0`}
                       data-bs-toggle="modal"
@@ -283,7 +283,7 @@ export default function Industries() {
                       <span>Explore More</span>
                       <RiArrowRightUpLine />
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
             ))}
