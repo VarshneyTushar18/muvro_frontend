@@ -202,6 +202,7 @@ export default async function SolutionsPage() {
                                     return (
                                         <div
                                             key={i}
+                                            id={`solution-${item.itemTitle?.replace(/\s+/g, "-").toLowerCase()}`}
                                             className={`${styles.solution} row align-items-center mb-5 mx-0`}
                                         >
                                             <div
