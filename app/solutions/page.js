@@ -52,7 +52,7 @@ export const metadata = {
 };
 
 async function getSolutions() {
- const res = await fetch(
+    const res = await fetch(
         `${process.env.STRAPI_BACKEND_BASE_URL}/solution-page?populate=*`,
         { next: { revalidate: 60 } }
     );
@@ -102,9 +102,9 @@ function ProductsModal({ item, modalId }) {
                                     <div className={styles.productCard} key={prod.id}>
                                         <div className={styles.productCardImage}>
                                             <a href={`/${prod.slug}`} className="text-center">
-                                            {imageUrl && (
-                                                <img src={imageUrl} alt={prod.productName} loading="lazy" />
-                                            )}
+                                                {imageUrl && (
+                                                    <img src={imageUrl} alt={prod.productName} loading="lazy" />
+                                                )}
                                             </a>
                                         </div>
                                         <div className={styles.productCardText}>
@@ -217,16 +217,15 @@ export default async function SolutionsPage() {
                                                     />
                                                 )}
                                             </div>
- 
+
                                             <div
                                                 className={`${styles.contentWrapper} col-md-6 d-flex flex-column justify-content-center align-items-start ${isEven ? "order-md-2" : "order-md-1"
                                                     }`}
-                                            >       
+                                            >
                                                 <h3 className={styles.title}>{item.itemTitle}</h3>
                                                 <p>{item.itemDescription}</p>
 
-                                                {item.hasMultipleProduct &&
-                                                    item.product_pages?.length > 0 ? (
+                                                {item.hasMultipleProduct && item.product_pages?.length > 0 ? (
                                                     <button
                                                         type="button"
                                                         className="mbtn mbtn-primary"
@@ -235,16 +234,14 @@ export default async function SolutionsPage() {
                                                     >
                                                         Explore Now
                                                     </button>
-                                                ) : (
-                                                    item.product_page && (
-                                                        <a
-                                                            href={`/${item.product_page.slug}`}
-                                                            className="mbtn mbtn-primary"
-                                                        >
-                                                            Explore Now
-                                                        </a>
-                                                    )
-                                                )}
+                                                ) : item.product_page?.slug ? (
+                                                    <a
+                                                        href={`/${item.product_page.slug}`}
+                                                        className="mbtn mbtn-primary"
+                                                    >
+                                                        Explore Now
+                                                    </a>
+                                                ) : null}
                                             </div>
                                         </div>
                                     );
