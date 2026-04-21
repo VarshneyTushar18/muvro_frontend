@@ -101,9 +101,11 @@ function ProductsModal({ item, modalId }) {
                                 return (
                                     <div className={styles.productCard} key={prod.id}>
                                         <div className={styles.productCardImage}>
+                                            <a href={`/${prod.slug}`}>
                                             {imageUrl && (
                                                 <img src={imageUrl} alt={prod.productName} loading="lazy" />
                                             )}
+                                            </a>
                                         </div>
                                         <div className={styles.productCardText}>
                                             <p className={styles.productName}>{prod.productName}</p>
