@@ -20,13 +20,13 @@ export default function Statistics() {
 
   const stats = [
     {
-      value: 20,
-      label: "Successful Years in Business",
+      value: 23,
+      label: "Diversive Experience",
       image: "/images/statistics-1.png",
     },
     { value: 1000, label: "Installations", image: "/images/statistics-2.png" },
     {
-      value: 350,
+      value: 400,
       label: "Professional Employees",
       image: "/images/statistics-3.png",
     },
@@ -54,11 +54,7 @@ export default function Statistics() {
             We provide Integrated Logistics Automation Solutions Worldwide
           </h4>
           <p data-aos="fade-up" data-aos-delay="150">
-            Every day, our team works diligently to provide integrated solutions
-            that provide substantial benefits to the various business verticals
-            in Logistics &amp; Automation. Our custom designs for the specific
-            needs of each customer, our automation technology, our expertise are
-            the perfect solution for any product line, regardless of industry.
+            Every day, our team works diligently to deliver integrated logistics and automation solutions that create real value across diverse business verticals. We specialize in custom-designed systems tailored to each customer’s unique requirements, combining advanced automation technology with deep industry expertise to provide reliable and efficient solutions for any product line, regardless of sector. Backed by ISO 9001 certification and global manufacturing standards, we ensure consistent quality, strong R&D-driven innovation, and a robust quality program with strict protocol adherence. Our commitment to sustainability reduces environmental impact while promoting responsible practices.
           </p>
         </div>
 
