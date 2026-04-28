@@ -3,8 +3,9 @@ import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStri
 import styles from "./SolutionsPage.module.css";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import TabsWithActive from "./TabsWithActive";
-const frontendBaseUrl =
-    process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
+
+
+const frontendBaseUrl = process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
     (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
 export const metadata = {
@@ -64,7 +65,7 @@ async function getSolutions() {
 
     const data = await res.json();
 
-    // ✅ FIX: no .attributes in your API
+    
     return data?.data;
 }
 

@@ -5,10 +5,9 @@ import styles from "./TechnologiesPage.module.css";
 
 export const dynamic = "force-dynamic";
 
-const frontendBaseUrl =
-  process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
 
+const frontendBaseUrl = process.env.NEXT_PUBLIC_FRONTEND_BASE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"); 
 export const metadata = {
   title: "MUVRO Technologies | MUVRO Intelligent Automation & Robotics",
   description:
