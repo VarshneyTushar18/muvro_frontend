@@ -111,7 +111,7 @@ export default function ConveyorTabs({ tabsData }) {
         {
           name: "Gravity Type Roller Conveyor",
           image: "/images/gravity-type-roller-conveyor-image.webp",
-          url: "/#",
+          url: "/conveyor",
         },
         {
           name: "Pu Coated roller conveyor",
