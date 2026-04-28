@@ -199,18 +199,18 @@ const megaMenuData = {
               image: "https://muvro.tech2globe.co.in/uploads/agv_image_a157089136.webp",
               url: "/automated-guided-vehicle"
             },
-            {
-              name: "AGV Stacker Crane",
-              subtitle: "Mobile Robots",
-              image: "/images/not_found.png",
-              url: "/#"
-            },
-            {
-              name: "Mini Cranes",
-              subtitle: "Mobile Robots",
-              image: "/images/not_found.png",
-              url: "/#"
-            },
+            // {
+            //   name: "AGV Stacker Crane",
+            //   subtitle: "Mobile Robots",
+            //   image: "/images/not_found.png",
+            //   url: "/#"
+            // },
+            // {
+            //   name: "Mini Cranes",
+            //   subtitle: "Mobile Robots",
+            //   image: "/images/not_found.png",
+            //   url: "/#"
+            // },
           ],
         },
 
@@ -400,7 +400,7 @@ const megaMenuData = {
               name: "Pallet ASRS Stacker Crane",
               subtitle: "Automated vertical storage crane",
               image: "https://muvro.tech2globe.co.in/uploads/asrs_crne_e3f07fc651.png",
-              url: "/pallet-asrs-stacker-crane"
+              url: "/asrs-stacker-cranes"
             },
             {
               name: "Mini Load ASRS Shuttle System",
