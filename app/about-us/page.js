@@ -119,6 +119,44 @@ export default async function AboutUs() {
                 </div>
             </section>
             <OurHistory />
+
+            <section className="pb-0">
+                <div className="container">
+                    {/* Section Header */}
+                    <div className="row justify-content-center align-items-center">
+                        <div
+                            className="col-xl-4 pb-4"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                        >
+                            <h3
+                                className="mb-5"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                MUVRO is Building Its Future Factory in 4,60,000 Sq Feet.
+                            </h3>
+
+                            <ul>
+                                    <li data-aos="fade-up">
+                                        Its Phase #1 will be Functional by Dec- 2026
+                                    </li>
+                                    <li data-aos="fade-up">
+                                        Its Phase #2 will be Functional by July - 2027
+                                    </li>
+                            </ul>
+                        </div>
+                        <div
+                            className="col-xl-6 pb-4"
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                        >
+                            <img src="images/image-collage.jpg" alt="About Us" className="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <OurValues />
             <QualityPolicy />
             <WhyMuvro />

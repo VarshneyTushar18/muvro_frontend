@@ -19,11 +19,6 @@ export default function OurTeamSection() {
       image: "/images/ashish-kumar.png",
     },
     {
-      name: "Mr. Vikram Sharma",
-      role: "Design Head",
-      image: "/images/vikram-sharma.png",
-    },
-    {
       name: "Mr. Saurabh Kr",
       role: "Sr. Manager (BDM)",
       image: "/images/saurabh-kr.png",
@@ -32,6 +27,61 @@ export default function OurTeamSection() {
       name: "Ms. Hemy Sharma",
       role: "CRM Manager",
       image: "/images/hemy-sharma.png",
+    },
+    {
+      name: "Mr. A. Jetinder",
+      role: "Plant Head",
+      image: "/images/r.-A.-Jetinder.jpg",
+    },
+    {
+      name: "Mr. Vikram Sharma",
+      role: "Design Head",
+      image: "/images/vikram-sharma.png",
+    },
+    {
+      name: "Mr. Rajkumar",
+      role: "R&D Head",
+      image: "/images/Mr.-Rajkumar.jpg",
+    },
+    {
+      name: "Mr. Saurabh Dixit",
+      role: "Design Manager",
+      image: "/images/Mr.-Saurabh-Dixit.jpg",
+    },
+    {
+      name: "Mr. Kali Kumar",
+      role: "Quality Manager ",
+      image: "/images/Mr.KaliKumar.jpg",
+    },
+    {
+      name: "Mr. Govind",
+      role: "SC Head",
+      image: "/images/Mr.Govind.jpg",
+    },
+    {
+      name: "Mr. Abhilash T.",
+      role: "Project Manager",
+      image: "/images/xmeet-the-team-6.jpg",
+    },
+    {
+      name: "Mr. Hemant",
+      role: "Project Manager",
+      image: "/images/Mr.Hemant.jpg",
+    },
+    {
+      name: "Mr. Ravi Kumar",
+      role: "Production In charge",
+      image: "/images/Mr.-Ravi-Kumar.jpg",
+    },
+    {
+      name: "Mr. Rohit Kumar",
+      role: "Assembly In charge",
+      image: "/images/Mr.-Rohit-Kumar.jpg",
+    },
+    {
+      name: "Mr. Avanesh Kumar",
+      role: "Finance Head",
+      image: "/images/meet-the-team-9-removebg-preview.jpg",
     },
   ];
 
