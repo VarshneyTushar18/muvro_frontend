@@ -9,9 +9,107 @@ import {
   RiArrowRightLine,
   RiArrowRightUpLine,
 } from "@remixicon/react";
-import Link from "next/link";
 
+const formatSolutionItemId = (title) =>
+  `solution-${title?.replace(/\s+/g, "-").toLowerCase()}`;
 
+const getHashFromLink = (link) => link?.split("#")[1] || "";
+
+const normalize = (value) =>
+  value?.toString().toLowerCase().replace(/[^a-z0-9]/g, "") || "";
+
+const getProductImageUrl = (product) => {
+  const imageUrl = product?.transparentImage?.url;
+  if (!imageUrl) return "";
+
+  return imageUrl.startsWith("http")
+    ? imageUrl
+    : `${process.env.NEXT_PUBLIC_STRAPI_ASSETS_BASE_URL || ""}${imageUrl}`;
+};
+
+function ProductCard({ product }) {
+  const imageUrl = getProductImageUrl(product);
+
+  return (
+    <div className={styles.productCard}>
+      <div className={styles.productCardImage}>
+        <a href={`/${product.slug}`} className="text-center">
+          {imageUrl && (
+            <img src={imageUrl} alt={product.productName} loading="lazy" />
+          )}
+        </a>
+      </div>
+      <div className={styles.productCardText}>
+        <p className={styles.productName}>{product.productName}</p>
+        <div className={styles.productFooter}>
+          <a href={`/${product.slug}`} className={styles.arrow}>
+            <RiArrowRightUpLine />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ServiceModal({ service, solutionItem }) {
+  if (!service) return null;
+
+  const relatedProducts = solutionItem?.hasMultipleProduct
+    ? solutionItem.product_pages || []
+    : solutionItem?.product_page
+      ? [solutionItem.product_page]
+      : [];
+
+  return (
+    <div
+      className="modal fade"
+      id="serviceModal"
+      tabIndex="-1"
+      aria-labelledby="serviceModalLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-dialog-centered modal-lg">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="serviceModalLabel">
+              {service.title}
+            </h5>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div className={`modal-body ${styles.serviceModalBody}`}>
+            <p>{service.description}</p>
+
+            {relatedProducts.length > 0 ? (
+              <div className={styles.productGrid}>
+                {relatedProducts.map((product) => (
+                  <ProductCard key={product.id || product.slug} product={product} />
+                ))}
+              </div>
+            ) : (
+              <img
+                src={service.image}
+                alt={service.title}
+                className={`img-fluid ${styles.serviceModalImage}`}
+              />
+            )}
+
+            {service.link && relatedProducts.length === 0 && (
+              <a href={service.link} className="mbtn mbtn-small mbtn-primary">
+                View Solution
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const categories = {
   "Intralogistics": [
@@ -234,10 +332,12 @@ const categories = {
 
 };
 
-export default function ServicesSectionTabs() {
+export default function ServicesSectionTabs({ solutions = [] }) {
   const categoryNames = Object.keys(categories);
   const [activeCategory, setActiveCategory] = useState(categoryNames[0]);
   const [activeService, setActiveService] = useState(0);
+  const [selectedService, setSelectedService] = useState(categories[categoryNames[0]][0]);
+  const [selectedSolutionItem, setSelectedSolutionItem] = useState(null);
   const [showArrows, setShowArrows] = useState(false);
   const swiperRef = useRef(null);
 
@@ -268,6 +368,32 @@ export default function ServicesSectionTabs() {
   };
 
   const currentService = services[activeService];
+  const solutionItems = solutions.flatMap((solution) => solution.solutionItem || []);
+  const findSolutionItem = (service) => {
+    const linkHash = getHashFromLink(service.link);
+    const normalizedHash = normalize(linkHash);
+    const normalizedServiceTitle = normalize(service.title);
+    const itemsWithKeys = solutionItems.map((item) => ({
+      item,
+      itemId: formatSolutionItemId(item.itemTitle),
+      normalizedItemTitle: normalize(item.itemTitle),
+    }));
+
+    return (
+      itemsWithKeys.find(({ normalizedItemTitle }) => normalizedItemTitle === normalizedServiceTitle)
+        ?.item ||
+      itemsWithKeys.find(({ itemId }) => itemId === linkHash)?.item ||
+      itemsWithKeys
+        .filter(
+          ({ normalizedItemTitle }) =>
+            normalizedHash.includes(normalizedItemTitle) ||
+            normalizedItemTitle.includes(normalizedHash)
+        )
+        .sort((a, b) => b.normalizedItemTitle.length - a.normalizedItemTitle.length)[0]
+        ?.item ||
+      null
+    );
+  };
 
   return (
     <section className={`${styles.WrapperSlider} pb-0`}>
@@ -320,9 +446,18 @@ export default function ServicesSectionTabs() {
             <div className={styles.overlay}>
               <div className={`${styles.bannerContent} container`}>
                 <p>{currentService.description}</p>
-                <a href={currentService.link} className="mbtn mbtn-small mbtn-primary">
+                <button
+                  type="button"
+                  className="mbtn mbtn-small mbtn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#serviceModal"
+                  onClick={() => {
+                    setSelectedService(currentService);
+                    setSelectedSolutionItem(findSolutionItem(currentService));
+                  }}
+                >
                   Explore More
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -386,6 +521,7 @@ export default function ServicesSectionTabs() {
           </button>
         </div>
       )}
+      <ServiceModal service={selectedService} solutionItem={selectedSolutionItem} />
     </section>
   );
 }

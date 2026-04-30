@@ -1,38 +1,65 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./SolutionsPage.module.css";
 
 export default function TabsWithActive({ solutions }) {
     const formatSlug = (str) =>
-        str?.toString().toLowerCase().replace(/ /g, "-").replace(/[^a-zA-Z0-9-]/g, "");                                                                                                                                                                                                                                                     
+        str
+            ?.toString()
+            .trim()
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "");
+
+    const tabs = useMemo(
+        () =>
+            solutions.map((solution) => ({
+                ...solution,
+                slug: formatSlug(solution.solutionName),
+            })),
+        [solutions]
+    );
+
+    const [activeSlug, setActiveSlug] = useState(tabs[0]?.slug || "");
+
     useEffect(() => {
-        const sections = document.querySelectorAll(`.${styles.solutionWrapper}`);
-        const tabs = document.querySelectorAll(`.${styles.tab}`);
+        if (!tabs.length) return;
+
+        setActiveSlug((currentSlug) => currentSlug || tabs[0].slug);
+
+        const sections = tabs
+            .map(({ slug }) => document.getElementById(slug))
+            .filter(Boolean);
+
+        if (!sections.length) return;
 
         const observer = new IntersectionObserver(
             (entries) => {
-                entries.forEach((entry) => {
-                    const id = entry.target.getAttribute("id");
-                    const tab = Array.from(tabs).find((t) => t.getAttribute("href") === `#${id}`);
+                const visibleEntry = entries
+                    .filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-                    if (entry.isIntersecting) {
-                        tabs.forEach((t) => t.classList.remove(styles.active));
-                        tab?.classList.add(styles.active); 
-                    }
-                });
+                if (visibleEntry?.target.id) {
+                    setActiveSlug(visibleEntry.target.id);
+                }
+            },
+            {
+                root: null,
+                rootMargin: "-30% 0px -55% 0px",
+                threshold: [0, 0.25, 0.5, 0.75, 1],
             }
         );
 
         sections.forEach((sec) => observer.observe(sec));
 
-        return () => observer.disconnect(); 
-    }, []);
+        return () => observer.disconnect();
+    }, [tabs]);
 
     return (
         <div className={styles.tabsList}>
-            {solutions.map((solution) => {
-                const slug = formatSlug(solution.solutionName);
+            {tabs.map((solution) => {
+                const { slug } = solution;
                 const thumbUrl =
                     solution.thumbnail?.url || solution.solutionBannerImage?.url || "";
                 const altText =
@@ -44,7 +71,9 @@ export default function TabsWithActive({ solutions }) {
                     <a
                         key={solution.id}
                         href={`#${slug}`}
-                        className={`${styles.tab} d-flex align-items-center justify-content-center gap-2`}
+                        onClick={() => setActiveSlug(slug)}
+                        className={`${styles.tab} ${activeSlug === slug ? styles.active : ""} d-flex align-items-center justify-content-center gap-2`}
+                        aria-current={activeSlug === slug ? "true" : undefined}
                     >
                         {thumbUrl && (
                             <img

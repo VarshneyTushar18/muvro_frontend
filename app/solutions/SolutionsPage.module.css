@@ -19,7 +19,7 @@
   padding: 20px 0;
   background-color: #ffffff;
   position: sticky;
-  top: 0;
+  top: 70px;
   z-index: 99;
   transition: all 0.3s ease;
 }
@@ -44,6 +44,21 @@
   font-size: 18px;
   font-family: var(--font-display);
   letter-spacing: 0.02em;
+}
+
+@media (min-width:1200px) and (max-width: 1399px) {
+  .tabsList {
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .tab {
+    padding: 4px;
+  }
+
+  .tab span {
+    font-size: 12px;
+  }
 }
 
 .solutionWrapper {
@@ -326,4 +341,8 @@
 .tab.active {
   background: var(--color-secondary);
   border-color: var(--color-secondary);
+}
+
+.tab.active span {
+  color: #ffffff;
 }

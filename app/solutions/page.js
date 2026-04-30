@@ -143,7 +143,12 @@ export default async function SolutionsPage() {
     ];
 
     const formatSlug = (str) =>
-        str?.toString().toLowerCase().replace(/ /g, "-").replace(/[^a-zA-Z0-9-]/g, "");
+        str
+            ?.toString()
+            .trim()
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "");
 
     return (
         <>

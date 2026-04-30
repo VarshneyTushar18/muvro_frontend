@@ -22,14 +22,36 @@ import ServicesSection from "./ui/home/Services/ServicesSection";
 import ServicesSection2 from "./ui/home/Services2/ServicesSection";
 import Statistics from "./ui/home/Statistics/Statistics";
 
-export default function Home() {
+async function getSolutions() {
+  try {
+    const res = await fetch(
+      `${process.env.STRAPI_BACKEND_BASE_URL}/solution-page?populate=*`,
+      { next: { revalidate: 60 } }
+    );
+
+    if (!res.ok) {
+      console.error("Home solutions fetch failed:", res.status);
+      return [];
+    }
+
+    const data = await res.json();
+    return data?.data?.solution || [];
+  } catch (error) {
+    console.error("Home solutions fetch error:", error);
+    return [];
+  }
+}
+
+export default async function Home() {
+  const solutions = await getSolutions();
+
   return (
     <>
       <HeroBanner />
       <AboutUs />
       <Statistics />
       {/* <ServicesSection /> */}
-      <ServicesSection2 />
+      <ServicesSection2 solutions={solutions} />
       <ProductsSection />
       <IndustriesSection />
       <ClientsSection />

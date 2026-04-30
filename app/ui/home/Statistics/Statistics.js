@@ -30,6 +30,23 @@ export default function Statistics() {
       label: "Professional Employees",
       image: "/images/statistics-3.png",
     },
+    {
+      value: 100,
+      label: "Proven Product Range",
+      image: "/images/sorting.png",
+    },
+    {
+      value: 99,
+      label: "Customer Satisfaction Index",
+      image: "/images/statistics-2.png",
+      suffix: "%",
+    },
+    {
+      value: 50,
+      label: "Achieving 100% Satisfied Over 50+ customers",
+      image: "/images/statistics-1.png",
+    }
+    
   ];
 
   useEffect(() => {
@@ -65,6 +82,7 @@ export default function Statistics() {
               target={stat.value}
               label={stat.label}
               image={stat.image}
+              suffix={stat.suffix}
               start={start}
               index={i}
             />
@@ -75,7 +93,7 @@ export default function Statistics() {
   );
 }
 
-function StatisticCard({ target, label, image, start, index }) {
+function StatisticCard({ target, label, image, suffix, start, index }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -96,14 +114,14 @@ function StatisticCard({ target, label, image, start, index }) {
 
   return (
     <div
-      className={`${styles.statisticCard} col-md-6 col-lg-4`}
+      className={`${styles.statisticCard} col-md-6 col-lg-4 mb-3`}
       style={{ "--bg-image": `url(${image})` }}
       data-aos="zoom-in"
       data-aos-delay={100 + index * 150}
     >
       <p>
         {count}
-        <RiAddLine />
+        {suffix || <RiAddLine />}
       </p>
       <span>{label}</span>
     </div>
