@@ -288,6 +288,40 @@ export default async function AboutUs() {
             </section>
 
             <WhyMuvro />
+
+            <section className="pb-0">
+                <div className="container">
+                    {/* Section Header */}
+                    <div className="row justify-content-center align-items-center">
+                        <div
+                            className="col-xl-8 pb-4 text-center">
+                            <h3
+                                className="mb-5 text-center"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                Our <span>Certifications </span>
+                            </h3>
+                            <div className="row g-4 justify-content-center">
+                                <div
+                                    className="col-xl-5 pb-4"
+                                    data-aos="fade-up"
+                                    data-aos-duration="800"
+                                >
+                                    <img src="images/picture1.webp" alt="" className="img-fluid" />
+                                </div>
+                                <div
+                                    className="col-xl-5 pb-4"
+                                    data-aos="fade-up"
+                                    data-aos-duration="800"
+                                >
+                                    <img src="images/picture2.webp" alt="" className="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
