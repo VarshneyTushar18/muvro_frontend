@@ -212,25 +212,33 @@ export default async function AboutUs() {
             <section className="pb-0">
                 <div className="container">
                     {/* Section Header */}
-                    <div className="row justify-content-center align-items-center">
+                    <div className="row justify-content-center">
                         <div
                             className="col-xl-6 pb-4"
                             data-aos="fade-up"
                             data-aos-duration="800"
                         >
                             <h3
-                                className="mb-5"
+                                className="mb-4"
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
-                                Muvro has <span>array of solutions</span>
+                                What <span>We Do</span>
                             </h3>
+                            <p>We deliver Various Automation Solution for E-Commerce and Warehouse Industries with the entire chain from Analysis, Design, Dimensioning and manufacturing to installation and services. This Offer our customer convenience and peace of mind. </p>
                         </div>
                         <div
                             className="col-xl-6 pb-4"
                             data-aos="fade-up"
                             data-aos-duration="800"
                         >
+                            <h3
+                                className="mb-4"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                Muvro has <span>array of solutions</span>
+                            </h3>
                             <p>High Speed Cross Belt Sorters, Linear Sorter , 3D Smart Sorter , Fast Sorter , Swivel Wheel Sorter, Volume Distribution Systems ( VDS), ASRS Systems, Conveyor Systems  Powered Roller Conveyors, PVC & Modular Belt Conveyors, Curve & Merger Conveyors,  ZPA Roller Conveyors. By these Solution we contribute to increase the efficiency, Just in Time Delivery, and competitiveness of our customers.</p>
                         </div>
                     </div>
