@@ -249,35 +249,35 @@ export default function ContactUs() {
                 loop={true}
               >
                 <SwiperSlide>
-                  <img src="/images/Processing-1.webp" alt="Slide 1" style={{ width: '100%' }} />
+                  <img src="/images/processing-1.webp" alt="Slide 1" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-2.webp" alt="Slide 2" style={{ width: '100%' }} />
+                  <img src="/images/processing-2.webp" alt="Slide 2" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-3.webp" alt="Slide 3" style={{ width: '100%' }} />
+                  <img src="/images/processing-3.webp" alt="Slide 3" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-4.webp" alt="Slide 4" style={{ width: '100%' }} />
+                  <img src="/images/processing-4.webp" alt="Slide 4" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-5.webp" alt="Slide 5" style={{ width: '100%' }} />
+                  <img src="/images/processing-5.webp" alt="Slide 5" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-6.webp" alt="Slide 6" style={{ width: '100%' }} />
+                  <img src="/images/processing-6.webp" alt="Slide 6" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-7.webp" alt="Slide 7" style={{ width: '100%' }} />
+                  <img src="/images/processing-7.webp" alt="Slide 7" style={{ width: '100%' }} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                  <img src="/images/Processing-8.webp" alt="Slide 8" style={{ width: '100%' }} />
+                  <img src="/images/processing-8.webp" alt="Slide 8" style={{ width: '100%' }} />
                 </SwiperSlide>
               </Swiper>
             </div>
