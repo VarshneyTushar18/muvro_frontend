@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./ProductsSection.module.css";
+import "./custom.css";
 
 const categories = [
   {
