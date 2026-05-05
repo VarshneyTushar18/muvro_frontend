@@ -111,22 +111,10 @@ const megaMenuData = {
           name: "Fulfilment Solution",
           products: [
             {
-              name: "Inbound",
+              name: "Fulfilment Solution",
               subtitle: "Fulfilment Solution",
-              image: "/images/inbound.webp",
-              url: "#"
-            },
-            {
-              name: "Processing",
-              subtitle: "Fulfilment Solution",
-              image: "/images/processing.webp",
-              url: "#"
-            },
-            {
-              name: "Out Bound",
-              subtitle: "Fulfilment Solution",
-              image: "/images/outbound.webp",
-              url: "#"
+              image: "/images/Muvro-Fulfilment-Center.webp",
+              url: "/fulfilment-solution"
             },
           ],
         },
@@ -199,12 +187,12 @@ const megaMenuData = {
               image: "https://muvro.tech2globe.co.in/uploads/agv_image_a157089136.webp",
               url: "/automated-guided-vehicle"
             },
-            // {
-            //   name: "AGV Stacker Crane",
-            //   subtitle: "Mobile Robots",
-            //   image: "/images/not_found.png",
-            //   url: "/#"
-            // },
+            {
+              name: "AGV Stacker Crane",
+              subtitle: "Mobile Robots",
+              image: "images/Mini-Load-ASRS-Shuttle-System.webp",
+              url: "/mini-load-asrs-shuttle-system"
+            },
             // {
             //   name: "Mini Cranes",
             //   subtitle: "Mobile Robots",
@@ -426,10 +414,10 @@ const megaMenuData = {
               url: "/tipper"
             },
             {
-              name: "VDS - Activated Roller Belt (ARB)",
-              subtitle: "Advanced Conveying System",
-              image: "https://muvro.tech2globe.co.in/uploads/ARB_Image_feb146e13b.webp",
-              url: "/activated-roller-belt"
+              name: "Volumetric Dimensioning System VDS",
+              subtitle: "Advanced Automated Solution",
+              image: "images/vds_main.webp",
+              url: "/volumetric-dimensioning-system"
             },
             // {
             //   name: "VDS - Smart Gate",

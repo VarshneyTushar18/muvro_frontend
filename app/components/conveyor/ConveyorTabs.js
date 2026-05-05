@@ -108,11 +108,11 @@ export default function ConveyorTabs({ tabsData }) {
           image: "/images/free-flow-roller-conveyor-image.webp",
           url: "/free-flow-roller-conveyor",
         },
-        {
-          name: "Gravity Type Roller Conveyor",
-          image: "/images/gravity-type-roller-conveyor-image.webp",
-          url: "/conveyor",
-        },
+        // {
+        //   name: "Gravity Type Roller Conveyor",
+        //   image: "/images/gravity-type-roller-conveyor-image.webp",
+        //   url: "/conveyor",
+        // },
         {
           name: "Pu Coated roller conveyor",
           image: "/images/pu-coated-roller-conveyor-image.webp",

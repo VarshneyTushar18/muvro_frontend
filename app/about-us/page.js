@@ -359,9 +359,9 @@ export default async function AboutUs() {
                 </div>
             </section>
 
-            <section className="pb-0">
+            {/* <section className="pb-0">
                 <div className="container">
-                    {/* Section Header */}
+                   
                     <div className="row justify-content-center align-items-center">
                         <div
                             className="col-xl-8 pb-4 text-center">
@@ -391,7 +391,7 @@ export default async function AboutUs() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }
