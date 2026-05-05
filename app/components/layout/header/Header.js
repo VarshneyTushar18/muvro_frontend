@@ -157,12 +157,12 @@ const megaMenuData = {
               image: "/images/PTL.webp",
               url: "/pick-to-light"
             },
-            {
-              name: "Dark Store",
-              subtitle: "Quick Commerce",
-              image: "/images/not_found.png",
-              url: "#"
-            },
+            // {
+            //   name: "Dark Store",
+            //   subtitle: "Quick Commerce",
+            //   image: "/images/not_found.png",
+            //   url: "#"
+            // },
             // {
             //   name: "Smart Sorter",
             //   subtitle: "Quick Commerce",

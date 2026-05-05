@@ -4,6 +4,7 @@ import OurValues from "../components/(company)/our-values/OurValues";
 import QualityPolicy from "../components/(company)/quality-policy/QualityPolicy";
 import WhyMuvro from "../components/(company)/why-muvro/WhyMuvro";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
+import Counter from "../components/aboutcounter/aboutcounter";
 import styles from "./style.module.css";
 import "./custom.css";
 import {
@@ -53,6 +54,45 @@ const features = [
         color: "secondary"
     }
 ];
+
+ const data = [
+    {
+      title: 'Product Quality Satisfaction',
+      desc: 'Commitment to Product Quality',
+      value: 99,
+      color: 'green',
+    },
+    {
+      title: 'Reliability',
+      desc: 'Building Trust Through Reliability',
+      value: 99.9,
+      color: 'orange',
+    },
+    {
+      title: 'Purchase Satisfaction',
+      desc: 'Delivering Delight',
+      value: 99.9,
+      color: 'teal',
+    },
+    {
+      title: 'Accuracy',
+      desc: 'Precision in Every Detail',
+      value: 99.5,
+      color: 'yellow',
+    },
+    {
+      title: 'Meet Expectations',
+      desc: 'Exceeding Standards',
+      value: 99.9,
+      color: 'blue',
+    },
+    {
+      title: 'Investment Satisfaction',
+      desc: 'Empowering Futures',
+      value: 100,
+      color: 'purple',
+    },
+  ];
 
 export default async function AboutUs() {
     const crumbs = [
@@ -288,6 +328,36 @@ export default async function AboutUs() {
             </section>
 
             <WhyMuvro />
+
+            <section className="pb-0">
+                <div className="container py-5">
+                    <div className="row">
+                        <h3
+                                className="mb-5 text-center"
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                            >
+                                Customer Satisfaction & <span>Benchmarks </span>
+                            </h3>
+                        {data.map((item, index) => (
+                            <div className="col-md-6 mb-4" key={index}>
+                                <div className="counter-box d-flex align-items-center gap-3 p-3">
+
+                                    <div className={`circle ${item.color}`}>
+                                        <Counter target={item.value} />%
+                                    </div>
+
+                                    <div>
+                                        <h6 className="text-capitalize">{item.title}</h6>
+                                        <p className="text-muted mb-0">{item.desc}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
 
             <section className="pb-0">
                 <div className="container">
