@@ -2,6 +2,8 @@
 import styles from "./TechnologiesCard.module.css";
 import { RiArrowRightUpLine } from "@remixicon/react";
 export default function TechnologiesCard({ number, title, description, imgSrc, products = [] }) {
+  const safeProducts = (products || []).filter((prod) => prod && prod.slug);
+
   return (
     <>
       {/* Card */}
@@ -13,7 +15,7 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         <hr className={styles.divider} />
-        {products.length > 0 && (
+        {safeProducts.length > 0 && (
           <button
             type="button"
             className="mbtn mbtn-primary d-inline-block"
@@ -26,7 +28,7 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
       </div>
 
       {/* Modal */}
-      {products.length > 0 && (
+      {safeProducts.length > 0 && (
         <div
           className="modal fade"
           id={`productsModal${number}`}
@@ -49,18 +51,24 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
               </div>
               <div className="modal-body">
                 <div className={styles.productGrid}>
-                  {products.map((prod) => (
-                    <div className={styles.productCard} key={prod.name}>
+                  {safeProducts.map((prod) => (
+                    <div className={styles.productCard} key={prod.slug}>
                       <div className={styles.productCardImage}>
                         <a href={`/${prod.slug}`} className="text-center">
-                        <img src={`${process.env.STRAPI_ASSETS_BASE_URL}${prod.transparentImage.url}`}
-                          alt={prod.productName} />
+                        <img
+                          src={
+                            prod?.transparentImage?.url
+                              ? `${process.env.STRAPI_ASSETS_BASE_URL}${prod.transparentImage.url}`
+                              : "/images/logo.png"
+                          }
+                          alt={prod.productName || "Product"}
+                        />
                         </a>
                       </div>
                       <div className={styles.productCardText}>
-                        <p className={styles.productName}>{prod.productName}</p>
+                        <p className={styles.productName}>{prod.productName || "Product"}</p>
                         <div className={styles.productFooter}>
-                          <p className={styles.productSubtitle}>{prod.tagline}</p>
+                          <p className={styles.productSubtitle}>{prod.tagline || ""}</p>
                           <a href={`/${prod.slug}`} className={styles.arrow}><RiArrowRightUpLine /></a>
                         </div>
                       </div>
