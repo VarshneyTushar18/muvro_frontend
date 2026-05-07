@@ -8,6 +8,20 @@
   ],
   "routes": [
     {
+      "src": "/technology",
+      "status": 308,
+      "headers": {
+        "Location": "/technologies"
+      }
+    },
+    {
+      "src": "/technologgy",
+      "status": 308,
+      "headers": {
+        "Location": "/technologies"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

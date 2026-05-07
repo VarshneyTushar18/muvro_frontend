@@ -16,7 +16,7 @@ import ProductGallery from "../ui/product-single/ProductGallery/ProductGallery";
 import ConfigurationOptionsWithGallery from "../ui/product-single/ConfigurationOptionsWithGallery/ConfigurationOptionsWithGallery";
 import KeyComponents from "../ui/product-single/KeyComponents/KeyComponents";
 import TechnicalSpecifications from "../ui/product-single/TechnicalSpecifications/TechnicalSpecifications";
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import React from "react";
 async function fetchSlugs() {
     const res = await fetch(
@@ -52,6 +52,11 @@ export async function generateStaticParams() {
 
 export default async function ProductSinglePage({ params }) {
     const { slug } = await params;
+
+    if (slug === "technology" || slug === "technologgy") {
+        redirect("/technologies");
+    }
+
     const product = await getProduct(slug);
 
     if (!product) {
