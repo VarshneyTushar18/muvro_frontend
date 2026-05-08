@@ -162,11 +162,11 @@ const categories = [
       {
         id: 3,
         title: "VDS System",
-        desc: "Developed by Intralox, it features a modular plastic belt with embedded rollers that can move products in multiple directions",
-        img: "/images/vds-system.webp",
+        desc: "A VDS is an advanced automated solution designed to accurately measure the length, width, height, and volume of parcels, cartons, or totes within modern logistics and warehouse operations. ",
+        img: "/images/vds_main.webp",
         tag: "Gentle Product Handling",
         bg: "#F2F2F2",
-        link: "/activated-roller-belt"
+        link: "/volumetric-dimensioning-system"
       },
     ],
   },

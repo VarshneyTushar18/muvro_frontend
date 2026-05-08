@@ -144,6 +144,7 @@ const categories = {
         "High-Density, Automated Precision, Scalable Design, Optimize your warehouse with our Pallet Shuttle ASRS, offering automated, high-density storage that enhances throughput and operational efficiency.",
       image: "/images/fulfilment.png",
       link: "/solutions#solution-fulfilment-solutions",
+      manualLink: "/fulfilment-solution",
     },
     {
       id: 5,
@@ -446,18 +447,27 @@ export default function ServicesSectionTabs({ solutions = [] }) {
             <div className={styles.overlay}>
               <div className={`${styles.bannerContent} container`}>
                 <p>{currentService.description}</p>
-                <button
-                  type="button"
-                  className="mbtn mbtn-small mbtn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#serviceModal"
-                  onClick={() => {
-                    setSelectedService(currentService);
-                    setSelectedSolutionItem(findSolutionItem(currentService));
-                  }}
-                >
-                  Explore More
-                </button>
+                {currentService.manualLink ? (
+                  <a
+                    href={currentService.manualLink}
+                    className="mbtn mbtn-small mbtn-primary"
+                  >
+                    Explore More
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    className="mbtn mbtn-small mbtn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#serviceModal"
+                    onClick={() => {
+                      setSelectedService(currentService);
+                      setSelectedSolutionItem(findSolutionItem(currentService));
+                    }}
+                  >
+                    Explore More
+                  </button>
+                )}
               </div>
             </div>
           </div>
