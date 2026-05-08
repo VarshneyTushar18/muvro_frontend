@@ -73,7 +73,7 @@
   color: var(--color-dark-alt);
   text-decoration: none;
   transition: 0.3s;
-  font-size: clamp(14px, 1.5vw, 17px);
+  font-size: clamp(14px, 1.5vw, 15px);
 }
 
 .links a:hover {

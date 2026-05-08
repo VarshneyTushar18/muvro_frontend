@@ -7,6 +7,35 @@
   Last Modified Date: 2025-AUG-29
   Version: 1.0
 */
+/* :root {
+ 
+  --color-primary: #FFC100;
+  --color-secondary: #FF8A08;
+  --color-gray-dark: #C1C1C1;
+  --color-gray-light: #F2F2F2;
+  --color-dark: #121212;
+  --color-dark-alt: #2B2B2B;
+
+
+  --font-h1: 68px;
+  --font-h2: 60px;
+  --font-h3: 52px;
+  --font-h4: 44px;
+  --font-h5: 36px;
+  --font-h6: 28px;
+  --font-body-large: 20px;
+  --font-body-small: 18px;
+
+ 
+  --lh-offset: 8px;
+
+
+  --font-sans: var(--font-poppins), 'Helvetica', 'Arial', sans-serif;
+  --font-display: var(--font-poppins), 'Helvetica', 'Arial', sans-serif;
+
+} */
+
+
 :root {
   /* Colors */
   --color-primary: #FFC100;
@@ -17,23 +46,24 @@
   --color-dark-alt: #2B2B2B;
 
   /* Base font sizes */
-  --font-h1: 68px;
-  --font-h2: 60px;
-  --font-h3: 52px;
-  --font-h4: 44px;
-  --font-h5: 36px;
-  --font-h6: 28px;
-  --font-body-large: 20px;
-  --font-body-small: 18px;
+  --font-h1: 50px;
+  --font-h2: 45px;
+  --font-h3: 40px;
+  --font-h4: 35px;
+  --font-h5: 30px;
+  --font-h6: 25px;
+  --font-body-large: 16px;
+  --font-body-small: 14px;
 
   /* Line height offset */
   --lh-offset: 8px;
 
   /* Fonts */
-  --font-sans: 'Helvetica', 'Arial', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: var(--font-poppins), 'Helvetica', 'Arial', sans-serif;
+  --font-display: var(--font-poppins), 'Helvetica', 'Arial', sans-serif;
 
 }
+
 
 @media (min-width: 1600px) {
   .container {
@@ -85,7 +115,7 @@ h6 {
 }
 
 /* Paragraphs */
-p {
+/* p {
   font-size: var(--font-body-small);
   line-height: calc(var(--font-body-small) * 1.55);
   color: var(--color-dark-alt)
@@ -94,6 +124,19 @@ p {
 p.text-large {
   font-size: var(--font-body-large);
   line-height: calc(var(--font-body-large) * 1.55);
+  color: var(--color-dark-alt)
+} */
+
+/* Paragraphs */
+p {
+  font-size: var(--font-body-small);
+  line-height: calc(var(--font-body-small) * 1.25);
+  color: var(--color-dark-alt)
+}
+
+p.text-large {
+  font-size: var(--font-body-large);
+  line-height: calc(var(--font-body-large) * 1.25);
   color: var(--color-dark-alt)
 }
 
@@ -767,7 +810,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 8px 10px;
   transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   width: 175px;
   overflow: hidden;
 }

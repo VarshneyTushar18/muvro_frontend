@@ -1,7 +1,7 @@
 // app/layout.js
 import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "@/utilities/BootstrapClient";
-import { Space_Grotesk } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header/Header";
 import Cursor from "./components/layout/Cursor";
@@ -12,10 +12,10 @@ import LightboxInitializer from "./utilities/LightboxInitializer";
 import Script from "next/script";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
-const spaceGrotesk = Space_Grotesk({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
 });
 
 const frontendBaseUrl =
@@ -77,7 +77,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={spaceGrotesk.variable}>
+    <html lang="en" className={poppins.variable}>
       <Script
         id="google-translate-script"
         strategy="afterInteractive"
