@@ -131,7 +131,7 @@ export default function ConveyorTabs({ tabsData }) {
           url: "/plastic-modular-belt-conveyor",
         },
         {
-          name: "Side Flezing Curve conveyor modular belt type",
+          name: "Side Flexing Curve conveyor modular belt type",
           image: "/images/side-flexing-curve-conveyor-image.webp",
           url: "/side-flexing-curve-conveyor",
         },
