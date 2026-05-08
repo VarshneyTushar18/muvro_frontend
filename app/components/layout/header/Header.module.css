@@ -14,7 +14,6 @@
 }
 
 .navDropdown {
-    font-size: 18px;
     line-height: normal;
     color: var(--color-dark);
     display: flex;
@@ -81,7 +80,8 @@
 .dropdownMenu,
 .dropdownSubmenuMenu {
     background: #fff;
-    border-radius: 3px
+    border-radius: 3px;
+    font-size: 14px;
 }
 
 .dropdownSubmenuMenu {
@@ -123,6 +123,7 @@
     font-weight: 500;
     border-radius: 0;
     transition: background 0.3s, color 0.3s;
+    font-size: 14px;
 }
 
 .topTabs button:hover {
@@ -156,6 +157,7 @@
     cursor: pointer;
     text-align: center;
     transition: background 0.3s, color 0.3s;
+    font-size: 14px;
 }
 
 .leftTabs button:hover {
@@ -228,8 +230,8 @@
 
 .productName {
     margin-bottom: 6px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 21px;
     z-index: 1;
     position: relative;
     display: -webkit-box;
@@ -268,6 +270,8 @@
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
@@ -355,3 +359,4 @@
 
     }
 }
+

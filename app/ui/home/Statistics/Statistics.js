@@ -75,7 +75,7 @@ export default function Statistics() {
           </p>
         </div>
 
-        <div className={`row justify-content-between align-items-center m-0`}>
+        <div className={`row justify-content-between align-items-center m-0 `}>
           {stats.map((stat, i) => (
             <StatisticCard
               key={i}

@@ -13,15 +13,15 @@
     position: relative;
     background: var(--color-primary);
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 1.2rem 1rem;
     max-width: 480px;
     overflow: hidden;
     transition: all 0.4s ease;
 }
 
 .wrapper {
-    max-width: 1080px;
-    margin-bottom: 3rem;
+    max-width: 100%;
+    margin-bottom: 2.4rem;
 }
 
 .wrapper h4 {
@@ -29,7 +29,8 @@
 }
 
 .wrapper p {
-    color: #686868
+    color: #373535;
+    line-height: calc(var(--font-body-small) * 1.25);
 }
 
 .statisticCard::before {
@@ -76,30 +77,80 @@
 }
 
 .statisticCard p {
-    font-size: clamp(2rem, 6vw, 80px);
-    margin-bottom: 10px;
+    font-size: clamp(2rem, 6vw, 45px);
+    margin-bottom: 5px;
     line-height: 1;
 }
 
 .statisticCard p svg {
-    width: clamp(2rem, 6vw, 80px);
-    height: clamp(2rem, 6vw, 80px);
+    width: clamp(2rem, 6vw, 45px);
+    height: clamp(2rem, 6vw, 45px);
 }
 
 .statisticCard span {
     margin-top: 0.5rem;
-    font-size: clamp(0.9rem, 2vw, 20px);
+    font-size: clamp(0.9rem, 2vw, 15px);
     font-weight: 500;
     line-height: 24px;
     font-family: var(--font-display);
     text-transform: uppercase;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
+}
+
+.statisticCard {
+    position: relative;
+    background: transparent;
+    /* removed yellow */
+    text-align: center;
+    padding: 1rem 0.5rem;
+    max-width: 480px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Background image always visible */
+.statisticCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    /* always visible */
+    z-index: 0;
+}
+
+/* Dark overlay always visible */
+.statisticCard::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(18, 18, 18, 0.75);
+    opacity: 1;
+    /* always visible */
+    z-index: 0;
+}
+
+/* Text always white like hover */
+.statisticCard p,
+.statisticCard span {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+/* Optional: keep slight hover effect */
+.statisticCard:hover::after {
+    background: rgba(18, 18, 18, 0.85);
+    /* slightly darker on hover */
 }
 
 @media (max-width: 576px) {
     .statisticCard {
         max-width: 100%;
         margin-bottom: 12px;
+        height: max-content;
     }
 }
 
@@ -107,6 +158,7 @@
     .statisticCard {
         max-width: 265px;
         margin-bottom: 12px;
+        height: max-content;
     }
 }
 
@@ -115,17 +167,20 @@
         max-width: 340px;
         margin-bottom: 12px;
     }
+
     .statisticCard span {
-        font-size:16px
+        font-size: 16px
     }
 }
+
 @media (min-width: 992px) and (max-width: 1024px) {
     .statisticCard {
         max-width: 300px;
         margin-bottom: 12px;
     }
+
     .statisticCard span {
-        font-size:16px
+        font-size: 16px
     }
 }
 

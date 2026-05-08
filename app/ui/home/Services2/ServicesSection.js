@@ -403,7 +403,7 @@ export default function ServicesSectionTabs({ solutions = [] }) {
           Efficiency, Flexibility & Reliability
         </span>
 
-        <div className="mt-5 mb-3 d-xl-flex justify-content-between align-items-start gap-5">
+        <div className="mt-3 mb-3 d-xl-flex justify-content-between align-items-start gap-5">
           <h2 data-aos="fade-right" data-aos-delay="100" className="flex-shrink-0">
             Smart <span>Solutions</span>
           </h2>
@@ -414,7 +414,7 @@ export default function ServicesSectionTabs({ solutions = [] }) {
           </p>
         </div>
       </div>
-      <div className="container-fluid">
+      <div className="container">
         {/* Category Tabs */}
         <Swiper
           spaceBetween={6}

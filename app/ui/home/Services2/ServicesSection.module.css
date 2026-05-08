@@ -34,10 +34,10 @@
 }
 
 .bannerContent p {
-    font-size: 1.1rem;
+    font-size: 14px;
     margin-bottom: 1rem;
     color: #ffffff;
-    line-height: 1.6;
+    line-height: calc(var(--font-body-small) * 1.35);
     max-width: 700px;
 }
 
@@ -56,14 +56,14 @@
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 100px;
+    height: 85px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     border-radius: 0;
-    outline: 2px solid #fff;
+    outline: 1px solid #fff;
     outline-offset: -8px;
 }
 
@@ -75,13 +75,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     transition: background 0.3s ease;
 }
 
 .cardOverlay h3 {
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     line-height: normal;
     text-align: center;
     margin: 0
@@ -345,14 +345,14 @@
     background: #f2f2f2;
     border: none;
     padding: 0.8rem 1.5rem 0.4rem 1.5rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
     color: #000;
     border-radius: 10px 10px 0 0;
     transition: all 0.3s ease;
     cursor: pointer;
     white-space: nowrap;
-    background-color: #cfcfcf;
+    background-color: #eedcb5;
     width: 100%;
 }
 

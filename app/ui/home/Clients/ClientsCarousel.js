@@ -23,7 +23,7 @@ export default function ClientsCarousel() {
         loop
         freeMode
         allowTouchMove={false}
-        speed={6000}
+        speed={3000}
         autoplay={{
           delay: 0,
           disableOnInteraction: false,

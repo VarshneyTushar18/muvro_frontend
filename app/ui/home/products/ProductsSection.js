@@ -357,7 +357,7 @@ export default function ProductsSection() {
                                       key={item.id}
                                       className={`col-${item.id === 1 ? "12" : "6"} d-flex`}
                                     >
-                                      <ProductCard item={item} />
+                                      <ProductCard item={item} imageOnTop={item.id === 2 || item.id === 3} />
                                     </div>
                                   ))}
                                 </div>
