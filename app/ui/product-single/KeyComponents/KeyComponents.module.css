@@ -82,16 +82,16 @@
 }
 
 .card h3 {
-  font-size: 22px;
-  line-height: 30px;
-  margin-bottom: 0.75rem;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 0.5rem;
   color: #ff8811;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 14px;
   color: #000000;
-  line-height: 24px;
+  line-height: 21px;
   margin-bottom: 0;
 }
 

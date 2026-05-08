@@ -31,23 +31,23 @@
 
 .industryApplicationCard .card_num {
   background: var(--color-primary);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--color-dark);
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 32px;
   margin: 0 auto 10px auto;
 }
 
 .industryApplicationCard h3 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 24px;
   text-align: center;
   color: #ffffff;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
 }
 
 .industryApplicationCard p {

@@ -140,6 +140,11 @@ p.text-large {
   color: var(--color-dark-alt)
 }
 
+ul{
+  font-size: var(--font-body-small);
+  line-height: calc(var(--font-body-small) * 1.25);
+}
+
 
 h1 span,
 h2 span,

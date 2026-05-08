@@ -1,6 +1,6 @@
 .CTABanner {
     background: var(--color-primary);
-    padding: 50px 80px;
+    padding: 40px 60px;
     position: relative;
 }
 
@@ -11,18 +11,18 @@
 }
 
 .tagline {
-    font-size: 20px;
+    font-size: 16px;
     color: #000000;
-    line-height: 28px;
+    line-height: 24px;
 }
 
 .phone {
     color: #000000;
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 40px;
     text-decoration: none;
     display: inline-block;
-    margin-block: 10px;
+    margin-block: 5px;
 }
 
 .ctaWrapper {
