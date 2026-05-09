@@ -232,18 +232,18 @@ export default function ConveyorTabs({ tabsData }) {
         }
       ],
     },
-    {
-      id: "lifts",
-      title: "Lifts",
-      heading: "Lifts",
-      products: [
-        {
-          name: "",
-          image: "",
-          url: "#",
-        }
-      ],
-    },
+    // {
+    //   id: "lifts",
+    //   title: "Lifts",
+    //   heading: "Lifts",
+    //   products: [
+    //     {
+    //       name: "",
+    //       image: "",
+    //       url: "#",
+    //     }
+    //   ],
+    // },
   ];
 
   const [activeTab, setActiveTab] = useState("all");

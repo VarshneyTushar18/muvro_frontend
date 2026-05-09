@@ -210,11 +210,6 @@ const megaMenuData = {
           name: "Automotive",
           products: [
             { name: "Assembly Lines", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Gearbox Assembly Lines", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Differential Case Assembly Lines", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Engine Assembly Lines", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Axle Line and Frame", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Tire & Wheel Conveyor System", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
             { name: "Sorting and Storage", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
             { name: "SPMs", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
             { name: "Ergonomic Handling System", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },

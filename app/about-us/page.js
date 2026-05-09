@@ -4,7 +4,6 @@ import OurValues from "../components/(company)/our-values/OurValues";
 import QualityPolicy from "../components/(company)/quality-policy/QualityPolicy";
 import WhyMuvro from "../components/(company)/why-muvro/WhyMuvro";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
-import Counter from "../components/aboutcounter/aboutcounter";
 import styles from "./style.module.css";
 import "./custom.css";
 import {
@@ -15,6 +14,8 @@ import {
     FaCheckCircle,
     FaSmile
 } from "react-icons/fa";
+import BenchmarkCounter from "../components/BenchmarkCounter/BenchmarkCounter";
+import WorldMapLocations from "../components/worldmaplocations/MapLocations";
 
 const features = [
     {
@@ -55,44 +56,35 @@ const features = [
     }
 ];
 
- const data = [
+
+
+const data = [
     {
-      title: 'Product Quality Satisfaction',
-      desc: 'Commitment to Product Quality',
-      value: 99,
-      color: 'green',
+        value: 99,
+        title: "Customer Satisfaction",
+        desc: "Delivering reliable automation solutions with maximum efficiency.",
+        color: "bg-success",
     },
     {
-      title: 'Reliability',
-      desc: 'Building Trust Through Reliability',
-      value: 99.9,
-      color: 'orange',
+        value: 95,
+        title: "Project Accuracy",
+        desc: "High precision execution from design to installation.",
+        color: "bg-primary",
     },
     {
-      title: 'Purchase Satisfaction',
-      desc: 'Delivering Delight',
-      value: 99.9,
-      color: 'teal',
+        value: 92,
+        title: "On-Time Delivery",
+        desc: "Ensuring fast deployment and timely project completion.",
+        color: "bg-warning",
     },
     {
-      title: 'Accuracy',
-      desc: 'Precision in Every Detail',
-      value: 99.5,
-      color: 'yellow',
+        value: 98,
+        title: "Service Support",
+        desc: "Dedicated after-sales support and maintenance services.",
+        color: "bg-danger",
     },
-    {
-      title: 'Meet Expectations',
-      desc: 'Exceeding Standards',
-      value: 99.9,
-      color: 'blue',
-    },
-    {
-      title: 'Investment Satisfaction',
-      desc: 'Empowering Futures',
-      value: 100,
-      color: 'purple',
-    },
-  ];
+];
+
 
 export default async function AboutUs() {
     const crumbs = [
@@ -214,32 +206,37 @@ export default async function AboutUs() {
                     {/* Section Header */}
                     <div className="row justify-content-center">
                         <div
-                            className="col-xl-6 pb-4"
+                            className="col-xl-5 pb-4"
                             data-aos="fade-up"
                             data-aos-duration="800"
                         >
-                            <h3
-                                className="mb-4"
-                                data-aos="fade-up"
-                                data-aos-delay="200"
-                            >
-                                What <span>We Do</span>
-                            </h3>
-                            <p>We deliver Various Automation Solution for E-Commerce and Warehouse Industries with the entire chain from Analysis, Design, Dimensioning and manufacturing to installation and services. This Offer our customer convenience and peace of mind. </p>
+                            <div className="card h-100 mb-3 yellow-card">
+                                <h5
+                                    className="mb-4"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
+                                    What <span>We Do</span>
+                                </h5>
+                                <p className="mb-0">We deliver Various Automation Solution for E-Commerce and Warehouse Industries with the entire chain from Analysis, Design, Dimensioning and manufacturing to installation and services. This Offer our customer convenience and peace of mind. </p>
+                            </div>
+
                         </div>
                         <div
-                            className="col-xl-6 pb-4"
+                            className="col-xl-5 pb-4"
                             data-aos="fade-up"
                             data-aos-duration="800"
                         >
-                            <h3
-                                className="mb-4"
-                                data-aos="fade-up"
-                                data-aos-delay="200"
-                            >
-                                Muvro has <span>array of solutions</span>
-                            </h3>
-                            <p>High Speed Cross Belt Sorters, Linear Sorter , 3D Smart Sorter , Fast Sorter , Swivel Wheel Sorter, Volume Distribution Systems ( VDS), ASRS Systems, Conveyor Systems  Powered Roller Conveyors, PVC & Modular Belt Conveyors, Curve & Merger Conveyors,  ZPA Roller Conveyors. By these Solution we contribute to increase the efficiency, Just in Time Delivery, and competitiveness of our customers.</p>
+                            <div className="card h-100 mb-3 grey-card">
+                                <h5
+                                    className="mb-4"
+                                    data-aos="fade-up"
+                                    data-aos-delay="200"
+                                >
+                                    Muvro has <span>array of solutions</span>
+                                </h5>
+                                <p>High Speed Cross Belt Sorters, Linear Sorter , 3D Smart Sorter , Fast Sorter , Swivel Wheel Sorter, Volume Distribution Systems ( VDS), ASRS Systems, Conveyor Systems  Powered Roller Conveyors, PVC & Modular Belt Conveyors, Curve & Merger Conveyors,  ZPA Roller Conveyors. By these Solution we contribute to increase the efficiency, Just in Time Delivery, and competitiveness of our customers.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -280,6 +277,26 @@ export default async function AboutUs() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section className="pb-0">
+                <div className="container">
+                    <div className="row g-4">
+                        <h3
+                            className="mb-5 text-center"
+                            data-aos="fade-up"
+                            data-aos-delay="200"
+                        >
+                            Our <span>Global Presence</span>
+                        </h3>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div class="col-md-9">
+                            <img src="/images/globalpresence.webp" alt="World Map" className="img-fluid" data-aos="fade-up" data-aos-delay="300" />
+                        </div>
+                    </div>
+                </div>
+                
             </section>
 
             <OurValues />
@@ -337,35 +354,7 @@ export default async function AboutUs() {
 
             <WhyMuvro />
 
-            <section className="pb-0">
-                <div className="container py-5">
-                    <div className="row">
-                        <h3
-                                className="mb-5 text-center"
-                                data-aos="fade-up"
-                                data-aos-delay="200"
-                            >
-                                Customer Satisfaction & <span>Benchmarks </span>
-                            </h3>
-                        {data.map((item, index) => (
-                            <div className="col-md-6 mb-4" key={index}>
-                                <div className="counter-box d-flex align-items-center gap-3 p-3">
-
-                                    <div className={`circle ${item.color}`}>
-                                        <Counter target={item.value} />%
-                                    </div>
-
-                                    <div>
-                                        <h6 className="text-capitalize">{item.title}</h6>
-                                        <p className="text-muted mb-0">{item.desc}</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <BenchmarkCounter data={data}/>
 
             {/* <section className="pb-0">
                 <div className="container">
@@ -403,3 +392,4 @@ export default async function AboutUs() {
         </>
     );
 }
+

@@ -9,30 +9,18 @@
   Last Modified Date: 2025-AUG-29
   Version: 1.0
 */
+
 .statisticCard {
     position: relative;
-    background: var(--color-primary);
+    background: #ffc100; /* Yellow default background */
     text-align: center;
-    padding: 1.2rem 1rem;
+    padding: 1rem 0.5rem;
     max-width: 480px;
     overflow: hidden;
     transition: all 0.4s ease;
 }
 
-.wrapper {
-    max-width: 100%;
-    margin-bottom: 2.4rem;
-}
-
-.wrapper h4 {
-    margin-bottom: 2rem;
-}
-
-.wrapper p {
-    color: #373535;
-    line-height: calc(var(--font-body-small) * 1.25);
-}
-
+/* Background image hidden by default */
 .statisticCard::before {
     content: "";
     position: absolute;
@@ -45,35 +33,36 @@
     z-index: 0;
 }
 
-/* Overlay using ::after */
+/* Dark overlay hidden by default */
 .statisticCard::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(18, 18, 18, 0.65);
+    background: rgba(18, 18, 18, 0.75);
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
 }
 
-.statisticCard:hover {
-    background: transparent;
+/* Default text color */
+.statisticCard p,
+.statisticCard span {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    transition: color 0.4s ease;
 }
 
+/* Hover state */
 .statisticCard:hover::before,
 .statisticCard:hover::after {
     opacity: 1;
 }
 
+/* White text on hover */
 .statisticCard:hover p,
 .statisticCard:hover span {
     color: #fff;
-}
-
-.statisticCard p,
-.statisticCard span {
-    position: relative;
-    z-index: 1;
 }
 
 .statisticCard p {
@@ -89,7 +78,7 @@
 
 .statisticCard span {
     margin-top: 0.5rem;
-    font-size: clamp(0.9rem, 2vw, 15px);
+    font-size: clamp(0.9rem, 2vw, 14px);
     font-weight: 500;
     line-height: 24px;
     font-family: var(--font-display);
@@ -97,55 +86,7 @@
     letter-spacing: 0;
 }
 
-.statisticCard {
-    position: relative;
-    background: transparent;
-    /* removed yellow */
-    text-align: center;
-    padding: 1rem 0.5rem;
-    max-width: 480px;
-    overflow: hidden;
-    transition: all 0.4s ease;
-}
-
-/* Background image always visible */
-.statisticCard::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: var(--bg-image);
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    /* always visible */
-    z-index: 0;
-}
-
-/* Dark overlay always visible */
-.statisticCard::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(18, 18, 18, 0.75);
-    opacity: 1;
-    /* always visible */
-    z-index: 0;
-}
-
-/* Text always white like hover */
-.statisticCard p,
-.statisticCard span {
-    position: relative;
-    z-index: 1;
-    color: #fff;
-}
-
-/* Optional: keep slight hover effect */
-.statisticCard:hover::after {
-    background: rgba(18, 18, 18, 0.85);
-    /* slightly darker on hover */
-}
-
+/* Responsive */
 @media (max-width: 576px) {
     .statisticCard {
         max-width: 100%;
@@ -169,7 +110,7 @@
     }
 
     .statisticCard span {
-        font-size: 16px
+        font-size: 16px;
     }
 }
 
@@ -180,14 +121,14 @@
     }
 
     .statisticCard span {
-        font-size: 16px
+        font-size: 16px;
     }
 }
 
 @media (min-width: 1025px) and (max-width: 1365px) {
     .statisticCard {
         max-width: 360px;
-        margin-bottom: 0
+        margin-bottom: 0;
     }
 }
 

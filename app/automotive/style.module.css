@@ -1,0 +1,420 @@
+.automotivePage {
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  padding: 80px 0 56px;
+  background:
+    linear-gradient(120deg, rgba(0, 0, 0, 0.88), rgba(18, 22, 27, 0.72)),
+    url("/images/Conveyor-Banner.webp") center / cover;
+  color: #fff;
+}
+
+.hero h1 {
+  max-width: 720px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero :global(.section-label) {
+  color: #fff;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.textLink:hover {
+  color: var(--color-primary);
+}
+
+.textLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+.heroImageWrap {
+  position: relative;
+  min-height: 460px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.heroImageWrap img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.heroBadge {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  padding: 18px 22px;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.statCard {
+  min-height: 132px;
+  padding: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.statCard:last-child {
+  border-right: 0;
+}
+
+.statCard strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1;
+}
+
+.statCard span {
+  display: block;
+  max-width: 280px;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.overview {
+  padding: 82px 0;
+  background: #fff;
+}
+
+.overview h2,
+.process h2,
+.cta h2 {
+  margin-bottom: 18px;
+}
+
+.capabilityGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.capabilityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 92px;
+  padding: 20px;
+  background: #f7f7f7;
+  border-left: 4px solid var(--color-primary);
+}
+
+.capabilityItem svg {
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  color: var(--color-primary);
+}
+
+.capabilityItem span {
+  color: #262626;
+}
+
+.solutions {
+  padding: 88px 0;
+  background: #f4f5f6;
+}
+
+.sectionHeader {
+  max-width: 820px;
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+.sectionHeader h2 {
+  margin-bottom: 14px;
+}
+
+.solutionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.solutionCard {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.solutionCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #111;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.solutionCard:hover .cardImage img {
+  transform: scale(1.06);
+}
+
+.cardBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.cardTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cardTitleRow h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.cardIcon {
+  display: inline-flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--color-primary);
+  color: var(--color-dark);
+}
+
+.cardIcon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.cardBody p {
+  margin-bottom: 18px;
+}
+
+.cardBody ul {
+  display: grid;
+  gap: 10px;
+  margin: auto 0 0;
+  padding-left: 18px;
+}
+
+.cardBody li {
+  color: #343434;
+}
+
+.process {
+  padding: 88px 0;
+  background: #fff;
+}
+
+.processList {
+  display: grid;
+  gap: 18px;
+}
+
+.processItem {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  align-items: center;
+  min-height: 112px;
+  background: #111820;
+  color: #fff;
+}
+
+.processItem span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.processItem p {
+  margin: 0;
+  padding: 22px 28px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.cta {
+  padding: 0 0 88px;
+  background: #fff;
+}
+
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 44px;
+  background: var(--color-primary);
+}
+
+.ctaInner h2 {
+  max-width: 780px;
+}
+
+.ctaInner p {
+  max-width: 780px;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.ctaInner :global(.section-label)::after {
+  background: var(--color-dark);
+}
+
+.ctaInner :global(.mbtn-secondary) {
+  flex: 0 0 auto;
+  background: var(--color-dark);
+  color: #fff;
+}
+
+@media (max-width: 1199px) {
+  .solutionGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 64px 0 42px;
+  }
+
+  .heroImageWrap,
+  .heroImageWrap img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statCard {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .statCard:last-child {
+    border-bottom: 0;
+  }
+
+  .overview,
+  .solutions,
+  .process {
+    padding: 64px 0;
+  }
+
+  .cta {
+    padding-bottom: 64px;
+  }
+
+  .ctaInner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.12;
+  }
+
+  .heroActions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .heroBadge {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    min-height: 60px;
+    padding: 14px 16px;
+  }
+
+  .capabilityGrid,
+  .solutionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardBody {
+    padding: 22px;
+  }
+
+  .processItem {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .processItem span {
+    font-size: 24px;
+  }
+
+  .processItem p {
+    padding: 18px;
+  }
+
+  .ctaInner {
+    padding: 30px 24px;
+  }
+}

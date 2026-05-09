@@ -130,19 +130,19 @@ p.text-large {
 /* Paragraphs */
 p {
   font-size: var(--font-body-small);
-  line-height: calc(var(--font-body-small) * 1.25);
+  line-height: calc(var(--font-body-small) * 1.50);
   color: var(--color-dark-alt)
 }
 
 p.text-large {
   font-size: var(--font-body-large);
-  line-height: calc(var(--font-body-large) * 1.25);
+  line-height: calc(var(--font-body-large) * 1.50);
   color: var(--color-dark-alt)
 }
 
 ul{
   font-size: var(--font-body-small);
-  line-height: calc(var(--font-body-small) * 1.25);
+  line-height: calc(var(--font-body-small) * 1.50);
 }
 
 
@@ -890,11 +890,11 @@ footer::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/images/footer-pattern.png');
+  background-image: url('/images/footer-bg-pattern.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  opacity: 0.6; 
+  opacity: 0.3; 
   z-index: -1;
 }
 

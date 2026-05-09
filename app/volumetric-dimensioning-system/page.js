@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { FiMove, FiShield, FiBox, FiZap, FiMinimize, FiTool, FiFastForward, FiPackage, FiCircle, FiGitBranch, FiSliders, FiCheckCircle, FiAlertCircle, FiUpload, FiBattery, FiAward, FiLink, FiRadio } from 'react-icons/fi';
 
 export default function VolumetricDimensioningSystem() {
   const router = useRouter();
@@ -50,7 +51,7 @@ export default function VolumetricDimensioningSystem() {
             data-aos-delay="100"
           >
             <div className="col-xl-6 pb-4">
-              <img src="/images/Muvro-Fulfilment-Center.webp" alt="" className="img-fluid" />
+              <img src="/images/Volumetric-Dimensioning-System-Image.webp" alt="Volumetric Dimensioning System" className="img-fluid" />
             </div>
             <div className="col-xl-6 pb-4">
 
@@ -215,73 +216,85 @@ export default function VolumetricDimensioningSystem() {
             </div>
 
             <div className="row">
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Features</h4>
-                <ul>
-                  <li>
-                    <strong>Omnidirectional movement</strong>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiMove /></div>
+                    <h5>Omnidirectional movement</h5>
                     <p>Allows products to move forward, sideways, or rotate in place for precise positioning.</p>
-                  </li>
-                  <li>
-                    <strong>Gentle product handling</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiShield /></div>
+                    <h5>Gentle product handling</h5>
                     <p>Reduces product damage by eliminating pushers, gates, and other contact mechanisms.</p>
-                  </li>
-                  <li>
-                    <strong>Modular belt design</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Modular belt design</h5>
                     <p>Simplifies maintenance and allows easy replacement of individual belt sections.</p>
-                  </li>
-                  <li>
-                    <strong>Flexible layout options</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Flexible layout options</h5>
                     <p>Supports complex conveyor configurations like 90° transfers, merges, and diverts.</p>
-                  </li>
-                  <li>
-                    <strong>Space-saving system</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiMinimize /></div>
+                    <h5>Space-saving system</h5>
                     <p>Performs multiple functions in a compact footprint, reducing floor space requirements.</p>
-                  </li>
-                  <li>
-                    <strong>Low maintenance</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiTool /></div>
+                    <h5>Low maintenance</h5>
                     <p>Fewer moving parts minimize wear, downtime, and maintenance costs.</p>
-                  </li>
-                  <li>
-                    <strong>High throughput capacity</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiFastForward /></div>
+                    <h5>High throughput capacity</h5>
                     <p>Enables continuous, efficient flow of products in high-speed operations.</p>
-                  </li>
-                  <li>
-                    <strong>Handles varied product types</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiPackage /></div>
+                    <h5>Handles varied product types</h5>
                     <p>Works effectively with items of different sizes, shapes, and weights.</p>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Components</h4>
-                <ul>
-                  <li>
-                    <strong>Activated Roller Belt (ARB)</strong>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiCircle /></div>
+                    <h5>Activated Roller Belt (ARB)</h5>
                     <p>The core component — a modular plastic belt with angled rollers embedded in its surface, enabling controlled product movement in multiple directions.</p>
-                  </li>
-                  <li>
-                    <strong>Rollers</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiRadio /></div>
+                    <h5>Rollers</h5>
                     <p>Small, freely rotating cylinders set at specific angles within the belt that guide and move products as they are activated.</p>
-                  </li>
-
-                  <li>
-                    <strong>Activation Mechanism</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Activation Mechanism</h5>
                     <p>Typically consists of <strong>under-belt transfer belts</strong> or <strong>stationary guides</strong> that contact the rollers from beneath, causing them to rotate and move items in the desired direction.</p>
-                  </li>
-                  <li>
-                    <strong>Drive System</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBattery /></div>
+                    <h5>Drive System</h5>
                     <p>Includes motors, chains, or gear drives that power the main conveyor belt.</p>
-                  </li>
-                  <li>
-                    <strong>Frame and Support Structure</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Frame and Support Structure</h5>
                     <p>Provides the mechanical stability to hold the conveyor components and ensure smooth belt operation.</p>
-                  </li>
-                  <li>
-                    <strong>Control System</strong>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiSliders /></div>
+                    <h5>Control System</h5>
                     <p>Coordinates belt activation, speed, and direction, often integrated with sensors or automation systems for sorting and merging tasks.</p>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -370,156 +383,116 @@ export default function VolumetricDimensioningSystem() {
             </div>
 
             <div className="row">
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Features</h4>
-                <ul>
-                  <li>
-                    <strong>Adjustable Tilt Angle</strong>
-                    <p>
-                      Allows the conveyor to operate on inclines or declines, facilitating
-                      movement between different heights or levels.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Integrated Gating Mechanism</strong>
-                    <p>
-                      Gates act as physical stops or release points to control product
-                      flow, enabling precise stopping, holding, or diverting.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Smooth and Controlled Material Handling</strong>
-                    <p>
-                      Designed to handle products gently to minimize damage during
-                      transport, especially on inclined surfaces.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Automation Ready</strong>
-                    <p>
-                      Easily integrated with sensors, PLCs, and other control systems for
-                      automated operation and synchronization with other processes.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Modular Design</strong>
-                    <p>
-                      Flexible and customizable to fit various layouts, product sizes, and
-                      throughput requirements.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Durable Construction</strong>
-                    <p>
-                      Built with materials suitable for the environment, ensuring long
-                      service life even under continuous operation.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Safety Features</strong>
-                    <p>
-                      Includes emergency stops, guards, and safety interlocks to protect
-                      operators and equipment.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Easy Maintenance and Access</strong>
-                    <p>
-                      Designed for quick cleaning, inspection, and maintenance to reduce
-                      downtime.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Variable Speed Control</strong>
-                    <p>
-                      Allows adjustment of conveyor speed to match production rates or
-                      product characteristics.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Compact Footprint</strong>
-                    <p>
-                      Optimized design to save floor space while providing efficient
-                      vertical transport.
-                    </p>
-                  </li>
-                </ul>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiSliders /></div>
+                    <h5>Adjustable Tilt Angle</h5>
+                    <p>Allows the conveyor to operate on inclines or declines, facilitating movement between different heights or levels.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiGitBranch /></div>
+                    <h5>Integrated Gating Mechanism</h5>
+                    <p>Gates act as physical stops or release points to control product flow, enabling precise stopping, holding, or diverting.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiCheckCircle /></div>
+                    <h5>Smooth and Controlled Material Handling</h5>
+                    <p>Designed to handle products gently to minimize damage during transport, especially on inclined surfaces.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Automation Ready</h5>
+                    <p>Easily integrated with sensors, PLCs, and other control systems for automated operation and synchronization with other processes.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Modular Design</h5>
+                    <p>Flexible and customizable to fit various layouts, product sizes, and throughput requirements.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiAward /></div>
+                    <h5>Durable Construction</h5>
+                    <p>Built with materials suitable for the environment, ensuring long service life even under continuous operation.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiAlertCircle /></div>
+                    <h5>Safety Features</h5>
+                    <p>Includes emergency stops, guards, and safety interlocks to protect operators and equipment.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiTool /></div>
+                    <h5>Easy Maintenance and Access</h5>
+                    <p>Designed for quick cleaning, inspection, and maintenance to reduce downtime.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiFastForward /></div>
+                    <h5>Variable Speed Control</h5>
+                    <p>Allows adjustment of conveyor speed to match production rates or product characteristics.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiMinimize /></div>
+                    <h5>Compact Footprint</h5>
+                    <p>Optimized design to save floor space while providing efficient vertical transport.</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Components</h4>
-                <ul>
-                  <li>
-                    <strong>Conveyor Belt or Roller Bed</strong>
-                    <p>
-                      The surface on which products are transported; can be belts,
-                      rollers, or slats depending on the application.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Tilt Frame/Structure</strong>
-                    <p>
-                      The adjustable frame that supports the conveyor and allows it to
-                      operate at various incline or decline angles.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Gating Mechanism</strong>
-                    <p>
-                      Physical gates or stops that can be manually or automatically
-                      operated to control the flow of items on the conveyor.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Drive System</strong>
-                    <p>
-                      Motors and gearboxes that power the conveyor movement; often
-                      includes variable speed drives for flexibility.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Sensors and Detection Devices</strong>
-                    <p>
-                      Proximity sensors, photoelectric sensors, or limit switches to
-                      detect product position and control gate operation.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Control System (PLC/HMI)</strong>
-                    <p>
-                      Programmable logic controller and human-machine interface to
-                      automate conveyor and gate operations.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Support Legs and Mounting</strong>
-                    <p>
-                      Adjustable supports that stabilize the conveyor at the desired tilt
-                      angle.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Safety Features</strong>
-                    <p>
-                      Emergency stops, safety guards, and interlocks to ensure safe
-                      operation.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Load/Unload Stations</strong>
-                    <p>
-                      Areas designed for placing or removing products from the conveyor,
-                      often coordinated with gate operation.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Power Supply</strong>
-                    <p>
-                      Electrical supply system to power motors, sensors, and control
-                      equipment.
-                    </p>
-                  </li>
-                </ul>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Conveyor Belt or Roller Bed</h5>
+                    <p>The surface on which products are transported; can be belts, rollers, or slats depending on the application.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Tilt Frame/Structure</h5>
+                    <p>The adjustable frame that supports the conveyor and allows it to operate at various incline or decline angles.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiGitBranch /></div>
+                    <h5>Gating Mechanism</h5>
+                    <p>Physical gates or stops that can be manually or automatically operated to control the flow of items on the conveyor.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBattery /></div>
+                    <h5>Drive System</h5>
+                    <p>Motors and gearboxes that power the conveyor movement; often includes variable speed drives for flexibility.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiRadio /></div>
+                    <h5>Sensors and Detection Devices</h5>
+                    <p>Proximity sensors, photoelectric sensors, or limit switches to detect product position and control gate operation.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiSliders /></div>
+                    <h5>Control System (PLC/HMI)</h5>
+                    <p>Programmable logic controller and human-machine interface to automate conveyor and gate operations.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Support Legs and Mounting</h5>
+                    <p>Adjustable supports that stabilize the conveyor at the desired tilt angle.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiAlertCircle /></div>
+                    <h5>Safety Features</h5>
+                    <p>Emergency stops, safety guards, and interlocks to ensure safe operation.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiUpload /></div>
+                    <h5>Load/Unload Stations</h5>
+                    <p>Areas designed for placing or removing products from the conveyor, often coordinated with gate operation.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBattery /></div>
+                    <h5>Power Supply</h5>
+                    <p>Electrical supply system to power motors, sensors, and control equipment.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -606,132 +579,101 @@ export default function VolumetricDimensioningSystem() {
             </div>
 
             <div className="row">
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Features</h4>
-                <ul>
-                  <li>
-                    <strong>High-Speed Operation</strong>
-                    <p>
-                      Capable of diverting parcels or bags at conveyor speeds up to 2.5
-                      m/s with precise timing.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Compact Design</strong>
-                    <p>
-                      Space-saving structure suitable for integration in existing conveyor
-                      layouts.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Flexible Actuation Options</strong>
-                    <p>
-                      Available with pneumatic, servo, or electric rotary actuators
-                      depending on speed and accuracy needs.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Accurate Sorting</strong>
-                    <p>
-                      Ensures smooth and controlled parcel redirection with minimal impact
-                      or product damage.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Quick Response Time</strong>
-                    <p>
-                      Fast actuation (typically 100–300 ms) enables high throughput.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Durable Construction</strong>
-                    <p>
-                      Made from mild steel, aluminium, or stainless steel for long life
-                      and low maintenance.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Easy Integration</strong>
-                    <p>
-                      Compatible with barcode scanners, sensors, and PLC-based control
-                      systems.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Low Maintenance</strong>
-                    <p>
-                      Simple mechanism with easy access for inspection and servicing.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Customizable Design</strong>
-                    <p>
-                      Tailored arm length, angle, and mounting configuration to suit
-                      various conveyor systems.
-                    </p>
-                  </li>
-                </ul>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiFastForward /></div>
+                    <h5>High-Speed Operation</h5>
+                    <p>Capable of diverting parcels or bags at conveyor speeds up to 2.5 m/s with precise timing.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiMinimize /></div>
+                    <h5>Compact Design</h5>
+                    <p>Space-saving structure suitable for integration in existing conveyor layouts.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Flexible Actuation Options</h5>
+                    <p>Available with pneumatic, servo, or electric rotary actuators depending on speed and accuracy needs.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiCheckCircle /></div>
+                    <h5>Accurate Sorting</h5>
+                    <p>Ensures smooth and controlled parcel redirection with minimal impact or product damage.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiFastForward /></div>
+                    <h5>Quick Response Time</h5>
+                    <p>Fast actuation (typically 100–300 ms) enables high throughput.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiAward /></div>
+                    <h5>Durable Construction</h5>
+                    <p>Made from mild steel, aluminium, or stainless steel for long life and low maintenance.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiLink /></div>
+                    <h5>Easy Integration</h5>
+                    <p>Compatible with barcode scanners, sensors, and PLC-based control systems.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiTool /></div>
+                    <h5>Low Maintenance</h5>
+                    <p>Simple mechanism with easy access for inspection and servicing.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiSliders /></div>
+                    <h5>Customizable Design</h5>
+                    <p>Tailored arm length, angle, and mounting configuration to suit various conveyor systems.</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="col-xl-6 pb-4">
+              <div className="col-xl-12 pb-4">
                 <h4 className="mb-4">Key Components</h4>
-                <ul>
-                  <li>
-                    <strong>Swing Arm / Paddle</strong>
-                    <p>
-                      The deflecting blade that swings into the conveyor path to redirect
-                      parcels or bags.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Actuator</strong>
-                    <p>
-                      Provides the swinging motion; can be pneumatic, servo-driven, or
-                      electric rotary type.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Mounting Frame / Bracket</strong>
-                    <p>
-                      Supports the entire diverter assembly and allows secure installation
-                      on the conveyor line.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Sensors</strong>
-                    <p>
-                      Detect parcel position or barcode data and signal the control system
-                      for accurate timing.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Control System (PLC / Controller)</strong>
-                    <p>
-                      Coordinates actuator movement and integrates with conveyor and
-                      sortation logic.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Shock Absorber / Stopper</strong>
-                    <p>
-                      Restricts excessive movement and cushions the arm during operation
-                      or return stroke.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Power Supply Unit</strong>
-                    <p>
-                      Delivers electrical or pneumatic power to the actuator and control
-                      components.
-                    </p>
-                  </li>
-                  <li>
-                    <strong>Safety Guards / Covers</strong>
-                    <p>
-                      Enclose moving parts to protect operators and ensure safe operation.
-                    </p>
-                  </li>
-                </ul>
+                <div className={Style.featureGrid}>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiMove /></div>
+                    <h5>Swing Arm / Paddle</h5>
+                    <p>The deflecting blade that swings into the conveyor path to redirect parcels or bags.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiZap /></div>
+                    <h5>Actuator</h5>
+                    <p>Provides the swinging motion; can be pneumatic, servo-driven, or electric rotary type.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBox /></div>
+                    <h5>Mounting Frame / Bracket</h5>
+                    <p>Supports the entire diverter assembly and allows secure installation on the conveyor line.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiRadio /></div>
+                    <h5>Sensors</h5>
+                    <p>Detect parcel position or barcode data and signal the control system for accurate timing.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiSliders /></div>
+                    <h5>Control System (PLC / Controller)</h5>
+                    <p>Coordinates actuator movement and integrates with conveyor and sortation logic.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiShield /></div>
+                    <h5>Shock Absorber / Stopper</h5>
+                    <p>Restricts excessive movement and cushions the arm during operation or return stroke.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiBattery /></div>
+                    <h5>Power Supply Unit</h5>
+                    <p>Delivers electrical or pneumatic power to the actuator and control components.</p>
+                  </div>
+                  <div className={Style.featureCard}>
+                    <div className={Style.iconWrapper}><FiAlertCircle /></div>
+                    <h5>Safety Guards / Covers</h5>
+                    <p>Enclose moving parts to protect operators and ensure safe operation.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

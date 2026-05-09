@@ -47,3 +47,15 @@
 .yellow { background: #f4b400; }
 .blue { background: #4a90e2; }
 .purple { background: #a66dd4; }
+
+.yellow-card{
+    background:  #fff3cc;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.grey-card{
+    background:  #f6f6f6;
+    border-radius: 6px;
+    padding: 20px;
+}
