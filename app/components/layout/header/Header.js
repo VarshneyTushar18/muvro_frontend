@@ -124,7 +124,7 @@ const megaMenuData = {
             {
               name: "Micro Fulfilment",
               subtitle: "Solutions",
-              image: "images/micr-fulfilment-Img.webp",
+              image: "images/micro-fulfil-main-image.webp",
               url: "/micro-fulfilment"
             },
             {
