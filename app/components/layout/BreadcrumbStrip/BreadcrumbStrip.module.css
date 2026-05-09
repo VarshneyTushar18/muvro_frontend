@@ -33,13 +33,14 @@
 }
 
 .breadcrumb li span {
-  background-color: var(--color-primary);
-  color: var(--color-dark);
+  background-color: none;
+  color: #c1c1c1;
   padding: 2px 10px;
   text-transform: uppercase;
   font-size: 16px;
   font-family: var(--font-display);
   letter-spacing: 0.02em;
+  text-decoration: underline;
 }
 
 .separator {

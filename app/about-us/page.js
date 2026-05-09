@@ -201,7 +201,7 @@ export default async function AboutUs() {
             </section>
             <OurHistory />
 
-            <section className="pb-0">
+            <section className="pt-0 pb-0">
                 <div className="container">
                     {/* Section Header */}
                     <div className="row justify-content-center">
