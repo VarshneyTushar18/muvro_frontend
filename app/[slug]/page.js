@@ -260,7 +260,7 @@ export default async function ProductSinglePage({ params }) {
                         description:
                             "Connect with our automation specialists to discover efficient, reliable, and cost-effective material handling and warehouse solutions tailored to your business needs.",
                         queryText: "Call Us Today",
-                        phoneNumber: "+91 (0) 9289 071 715",
+                        phoneNumber: "+91-7457800130",
                     }}
                 />
             )}

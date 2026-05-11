@@ -7,7 +7,7 @@ const defaultContent = {
   description:
     "Discover how Muvro’s 3D Smart Sorter System – Next Gen Autonomous Sorting enhances speed, accuracy, and efficiency in warehouse automation, streamlining material flow from induction to destination with seamless flexibility.",
   queryText: "Having Queries? Call Us Now",
-  phoneNumber: "+91 (0) 9289 071 715",
+  phoneNumber: "+91-7457800130",
 };
 
 export default function CTABanner({ content = defaultContent }) {

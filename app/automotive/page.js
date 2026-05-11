@@ -121,7 +121,7 @@ const ctaBannerData = {
   description:
     "Connect with MUVRO's automation experts to plan assembly lines, SPMs, mobile robots, EMS, RGVs, fixtures, and handling systems tailored to your plant workflow.",
   queryText: "Have an Automotive Project?",
-  phoneNumber: "+91 (0) 9289 071 715",
+  phoneNumber: "+91-7457800130",
 };
 
 export default function Automotive() {
