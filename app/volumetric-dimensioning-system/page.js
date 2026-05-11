@@ -78,7 +78,7 @@ export default function VolumetricDimensioningSystem() {
               >
                 A VDS (Volumetric Dimensioning System) by MUVRO is an advanced automated solution designed to accurately measure the
                 length, width, height, and volume of parcels, cartons, or totes within modern logistics and warehouse operations. Integrated seamlessly with conveyor and sorting systems, MUVRO’s VDS eliminates manual measurement by using sensors and intelligent controls to capture real-time dimensional data, improving accuracy and operational efficiency. The system is
-                available in three specialized configurations—Integrated Ball Belt VDS, Swing Arm VDS, and Tilt Smart Gate VDS—each tailored for different handling and sorting requirements. With capabilities such as high-speed measurement, precise volume calculation, seamless WMS/ERP integration, and enhanced throughput, MUVRO’s VDS enables optimized space utilization, reduced errors, and cost-effective material handling in high-performance distribution environments.
+                available in three specialized configurations—Integrated Roller Belt Conveyor VDS, Diverter Arm Conveyor VDS, and Smart Tilt Gate Conveyor VDS—each tailored for different handling and sorting requirements. With capabilities such as high-speed measurement, precise volume calculation, seamless WMS/ERP integration, and enhanced throughput, MUVRO’s VDS enables optimized space utilization, reduced errors, and cost-effective material handling in high-performance distribution environments.
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function VolumetricDimensioningSystem() {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              A VDS (Volumetric Dimensioning System) is an automated system used to measure parcel dimensions (L×W×H) and volume in logistics operations. It is mainly of three types: Integrated Ball Belt VDS, Swing Arm VDS, and Tilt Smart Gate VDS. Key capabilities include high-speed accurate measurement, real-time data capture, system integration (WMS/ERP), and improved throughput and space optimization.
+              A VDS (Volumetric Dimensioning System) is an automated system used to measure parcel dimensions (L×W×H) and volume in logistics operations. It is mainly of three types: Integrated Roller Belt VDS, Diverter Arm Conveyor VDS, and Smart Tilt Gate Conveyor VDS. Key capabilities include high-speed accurate measurement, real-time data capture, system integration (WMS/ERP), and improved throughput and space optimization.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function VolumetricDimensioningSystem() {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                Activated Roller Belt (ARB)
+                Integrated Roller Belt Conveyor
               </h4>
 
               <p
@@ -134,7 +134,7 @@ export default function VolumetricDimensioningSystem() {
                 data-aos-delay="300"
               >
                 An
-                Activated Roller Belt (ARB) conveyor
+                Integrated Roller Belt Conveyor
                 is an advanced conveying system
                 designed for precise and efficient product handling, it features a modular plastic belt
                 with embedded rollers that can move products in multiple directions
@@ -145,13 +145,13 @@ export default function VolumetricDimensioningSystem() {
                 without the need for external pus
                 hers or complex
                 mechanisms. By activating the rollers through contact with angled guides or belts
-                beneath the surface, ARB conveyors enable smooth sorting, merging, diverting, and
+                beneath the surface, Integrated Roller Belt conveyors enable smooth sorting, merging, diverting, and
                 aligning of items. They are widely used in packaging, logistics, food proces
                 sing, and
                 manufacturing industries due to their gentle product handling, low maintenance, and
                 space
                 -
-                saving design. Offering high flexibility and automation efficiency, ARB
+                saving design. Offering high flexibility and automation efficiency, Integrated Roller Belt
                 conveyors help increase throughput, reduce manual labour, and improve overall
                 materi
                 al flow in modern production and distribution systems.
@@ -309,11 +309,11 @@ export default function VolumetricDimensioningSystem() {
 
             <div className="col-xl-12 pb-4">
               <h4 className="mb-3" data-aos="fade-up" data-aos-delay="200">
-                Gated (Tilted) Conveyor
+                Smart Tilt Gate Conveyor
               </h4>
 
               <p data-aos="fade-up" data-aos-delay="300">
-                A Gated (Tilted) Conveyor is a specialized conveyor system designed to
+                A Smart Tilt Gate Conveyor is a specialized conveyor system designed to
                 transport materials, components, or finished products along an inclined or
                 declined surface, incorporating a gating mechanism that controls the
                 movement and flow of items on the conveyor. The tilt feature allows
@@ -507,11 +507,11 @@ export default function VolumetricDimensioningSystem() {
 
             <div className="col-xl-12 pb-4">
               <h4 className="mb-3" data-aos="fade-up" data-aos-delay="200">
-                Swing Arm
+                Diverter Arm Conveyor
               </h4>
 
               <p data-aos="fade-up" data-aos-delay="300">
-                A Swing Arm is a compact and efficient sorting mechanism commonly used in
+                A Diverter Arm Conveyor is a compact and efficient sorting mechanism commonly used in
                 automated parcel, logistics, and baggage handling systems. It is designed
                 to divert parcels or bags from the main conveyor line to designated
                 secondary lines, chutes, or sorting areas. The system operates using a
