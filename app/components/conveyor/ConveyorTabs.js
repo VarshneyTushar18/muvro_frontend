@@ -84,7 +84,7 @@ export default function ConveyorTabs({ tabsData }) {
           url: "/accumulation-roller-conveyor",
         },
         {
-          name: "Roller Marger Conveyor",
+          name: "Roller Merger Conveyor",
           image: "/images/roller-marger-conveyor-image.webp",
           url: "/roller-marger-conveyor",
         },
