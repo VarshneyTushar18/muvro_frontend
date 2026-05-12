@@ -16,7 +16,7 @@ const categories = [
         id: 1,
         title: "High Speed Cross Belt Sorter",
         desc: "Muvro’s ZedSort – The Loop is a high-speed Cross Belt Sorter ensuring precise, quiet, and efficient warehouse automation.",
-        img: "/images/High Speed Cross Belt Sorter.png",
+        img: "/images/new-images/High-Speed-Cross-Belt-Sorter.webp",
         tag: "Speed. Precision. Power ",
         bg: "#F6F6F6",
         link: "/high-speed-cross-belt-loop-sorter"
@@ -25,7 +25,7 @@ const categories = [
         id: 2,
         title: "Tilt Tray Sorter",
         desc: " Tilt Tray Sorter System is a high-speed, modular, and flexible solution for automating sorting in warehouses, distribution centres, and logistics hubs.",
-        img: "/images/Tilt-Tray-Sorter.png",
+        img: "/images/new-images/Tilt_Tray_Sorter.webp",
         tag: "Smart. Scalable. Seamless.",
         bg: "rgba(104,104,104,0.3)",
         link: "/tilt-tray-sorter-system"
@@ -34,7 +34,7 @@ const categories = [
         id: 3,
         title: "3D Smart Sorter",
         desc: "Muvro delivers an advanced modular sorting system with autonomous bots optimizing space, accuracy, and scalability for modern warehouses.",
-        img: "/images/3D Smart Sorter.png",
+        img: "/images/new-images/3D-Smart-Sorter.webp",
         tag: "Smart. Scalable. Space-Savvy ",
         bg: "rgba(255,193,0,0.2)",
         link: "/3d-smart-sorter-ics"
@@ -43,7 +43,7 @@ const categories = [
         id: 4,
         title: "Linear Cross Belt Sorter",
         desc: "Muvro’s ZedSort™ Cross-Belt Sorter powers modern logistics with unmatched speed, reliability, and flexibility for diverse industries.",
-        img: "/images/zedsort-the-lin-linear-cross-belt-sorter.webp",
+        img: "/images/new-images/Linear-Cross-Sorter.webp",
         tag: "High-Speed. Precision Space-Efficient.",
         bg: "rgba(255,138,8,0.3)",
         link: "/zedsort-the-lin-linear-cross-belt-sorter"
@@ -52,7 +52,7 @@ const categories = [
         id: 5,
         title: "Swing Wheel Sorter",
         desc: "Muvro’s Swing Wheel Sorter delivers high-speed, precise parcel handling, boosting efficiency across e-commerce, retail, and logistics operations.",
-        img: "/images/Swing Wheel Sorter.png",
+        img: "/images/new-images/Swing-Wheel-Sorter.webp",
         tag: "Swift. Smart. Seamless ",
         bg: "#F2F2F2",
         link: "/swing-wheel-sorter"
@@ -67,7 +67,7 @@ const categories = [
         id: 1,
         title: "Vertixo Stack Sorter",
         desc: "The Vertixo™ Stack Sorter is a high-density, multi-level parcel sorting system engineered for modern warehouses.",
-        img: "/images/Vertixo_Stack_Sorter.webp",
+        img: "/images/new-images/Vertixo_Stack_Sorter.webp",
         tag: "Ideal for high-density",
         bg: "rgba(255,193,0,0.2)",
         link: "/vertixo-stack-sorter"
@@ -76,7 +76,7 @@ const categories = [
         id: 2,
         title: "Vetro Micro Sort",
         desc: "Vetro Micro Sort offers a compact yet powerful secondary sortotion solution designed specifically for space—constrained environments.",
-        img: "/images/Micro_SORT_The_Lite.webp",
+        img: "/images/new-images/Micro_SORT_The_Lite.webp",
         tag: "Smart Parcel Tracking",
         bg: "rgba(255,193,0,0.2)",
         link: "/vetro-micro-sort"
@@ -85,7 +85,7 @@ const categories = [
         id: 3,
         title: "VOREX",
         desc: "The VOREX™ Multi-Layer Multi-Bot Sorting System is Muvro’s most advanced 3D orbital sorter—engineered for operations.",
-        img: "/images/Vorex-image.webp",
+        img: "/images/new-images/Vorex-image.webp",
         tag: "Multi-Layer High-Density Sorting",
         bg: "rgba(255,193,0,0.2)",
         link: "/vorex"
@@ -219,6 +219,15 @@ const categories = [
         bg: "#F2F2F2",
         link: "/conveyor"
       },
+      {
+        id: 6,
+        title: "Spiral Conveyor",
+        desc: "An spiral conveyor system is designed to transport products in a spiral pattern, making it ideal for elevation changes and space-efficient material handling in various warehouse operations.",
+        img: "/images/gravity-type-spiral-roller-conveyor-image.webp",
+        tag: "Elevation & Angle Control",
+        bg: "rgba(255,193,0,0.2)",
+        link: "/conveyor"
+      },
     ],
   }
 ];
@@ -232,7 +241,7 @@ function ProductCard({ item, imageOnTop = false }) {
       {
         !imageOnTop &&
         <div className={styles.cardHeader}>
-          <span className={styles.tag}>{item.tag}</span>
+          {/* <span className={styles.tag}>{item.tag}</span> */}
         </div>
       }
 
@@ -241,7 +250,7 @@ function ProductCard({ item, imageOnTop = false }) {
           {
             imageOnTop &&
             <div className={styles.cardHeader}>
-              <span className={styles.tag}>{item.tag}</span>
+              {/* <span className={styles.tag}>{item.tag}</span> */}
             </div>
           }
           <h3>{item.title}</h3>
@@ -304,76 +313,14 @@ export default function ProductsSection() {
                     <p className="text-center py-5 fw-bold">No Products Available</p>
                   ) : (
                     <>
-                      {/* Desktop Layout (≥1366px) */}
+                      {/* Desktop Layout (≥1366px) - 3 Column Grid */}
                       <div className="d-none d-xxl-block">
-                        <div className="row g-4 justify-content-center">
-                          {category.products.length === 1 && (
-                            <div className="col-lg-6 d-flex">
-                              <ProductCard item={category.products[0]} imageOnTop={true} />
+                        <div className="row g-4">
+                          {category.products.map((item) => (
+                            <div key={item.id} className="col-lg-4 d-flex">
+                              <ProductCard item={item} imageOnTop={true} />
                             </div>
-                          )}
-
-                          {category.products.length === 2 && (
-                            <>
-                              {category.products.map((item) => (
-                                <div key={item.id} className="col-lg-6 d-flex">
-                                  <ProductCard item={item} imageOnTop={true} />
-                                </div>
-                              ))}
-                            </>
-                          )}
-
-                          {category.products.length === 3 && (
-                            <>
-                              {category.products.map((item) => (
-                                <div key={item.id} className="col-lg-4 d-flex">
-                                  <ProductCard item={item} imageOnTop={true} />
-                                </div>
-                              ))}
-                            </>
-                          )}
-
-                          {category.products.length === 4 && (
-                            <>
-                              {category.products.slice(0, 2).map((item) => (
-                                <div key={item.id} className="col-lg-6 d-flex">
-                                  <ProductCard item={item} />
-                                </div>
-                              ))}
-                              {category.products.slice(2, 4).map((item) => (
-                                <div key={item.id} className="col-lg-6 d-flex">
-                                  <ProductCard item={item} />
-                                </div>
-                              ))}
-                            </>
-                          )}
-
-                          {category.products.length >= 5 && (
-                            <>
-                              <div className="col-lg-8 d-flex flex-column">
-                                <div className="row g-4 flex-grow-1">
-                                  {category.products.slice(0, 3).map((item) => (
-                                    <div
-                                      key={item.id}
-                                      className={`col-${item.id === 1 ? "12" : "6"} d-flex`}
-                                    >
-                                      <ProductCard item={item} imageOnTop={item.id === 2 || item.id === 3} />
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-
-                              <div className="col-lg-4 d-flex flex-column">
-                                <div className="row g-4">
-                                  {category.products.slice(3, 5).map((item) => (
-                                    <div key={item.id} className="col-12 d-flex">
-                                      <ProductCard item={item} imageOnTop={true} />
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                            </>
-                          )}
+                          ))}
                         </div>
                       </div>
                       {/* Mobile & Tablet Slider (≤1366px) */}

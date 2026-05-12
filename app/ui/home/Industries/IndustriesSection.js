@@ -79,10 +79,10 @@ export default function IndustriesSection() {
       link: "/industries#e-commerce",
     },
     {
-      title: "Exhibitions",
+      title: "Industrial Automations",
       description:
-        "We offer efficient, flexible material handling solutions for exhibitions, ensuring smooth setup, quick transitions, and reliable logistics support.",
-      image: "/images/exhibitions.png",
+        "we offer efficient, flexible material handling solutions for advanced industrial applications, ensuring smooth setup, quick transitions, and reliable logistics support.",
+      image: "/images/Advanced Industrial Automations.webp",
     },
   ];
 

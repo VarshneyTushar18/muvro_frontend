@@ -14,16 +14,16 @@ import Link from "next/link";
 const events = [
   {
     id: 1,
-    image: "/images/event-1.png",
-    title: "Georgia World Congress Centre Atlanta | 2025",
-    date: "13 Apr - 16 Apr",
+    image: "/images/Invitation-For-Website-IWE.webp",
+    title: "Intralogistics & Warehousing Expo, Mumbai | 2026",
+    date: "14 May - 16 May",
     link: "#",
   },
   {
     id: 2,
-    image: "/images/event-2.png",
-    title: "International Trade Show Messe Stuttgart, Germany | 2025",
-    date: "24 Mar - 26 Mar",
+    image: "/images/Invitation-For-Website-IWS-Delhi.webp",
+    title: "India Warehousing Show, Delhi | 2026",
+    date: "25 June - 27 June",
     link: "#",
   },
 ];

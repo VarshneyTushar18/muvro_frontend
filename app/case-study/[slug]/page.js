@@ -7,14 +7,22 @@ import { notFound } from "next/navigation";
 import { renderBlock } from "blocks-html-renderer";
 
 async function fetchSlugs() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch case studies slugs");
+    try {
+        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`;
+        console.log("Fetching slugs from:", url);
+        
+        const res = await fetch(url);
+        if (!res.ok) {
+            console.error("Slugs API Error:", res.status, res.statusText);
+            throw new Error("Failed to fetch case studies slugs");
+        }
+        const data = await res.json();
+        console.log("Slugs fetched:", data.data.length, "case studies");
+        return data.data.map((item) => item.slug);
+    } catch (error) {
+        console.error("fetchSlugs error:", error);
+        return [];
     }
-    const data = await res.json();
-    return data.data.map((item) => item.slug);
 }
 export async function generateStaticParams() {
     const slugs = await fetchSlugs();
@@ -22,16 +30,25 @@ export async function generateStaticParams() {
 }
 
 async function getCaseStudy(slug) {
-    console.log(slug);
-    const res = await fetch(`${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${slug}&populate=*`,
-        { next: { revalidate: 60 } }
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch case study details");
-    }
+    try {
+        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${slug}&populate=*`;
+        console.log("Fetching from:", url);
+        
+        const res = await fetch(url, { next: { revalidate: 60 } });
+        
+        if (!res.ok) {
+            console.error("API Error:", res.status, res.statusText);
+            throw new Error(`Failed to fetch case study details: ${res.status}`);
+        }
 
-    const data = await res.json();
-    return data.data.length > 0 ? data.data[0] : null;
+        const data = await res.json();
+        console.log("API Response:", data);
+        
+        return data.data && data.data.length > 0 ? data.data[0] : null;
+    } catch (error) {
+        console.error("getCaseStudy error:", error);
+        throw error;
+    }
 }
 
 export default async function CaseStudy({ params }) {

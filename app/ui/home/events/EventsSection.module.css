@@ -11,6 +11,7 @@
 .imageWrapper img {
     width: 100%;
     display: block;
+    border: 1px solid #d3d3d3;
 }
 
 .content {
