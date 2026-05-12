@@ -154,6 +154,26 @@
   color: #262626;
 }
 
+.capabilityTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f0f0;
+  border-radius: 16px;
+  padding: 6px 16px;
+  font-size: 14px;
+  color: #222;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.capabilityTag:hover, .capabilityTag:focus {
+  background: var(--color-primary, #ffd600);
+  color: #111;
+  border-color: var(--color-primary, #ffd600);
+  outline: none;
+}
+
 .solutions {
   padding: 88px 0;
   background: #f4f5f6;
@@ -243,18 +263,98 @@
 }
 
 .cardBody p {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .cardBody ul {
-  display: grid;
-  gap: 10px;
-  margin: auto 0 0;
-  padding-left: 18px;
+  margin: 0;
+  padding-left: 1.25rem;
+  display: inline;
 }
 
 .cardBody li {
+  margin-bottom: 10px;
+}
+
+.pointLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pointLink:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #f0f0f0;
+  border: 1.5px solid #ddd;
   color: #343434;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.tag:hover {
+  background: #e8e8e8;
+  border-color: var(--color-primary);
+  color: #000;
+}
+
+.tag.tagActive {
+  background: var(--color-primary);
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+  font-weight: 600;
+}
+
+.filterTag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 12px 18px;
+  background: #fff;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.filterTag strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.clearFilter {
+  margin-left: auto;
+  padding: 6px 12px;
+  background: var(--color-primary);
+  color: var(--color-dark);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.clearFilter:hover {
+  opacity: 0.85;
 }
 
 .process {

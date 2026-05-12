@@ -50,7 +50,13 @@ const solutionCards = [
     image: "/images/Assembly-Lines.webp",
     description:
       "Modular lines for component and vehicle assembly with controlled flow, station balancing, quality gates, and production-ready ergonomics.",
-    points: ["Engine, gearbox, axle, and frame lines", "Manual, semi-automatic, and automatic stations", "Poka-yoke, torque, inspection, and traceability"],
+    points: [
+      // { text: "Gearbox", link: "#" },
+      // { text: "Differential Case", link: "#" },
+      // { text: "Engines", link: "#" },
+      // { text: "Tire & Wheel Storage & Transfer System", link: "#" },
+      // { text: "Axle Line and frame", link: "#" },
+    ],
   },
   {
     title: "SPM's",
@@ -58,7 +64,9 @@ const solutionCards = [
     image: "/images/SPM's.webp",
     description:
       "Special purpose machines built around your part, cycle time, and process sequence for repeatable output on demanding shop floors.",
-    points: ["Pressing, testing, assembly, and inspection", "Custom tooling and machine guarding", "PLC, HMI, sensors, and data capture"],
+    points: [
+      // { text: "SPM's", link: "#" },
+    ],
   },
   {
     title: "Mobile Robots",
@@ -66,7 +74,7 @@ const solutionCards = [
     image: "/images/mob-rob.webp",
     description:
       "AGV and AMR based internal transport for predictable, safer material movement between storage, line-side, and dispatch areas.",
-    points: ["Line feeding and kitting movement", "Flexible route planning", "Reduced forklift dependency"],
+    points: [],
   },
   {
     title: "EMS Systems",
@@ -74,7 +82,7 @@ const solutionCards = [
     image: "/images/EMS-Systems.webp",
     description:
       "Electrified monorail systems for overhead movement where floor space is limited and synchronized transfer is essential.",
-    points: ["Overhead transfer and buffer loops", "Independent carrier control", "Plant-layout friendly movement"],
+    points: [],
   },
   {
     title: "Rail Guided Vehicles (RGV)",
@@ -82,7 +90,7 @@ const solutionCards = [
     image: "/images/Rail-Guided-Vehicles.webp",
     description:
       "Rail-guided transfer vehicles for reliable in-line and cross-bay movement of pallets, bins, fixtures, and work-in-process loads.",
-    points: ["Point-to-point material transfer", "High repeatability and controlled routing", "Integration with conveyors and stations"],
+    points: [],
   },
   {
     title: "Sorting & Storage",
@@ -90,7 +98,7 @@ const solutionCards = [
     image: "/images/sorting.png",
     description:
       "Organized storage and sorting systems that keep automotive components available at the right station, in the right sequence.",
-    points: ["Line-side supermarkets", "Sequencing and dispatch buffers", "Barcode and scanner integration"],
+    points: [],
   },
   {
     title: "Ergonomic Handling System",
@@ -98,7 +106,7 @@ const solutionCards = [
     image: "/images/Ergonomic-Handling-System.webp",
     description:
       "Operator-friendly lifting, tilting, positioning, and handling equipment designed to reduce strain and improve repeatability.",
-    points: ["Lifters, manipulators, and positioners", "Safer handling of heavy components", "Better access for assembly operations"],
+    points: [],
   },
   {
     title: "Fixtures & Grippers",
@@ -106,14 +114,8 @@ const solutionCards = [
     image: "/images/Fixtures-Grippers.webp",
     description:
       "Precision fixtures and gripping systems for stable part holding, robotic handling, inspection, and repeatable assembly quality.",
-    points: ["Custom nests, jigs, and clamps", "Robot end-of-arm tooling", "Quick-change and part-family designs"],
+    points: [],
   },
-];
-
-const processSteps = [
-  "Study component flow, takt time, plant layout, and operator movement",
-  "Design the right mix of automation, handling, storage, and safety systems",
-  "Manufacture, integrate, test, install, and support the complete solution",
 ];
 
 const ctaBannerData = {
@@ -209,10 +211,6 @@ export default function Automotive() {
               <h2>
                 Automotive <span>Automation Capabilities</span>
               </h2>
-              <p>
-                The page structure follows the automotive content buckets in
-                your supplied folder reference.
-              </p>
             </div>
 
             <div className={Style.solutionGrid}>
@@ -238,9 +236,22 @@ export default function Automotive() {
                       </div>
                       <p>{item.description}</p>
                       <ul>
-                        {item.points.map((point) => (
-                          <li key={point}>{point}</li>
-                        ))}
+                        {item.points.map((point) => {
+                          const pointText = typeof point === "string" ? point : point.text;
+                          const pointLink = typeof point === "object" ? point.link : undefined;
+
+                          return (
+                            <li key={pointText}>
+                              {pointLink ? (
+                                <Link href={pointLink} className={Style.pointLink}>
+                                  {pointText}
+                                </Link>
+                              ) : (
+                                pointText
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   </article>
