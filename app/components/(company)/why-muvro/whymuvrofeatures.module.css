@@ -1,0 +1,227 @@
+.whyMuvroSection {
+  padding: 40px 0;
+  background: transparent;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.3px;
+}
+
+.sectionTitle span {
+  color: #ffc100;
+  font-weight: 700;
+}
+
+/* Main Card */
+.mainCard {
+  background: linear-gradient(135deg, #fffde7 0%, #fff9c4 100%);
+  border: 2px solid #ffc100;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Features List */
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.featurePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+  padding: 0.3rem 0;
+}
+
+.featurePoint:hover {
+  padding-left: 0.3rem;
+}
+
+.bullet {
+  color: #ffc100;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1;
+  min-width: 18px;
+  margin-top: 2px;
+}
+
+.featureContent {
+  flex: 1;
+}
+
+.featureContent strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.featureContent p {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Highlights Container */
+.highlightContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.highlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+}
+
+.highlightPoint {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0;
+  line-height: 1.3;
+}
+
+.highlightPoint:hover {
+  color: #ffc100;
+  padding-left: 0.3rem;
+}
+
+.icon {
+  color: #ffc100;
+  font-weight: bold;
+  font-size: 0.95rem;
+  min-width: 16px;
+}
+
+/* Experience Text */
+.experienceText {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(0, 102, 204, 0.15);
+  text-align: center;
+}
+
+.experienceText p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.experienceText p:first-child {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.highlight {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ff3333;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .mainCard {
+    padding: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .featuresList {
+    gap: 1rem;
+  }
+
+  .featureContent strong {
+    font-size: 0.9rem;
+  }
+
+  .featureContent p {
+    font-size: 0.8rem;
+  }
+
+  .highlightsList {
+    gap: 0.8rem;
+  }
+
+  .highlightPoint {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyMuvroSection {
+    padding: 30px 0;
+  }
+
+  .mainCard {
+    padding: 1.25rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .featuresList {
+    gap: 0.9rem;
+  }
+
+  .featurePoint {
+    padding: 0.4rem 0;
+  }
+
+  .featureContent strong {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .featureContent p {
+    font-size: 0.75rem;
+  }
+
+  .highlightsList {
+    gap: 0.7rem;
+  }
+
+  .highlightPoint {
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+  }
+
+  .experienceText {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .experienceText p {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+  }
+
+  .highlight {
+    font-size: 0.9rem;
+  }
+}

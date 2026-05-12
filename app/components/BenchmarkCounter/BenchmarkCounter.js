@@ -52,7 +52,7 @@ const BenchmarkCounter = ({ data }) => {
 
     return (
         <section className="pb-0" id="benchmark-section">
-            <div className="container py-5">
+            <div className="container">
                 <div className="row">
                     <h3
                         className="mb-5 text-center"

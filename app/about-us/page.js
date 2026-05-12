@@ -3,6 +3,7 @@ import OurHistory from "../components/(company)/our-history/OurHistory";
 import OurValues from "../components/(company)/our-values/OurValues";
 import QualityPolicy from "../components/(company)/quality-policy/QualityPolicy";
 import WhyMuvro from "../components/(company)/why-muvro/WhyMuvro";
+import WhyMuvroFeatures from "../components/(company)/why-muvro/WhyMuvroFeatures";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
 import styles from "./style.module.css";
 import "./custom.css";
@@ -298,6 +299,8 @@ export default async function AboutUs() {
                 </div>
                 
             </section>
+
+            <WhyMuvroFeatures />
 
             <OurValues />
 
