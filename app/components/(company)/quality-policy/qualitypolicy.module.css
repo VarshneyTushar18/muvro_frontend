@@ -51,6 +51,7 @@
 
 .quality_policy .image_block .image_hover {
   overflow: hidden;
+  text-align: center;
 }
 
 .quality_policy .image_block .image_hover img {
