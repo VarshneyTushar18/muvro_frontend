@@ -21,7 +21,7 @@ const events = [
   },
   {
     id: 2,
-    image: "/images/Invitation-For-Website-IWS-Delhi.webp",
+    image: "/images/Invitation-IWS-Delhi.webp",
     title: "India Warehousing Show, Delhi | 2026",
     date: "25 June - 27 June",
     link: "#",

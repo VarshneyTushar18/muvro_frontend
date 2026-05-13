@@ -62,27 +62,51 @@ const features = [
 const data = [
     {
         value: 99,
-        title: "Customer Satisfaction",
-        desc: "Delivering reliable automation solutions with maximum efficiency.",
-        color: "bg-success",
+        title: "Product Quality Satisfaction",
+        desc: "Excellence Unveiled: Our Commitment to Product Quality Satisfaction",
+        color: "#27ae60",
     },
     {
-        value: 95,
-        title: "Project Accuracy",
-        desc: "High precision execution from design to installation.",
-        color: "bg-primary",
+        value: 99,
+        title: "Reliability",
+        desc: "Building Trust Through Reliability",
+        color: "#3498db",
     },
     {
-        value: 92,
-        title: "On-Time Delivery",
-        desc: "Ensuring fast deployment and timely project completion.",
-        color: "bg-warning",
+        value: 99,
+        title: "Purchase Satisfaction",
+        desc: "Delight: A Commitment to Purchase Satisfaction",
+        color: "#f39c12",
     },
     {
-        value: 98,
-        title: "Service Support",
-        desc: "Dedicated after-sales support and maintenance services.",
-        color: "bg-danger",
+        value: 99,
+        title: "I&C Accuracy",
+        desc: "Precision in Every Detail: Our Commitment to Accuracy",
+        color: "#e74c3c",
+    },
+    {
+        value: 99,
+        title: "Meet Expectations",
+        desc: "Exceeding the Standard: Our Pledge to Meet and Surpass Expectations",
+        color: "#17a2b8",
+    },
+    {
+        value: 99,
+        title: "Craftsmanship",
+        desc: "The Art of Excellence: Celebrating Craftsmanship in Muvro technologies",
+        color: "#9b59b6",
+    },
+    {
+        value: 97,
+        title: "On Time Delivery",
+        desc: "Punctuality Personified: Our Commitment to On-Time Delivery",
+        color: "#34495e",
+    },
+    {
+        value: 100,
+        title: "Investment Satisfaction",
+        desc: "Empowering Futures: A Commitment to Investment Satisfaction",
+        color: "#e67e22",
     },
 ];
 
@@ -293,7 +317,7 @@ export default async function AboutUs() {
                     </div>
                     <div className="row justify-content-center">
                         <div class="col-md-9">
-                            <img src="/images/globalpresence.webp" alt="World Map" className="img-fluid" data-aos="fade-up" data-aos-delay="300" />
+                            <img src="/images/global-1.webp" alt="World Map" className="img-fluid" data-aos="fade-up" data-aos-delay="300" />
                         </div>
                     </div>
                 </div>

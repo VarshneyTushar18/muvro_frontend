@@ -134,7 +134,7 @@ const categories = {
       title: "Secondary Sorting Systems",
       description:
         "Our innovative gantry-based system delivers unmatched throughput, precision, and scalability for modern logistics operations.",
-      image: "/images/secondary-sorting.webp",
+      image: "/images/main-secondary-sorters.webp",
       link: "/solutions#solution-secondary-sorting-solutions",
     },
     {
@@ -159,7 +159,7 @@ const categories = {
       title: "Mobile Robots",
       description:
         "Mobile Robots in automotive industries automate material transport, streamline assembly processes, reduce manual labor, and enhance efficiency, safety, and overall production flexibility.",
-      image: "/images/mob-rob.webp",
+      image: "/images/mobile-robots-main-image.webp",
       link: "/solutions#solution-mobile-robots",
     },
   ],
