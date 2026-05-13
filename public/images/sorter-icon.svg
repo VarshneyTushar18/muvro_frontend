@@ -1,0 +1,29 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#ff8a08" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Conveyor Belt -->
+    <rect x="16" y="54" width="96" height="20" rx="4"></rect>
+    
+    <!-- Rollers -->
+    <circle cx="28" cy="64" r="2"></circle>
+    <circle cx="44" cy="64" r="2"></circle>
+    <circle cx="60" cy="64" r="2"></circle>
+    <circle cx="76" cy="64" r="2"></circle>
+    <circle cx="92" cy="64" r="2"></circle>
+
+    <!-- Sorter Arm -->
+    <path d="M64 54V28"></path>
+    <path d="M64 40L88 24"></path>
+    <circle cx="64" cy="28" r="4"></circle>
+
+    <!-- Package -->
+    <rect x="48" y="42" width="16" height="12" rx="2"></rect>
+
+    <!-- Diverter Path -->
+    <path d="M88 74L106 92"></path>
+
+    <!-- Sorted Box -->
+    <rect x="96" y="92" width="16" height="14" rx="2"></rect>
+
+  </g>
+</svg>

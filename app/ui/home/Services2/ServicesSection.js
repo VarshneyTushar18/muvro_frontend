@@ -363,6 +363,13 @@ const categories = {
 
 };
 
+const disabledCategories = new Set([
+  "Food & Beverages",
+  "Waste Management",
+  "Packaging Industry",
+  "Airport",
+]);
+
 export default function ServicesSectionTabs({ solutions = [] }) {
   const categoryNames = Object.keys(categories);
   const [activeCategory, setActiveCategory] = useState(categoryNames[0]);
@@ -456,11 +463,14 @@ export default function ServicesSectionTabs({ solutions = [] }) {
             <SwiperSlide key={cat}>
               <button
                 className={`${styles.tabButton} ${cat === activeCategory ? styles.activeTab : ""
-                  }`}
+                  } ${disabledCategories.has(cat) ? styles.disabledTab : ""}`}
                 onClick={() => {
-                  setActiveCategory(cat);
-                  setActiveService(0);
+                  if (!disabledCategories.has(cat)) {
+                    setActiveCategory(cat);
+                    setActiveService(0);
+                  }
                 }}
+                disabled={disabledCategories.has(cat)}
               >
                 {cat}
               </button>

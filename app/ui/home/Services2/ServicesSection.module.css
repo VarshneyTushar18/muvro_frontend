@@ -410,3 +410,16 @@
 .activeTab:after {
   box-shadow: -2px 2px 0 var(--color-primary);
 }
+
+.disabledTab {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+  background-color: #d3d3d3 !important;
+  color: #808080 !important;
+}
+
+.disabledTab:hover {
+  background: #d3d3d3 !important;
+  color: #808080 !important;
+  cursor: not-allowed;
+}

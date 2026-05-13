@@ -6,14 +6,14 @@ import styles from "./Clients.module.css";
 
 export default function ClientsCarousel() {
   const images = [
-    { src: "/images/adani.png", alt: "Adani" },
-    { src: "/images/amazon.png", alt: "Amazon" },
-    { src: "/images/ekart.png", alt: "Ekart" },
-    { src: "/images/flipkart.png", alt: "Flipkart" },
-    { src: "/images/fm-logistics.png", alt: "FM Logistics" },
-    { src: "/images/ford.png", alt: "Ford" },
-    { src: "/images/mahindra.png", alt: "Mahindra" },
-    { src: "/images/myntra.png", alt: "Myntra" },
+    { src: "/images/logos/adani-logo.webp", alt: "Adani" },
+    { src: "/images/logos/amazon-logo.webp", alt: "Amazon" },
+    { src: "/images/logos/ekart-logo.webp", alt: "Ekart" },
+    { src: "/images/logos/flipkart-logo.webp", alt: "Flipkart" },
+    { src: "/images/logos/fm-logistic-logo.webp", alt: "FM Logistics" },
+    { src: "/images/logos/ford-logo.webp", alt: "Ford" },
+    { src: "/images/logos/mahindra-logo.webp", alt: "Mahindra" },
+    { src: "/images/logos/myntra-logo.webp", alt: "Myntra" },
   ];
 
   return (

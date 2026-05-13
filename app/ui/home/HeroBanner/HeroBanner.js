@@ -23,7 +23,7 @@ export default function HeroBanner() {
         muted
         playsInline
         preload="metadata"
-        poster="/images/banner-poster.jpg"
+        poster="/images/banner-poster.webp"
       >
         <source src="/videos/banner.mp4" type="video/mp4" />
         <source src="/videos/banner.webm" type="video/webm" />

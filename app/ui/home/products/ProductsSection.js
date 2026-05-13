@@ -14,11 +14,11 @@ const categories = [
     products: [
       {
         id: 1,
-        title: "High Speed Cross Belt Sorter",
+        title: "ZedSort the Loop – High-Speed Cross Belt Loop Sorter",
         desc: "Muvro’s ZedSort – The Loop is a high-speed Cross Belt Sorter ensuring precise, quiet, and efficient warehouse automation.",
-        img: "/images/new-images/High-Speed-Cross-Belt-Sorter.webp",
+        img: "/images/ZedSort-the-Loop.webp",
         tag: "Speed. Precision. Power ",
-        bg: "#F6F6F6",
+        bg: "#eee",
         link: "/high-speed-cross-belt-loop-sorter"
       },
       {
@@ -27,7 +27,7 @@ const categories = [
         desc: " Tilt Tray Sorter System is a high-speed, modular, and flexible solution for automating sorting in warehouses, distribution centres, and logistics hubs.",
         img: "/images/new-images/Tilt_Tray_Sorter.webp",
         tag: "Smart. Scalable. Seamless.",
-        bg: "rgba(104,104,104,0.3)",
+        bg: "#eee",
         link: "/tilt-tray-sorter-system"
       },
       {
@@ -36,7 +36,7 @@ const categories = [
         desc: "Muvro delivers an advanced modular sorting system with autonomous bots optimizing space, accuracy, and scalability for modern warehouses.",
         img: "/images/new-images/3D-Smart-Sorter.webp",
         tag: "Smart. Scalable. Space-Savvy ",
-        bg: "rgba(255,193,0,0.2)",
+        bg: "#eee",
         link: "/3d-smart-sorter-ics"
       },
       {
@@ -45,7 +45,7 @@ const categories = [
         desc: "Muvro’s ZedSort™ Cross-Belt Sorter powers modern logistics with unmatched speed, reliability, and flexibility for diverse industries.",
         img: "/images/new-images/Linear-Cross-Sorter.webp",
         tag: "High-Speed. Precision Space-Efficient.",
-        bg: "rgba(255,138,8,0.3)",
+        bg: "#eee",
         link: "/zedsort-the-lin-linear-cross-belt-sorter"
       },
       {
@@ -54,7 +54,7 @@ const categories = [
         desc: "Muvro’s Swing Wheel Sorter delivers high-speed, precise parcel handling, boosting efficiency across e-commerce, retail, and logistics operations.",
         img: "/images/new-images/Swing-Wheel-Sorter.webp",
         tag: "Swift. Smart. Seamless ",
-        bg: "#F2F2F2",
+        bg: "#eee",
         link: "/swing-wheel-sorter"
       },
     ],
@@ -90,7 +90,7 @@ const categories = [
         bg: "rgba(255,193,0,0.2)",
         link: "/vorex"
       },
-     
+
     ],
   },
 
@@ -235,7 +235,7 @@ const categories = [
 function ProductCard({ item, imageOnTop = false }) {
   return (
     <div
-      className={`${styles.card} h-100`}
+      className={`${styles.card}`}
       style={{ backgroundColor: item.bg }}
     >
       {
@@ -247,17 +247,29 @@ function ProductCard({ item, imageOnTop = false }) {
 
       <div className={`${styles.cardBody} ${imageOnTop ? styles.imageOnTop : ""}`}>
         <div className={styles.cardContent}>
+
           {
             imageOnTop &&
             <div className={styles.cardHeader}>
               {/* <span className={styles.tag}>{item.tag}</span> */}
             </div>
           }
-          <h3>{item.title}</h3>
-          <p>{item.desc}</p>
-          <a href={item.link} className={styles.link}>
-            Check Details <RiArrowRightUpLine />
-          </a>
+
+          <div className={styles.cardIcon}>
+            <div className={styles.iconWrapper}>
+              <img src="images/sorter-icon.svg" alt="" className="img-fluid" />
+            </div>
+          </div>
+          <div className={styles.cardText}>
+            <h3>{item.title}</h3>
+
+              <p className="mb-3">{item.desc}</p>
+
+            <a href={item.link} className={styles.link}>
+                Explore More <RiArrowRightUpLine fontSize={12} />
+              </a>
+          </div>
+          <div className={styles.categorytag}>Sorter</div>
         </div>
         <div className={styles.cardImage}>
           <img src={item.img} alt={item.title} />
@@ -271,85 +283,89 @@ export default function ProductsSection() {
   return (
     <section>
       <div className="container">
-        <div className={styles.wrapper}>
-          <span className="section-label-center">Smart Technologies</span>
-          <h2>
-            Cutting-Edge <span>Technologies</span>
-          </h2>
-          <p>
-            From manufacturing to retail, Muvro Technologies delivers innovative
-            intralogistics and material handling solutions that drive
-            efficiency, reliability, and growth across diverse industries
-            worldwide.
-          </p>
-        </div>
-        <div className={styles.WrapperSlider}>
-          <div className={`${styles.navButtons}`}>
-            <button className={`custom-button-prev mbtn mbtn-primary ${styles.navButton}`}>
-              <RiArrowLeftLongLine />
-            </button>
-            <button className={`custom-button-next mbtn mbtn-primary ${styles.navButton}`}>
-              <RiArrowRightLongLine />
-            </button>
-          </div>
-          {/* Parent Slider: Categories */}
-          <Swiper
-            modules={[Navigation]}
-            navigation={{
-              nextEl: ".custom-button-next",
-              prevEl: ".custom-button-prev",
-            }}
-            autoHeight={true}
-            spaceBetween={50}
-          >
-            {categories.map((category) => (
-              <SwiperSlide key={category.id}>
-                <div className="category-block">
-                  <div className={styles.categoryHeader}>
-                    <h3 className="text-left mb-4">{category.name}</h3>
-                  </div>
+        <div className="row justify-content-center">
+          <div className="col-md-9">
+            <div className={styles.wrapper}>
+              <span className="section-label-center">Smart Technologies</span>
+              <h2>
+                Cutting-Edge <span>Technologies</span>
+              </h2>
+              <p>
+                From manufacturing to retail, Muvro Technologies delivers innovative
+                intralogistics and material handling solutions that drive
+                efficiency, reliability, and growth across diverse industries
+                worldwide.
+              </p>
+            </div>
+            <div className={styles.WrapperSlider}>
+              <div className={`${styles.navButtons}`}>
+                <button className={`custom-button-prev mbtn mbtn-primary ${styles.navButton}`}>
+                  <RiArrowLeftLongLine />
+                </button>
+                <button className={`custom-button-next mbtn mbtn-primary ${styles.navButton}`}>
+                  <RiArrowRightLongLine />
+                </button>
+              </div>
+              {/* Parent Slider: Categories */}
+              <Swiper
+                modules={[Navigation]}
+                navigation={{
+                  nextEl: ".custom-button-next",
+                  prevEl: ".custom-button-prev",
+                }}
+                autoHeight={true}
+                spaceBetween={50}
+              >
+                {categories.map((category) => (
+                  <SwiperSlide key={category.id}>
+                    <div className="category-block">
+                      <div className={styles.categoryHeader}>
+                        <h3 className="text-left mb-4">{category.name}</h3>
+                      </div>
 
-                  {category.products.length === 0 ? (
-                    <p className="text-center py-5 fw-bold">No Products Available</p>
-                  ) : (
-                    <>
-                      {/* Desktop Layout (≥1366px) - 3 Column Grid */}
-                      <div className="d-none d-xxl-block">
-                        <div className="row g-4">
-                          {category.products.map((item) => (
-                            <div key={item.id} className="col-lg-4 d-flex">
-                              <ProductCard item={item} imageOnTop={true} />
+                      {category.products.length === 0 ? (
+                        <p className="text-center py-5 fw-bold">No Products Available</p>
+                      ) : (
+                        <>
+                          {/* Desktop Layout (≥1366px) - 3 Column Grid */}
+                          <div className="d-none d-xxl-block">
+                            <div className="row g-4">
+                              {category.products.map((item) => (
+                                <div key={item.id} className="col-lg-6 d-flex">
+                                  <ProductCard item={item} imageOnTop={true} />
+                                </div>
+                              ))}
                             </div>
-                          ))}
-                        </div>
-                      </div>
-                      {/* Mobile & Tablet Slider (≤1366px) */}
-                      <div className="d-block d-xxl-none">
-                        <Swiper
-                          modules={[Pagination]}
-                          spaceBetween={20}
-                          pagination={{ clickable: true }}
-                          breakpoints={{
-                            0: { slidesPerView: 1 },
-                            576: { slidesPerView: 1.2 },
-                            768: { slidesPerView: 1.5 },
-                            1024: { slidesPerView: 2 },
-                            1200: { slidesPerView: 3 },
-                          }}
-                        >
-                          {category.products.map((item) => (
-                            <SwiperSlide key={item.id}>
-                              <ProductCard item={item} />
-                            </SwiperSlide>
-                          ))}
-                        </Swiper>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                          </div>
+                          {/* Mobile & Tablet Slider (≤1366px) */}
+                          <div className="d-block d-xxl-none">
+                            <Swiper
+                              modules={[Pagination]}
+                              spaceBetween={20}
+                              pagination={{ clickable: true }}
+                              breakpoints={{
+                                0: { slidesPerView: 1 },
+                                576: { slidesPerView: 1.2 },
+                                768: { slidesPerView: 1.5 },
+                                1024: { slidesPerView: 2 },
+                                1200: { slidesPerView: 3 },
+                              }}
+                            >
+                              {category.products.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                  <ProductCard item={item} />
+                                </SwiperSlide>
+                              ))}
+                            </Swiper>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
       </div>
     </section>

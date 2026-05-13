@@ -12,8 +12,8 @@ import styles from "./Certifications.module.css";
 
 export default function Certifications() {
   const certifications = [
-    { src: "/images/Avetta-Member.png", alt: "Avetta Member Certification" },
-    { src: "/images/TUV-Nord.png", alt: "TUV Nord Certification" },
+    { src: "/images/Avetta.webp", alt: "Avetta Member Certification" },
+    { src: "/images/tuvnord.webp", alt: "TUV Nord Certification" },
     { src: "/images/CE.png", alt: "CE Certification" },
     { src: "/images/ISO.png", alt: "ISO Certification" },
   ];
