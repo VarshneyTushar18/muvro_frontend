@@ -47,7 +47,7 @@ const megaMenuData = {
           name: "Sorting Solutions",
           products: [
             // {
-            //   name: "3D Smart Sorter (ICS)",
+            //   name: "Trid with Zed Bot",
             //   subtitle: "10Kg Max Weight",
             //   image: "https://muvro.tech2globe.co.in/uploads/3d_sorter_bg_removed_c28b208916.png",
             //   url: "/3d-smart-sorter-ics"
@@ -66,7 +66,7 @@ const megaMenuData = {
             },
             {
               name: "Swing Wheel Sorter",
-              subtitle: "0.1 kg to 35 kg",
+              subtitle: "0.1 kg to 30 kg",
               image: "https://muvro.tech2globe.co.in/uploads/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
               url: "/swing-wheel-sorter"
             },
@@ -128,7 +128,7 @@ const megaMenuData = {
               url: "/micro-fulfilment"
             },
             {
-              name: "3D Smart Sorter (ICS)",
+              name: "Trid with Zed Bot",
               subtitle: "10Kg Max Weight",
               image: "https://muvro.tech2globe.co.in/uploads/3d_sorter_bg_removed_c28b208916.png",
               url: "/3d-smart-sorter-ics"
@@ -304,7 +304,7 @@ const megaMenuData = {
           name: "Sorters",
           products: [
             {
-              name: "3D Smart Sorter (ICS)",
+              name: "Trid with Zed Bot",
               subtitle: "10Kg Max Weight",
               image: "https://muvro.tech2globe.co.in/uploads/3d_sorter_bg_removed_c28b208916.png",
               url: "/3d-smart-sorter-ics"
@@ -329,7 +329,7 @@ const megaMenuData = {
             },
             {
               name: "Swing Wheel Sorter",
-              subtitle: "0.1 kg to 35 kg",
+              subtitle: "0.1 kg to 30 kg",
               image: "https://muvro.tech2globe.co.in/uploads/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
               url: "/swing-wheel-sorter"
             },

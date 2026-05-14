@@ -3,9 +3,9 @@ import Link from "next/link";
 import styles from "./CTABanner.module.css";
 
 const defaultContent = {
-  title: "Know More About  3D Smart Sorter System – Next Gen Autonomous Sorting",
+  title: "Know More About  Trid with Zed Bot System – Next Gen Autonomous Sorting",
   description:
-    "Discover how Muvro’s 3D Smart Sorter System – Next Gen Autonomous Sorting enhances speed, accuracy, and efficiency in warehouse automation, streamlining material flow from induction to destination with seamless flexibility.",
+    "Discover how Muvro’s Trid with Zed Bot System – Next Gen Autonomous Sorting enhances speed, accuracy, and efficiency in warehouse automation, streamlining material flow from induction to destination with seamless flexibility.",
   queryText: "Having Queries? Call Us Now",
   phoneNumber: "+91-7457800130",
 };

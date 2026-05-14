@@ -36,7 +36,7 @@ const categories = [
       },
       {
         id: 3,
-        title: "Trid with Zed Bot (3D smart sorter)",
+        title: "Trid with Zed Bot (3D Smart Sorter)",
         desc: "Muvro delivers an advanced modular sorting system with autonomous bots optimizing space, accuracy, and scalability for modern warehouses.",
         img: "/images/new-images/3dsmart-sorter-image.webp",
         tag: "Smart. Scalable. Space-Savvy ",
