@@ -402,11 +402,17 @@
     }
 }
 
-@media (min-width: 1401px) and (max-width: 1650px) {
+
+
+@media (min-width: 1400px) and (max-width: 1650px) {
     .cardBody {
         flex-direction: column;
     }
+    .cardImage {
+        min-height: 210px!important;
+    }
 }
+
 
 
 @media (min-width: 768px) and (max-width:1199px) {
