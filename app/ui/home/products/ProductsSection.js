@@ -80,7 +80,9 @@ const categories = [
         img: "/images/new-images/Vertixo_Stack_Sorter.webp",
         tag: "Ideal for high-density",
         bg: "rgba(255,193,0,0.2)",
-        link: "/vertixo-stack-sorter"
+        link: "/vertixo-stack-sorter",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Secondary Sorters",
       },
       {
         id: 2,
@@ -89,7 +91,9 @@ const categories = [
         img: "/images/new-images/Micro_SORT_The_Lite.webp",
         tag: "Smart Parcel Tracking",
         bg: "rgba(255,193,0,0.2)",
-        link: "/vetro-micro-sort"
+        link: "/vetro-micro-sort",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Secondary Sorters",
       },
       {
         id: 3,
@@ -98,7 +102,9 @@ const categories = [
         img: "/images/new-images/Vorex-image.webp",
         tag: "Multi-Layer High-Density Sorting",
         bg: "rgba(255,193,0,0.2)",
-        link: "/vorex"
+        link: "/vorex",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Secondary Sorters",
       },
 
     ],
@@ -115,7 +121,9 @@ const categories = [
         img: "/images/Pallet Shuttle ASRS System.png",
         tag: "Smart. Scalable. Seamless.",
         bg: "rgba(255,193,0,0.2)",
-        link: "/navigo-pallet-shuttle-asrs-system"
+        link: "/navigo-pallet-shuttle-asrs-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "ASRS",
       },
       {
         id: 2,
@@ -124,7 +132,9 @@ const categories = [
         img: "/images/Radio Shuttle System.png",
         tag: "Deep. Dynamic. Dependable.",
         bg: "rgba(104,104,104,0.3)",
-        link: "/radio-shuttle-system"
+        link: "/radio-shuttle-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "ASRS",
       },
       {
         id: 3,
@@ -133,7 +143,9 @@ const categories = [
         img: "/images/Pallet ASRS Stacker Crane.png",
         tag: "Tall. Precise. Powerful.",
         bg: "#F6F6F6",
-        link: "/asrs-stacker-cranes"
+        link: "/asrs-stacker-cranes",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "ASRS",
       },
       {
         id: 4,
@@ -142,7 +154,9 @@ const categories = [
         img: "/images/Mini-Load-ASRS-Shuttle-System.webp",
         tag: "Energy-Efficient Drives",
         bg: "#F6F6F6",
-        link: "/mini-load-asrs-shuttle-system"
+        link: "/mini-load-asrs-shuttle-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "ASRS",
       }
     ],
   },
@@ -158,7 +172,9 @@ const categories = [
         img: "/images/Singulator System.png",
         tag: "Smart. Smooth. Singular",
         bg: "rgba(255,193,0,0.2)",
-        link: "/parcel-singulator-system"
+        link: "/parcel-singulator-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Parcel Feeding / Handling",
       },
       {
         id: 2,
@@ -167,7 +183,9 @@ const categories = [
         img: "/images/tipper-parcel.webp",
         tag: "Universal Compatibility",
         bg: "#F2F2F2",
-        link: "/tipper"
+        link: "/tipper",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Parcel Feeding / Handling",
       },
       {
         id: 3,
@@ -176,7 +194,9 @@ const categories = [
         img: "/images/vds_main.webp",
         tag: "Gentle Product Handling",
         bg: "#F2F2F2",
-        link: "/volumetric-dimensioning-system"
+        link: "/volumetric-dimensioning-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Parcel Feeding / Handling",
       },
     ],
   },

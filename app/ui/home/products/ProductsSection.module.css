@@ -402,6 +402,12 @@
     }
 }
 
+@media (min-width: 1401px) and (max-width: 1650px) {
+    .cardBody {
+        flex-direction: column;
+    }
+}
+
 
 @media (min-width: 768px) and (max-width:1199px) {
     .card {
