@@ -83,7 +83,7 @@
     order: 1;
 }
 
-.cardText{
+.cardText {
     width: 75%;
 }
 
@@ -102,7 +102,7 @@
 .cardIcon img {
     height: 100px;
     width: 100px;
-    padding:10px;
+    padding: 10px;
 }
 
 .cardImage img {
@@ -306,5 +306,192 @@
     .card p {
         font-size: 12px;
         line-height: 16px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+
+    .card {
+        padding: 0;
+    }
+
+    .cardBody {
+        flex-direction: column-reverse;
+    }
+
+    .cardContent {
+        padding: 22px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .cardImage {
+        min-height: 210px;
+    }
+
+    .cardIcon {
+        width: 32%;
+        margin-left: -25px;
+        margin-right: 15px;
+        text-align: center;
+    }
+
+    .cardIcon img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .cardText {
+        width: 68%;
+    }
+
+    .categorytag {
+        font-size: 42px;
+        line-height: 42px;
+    }
+}
+
+/* ===================================== */
+/* 1367px - 1500px */
+/* ===================================== */
+@media (min-width: 1367px) and (max-width: 1599px) {
+
+    .card {
+        padding: 0;
+    }
+
+    .cardBody {
+        flex-direction: column-reverse;
+    }
+
+    .cardContent {
+        padding: 24px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .cardImage {
+        min-height: 230px;
+    }
+
+    .cardIcon {
+        width: 30%;
+        margin-left: -30px;
+        margin-right: 18px;
+        text-align: center;
+    }
+
+    .cardIcon img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .cardText {
+        width: 70%;
+    }
+
+    .categorytag {
+        font-size: 46px;
+        line-height: 46px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width:1199px) {
+    .card {
+        padding: 0;
+        box-shadow: 0 0px 0px #0000001f;
+    }
+
+    .cardBody {
+        flex-direction: column-reverse;
+    }
+
+    .cardImage {
+        min-height: 170px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cardContent {
+        padding: 20px;
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    .cardText {
+        width: 100%;
+    }
+
+    .cardIcon {
+        margin: auto;
+        margin-top: -60px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 90px;
+        height: 90px;
+    }
+
+    .cardIcon img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card p {
+        font-size: 11px;
+        line-height: 16px;
+    }
+
+    .link {
+        padding: .2rem 0.8rem;
+        font-size: 11px;
+    }
+}
+
+@media (max-width:767px){
+    .card{
+        padding: 0;
+        box-shadow: 0 0px 0px #0000001f;
+    }
+
+    .cardBody{
+        flex-direction: column-reverse;
+    }
+
+    .cardContent{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cardText{
+        width: 100%;
+    }
+
+    .cardIcon {
+        margin: auto;
+        margin-top: -60px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 90px;
+        height: 90px;
+    }
+
+    .cardIcon img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .link{
+        padding: 0.4rem 0.8rem;
+        font-size: 12px;
     }
 }

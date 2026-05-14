@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+
+  <!-- Conveyor frame -->
+  <rect x="28" y="58" width="56" height="12" rx="3" stroke="#F4A340" stroke-width="2.5"></rect>
+
+  <!-- Rollers -->
+  <circle cx="38" cy="64" r="2" fill="#F4A340"></circle>
+  <circle cx="48" cy="64" r="2" fill="#F4A340"></circle>
+  <circle cx="58" cy="64" r="2" fill="#F4A340"></circle>
+  <circle cx="68" cy="64" r="2" fill="#F4A340"></circle>
+  <circle cx="78" cy="64" r="2" fill="#F4A340"></circle>
+
+  <!-- Conveyor legs -->
+  <path d="M40 70L34 84" stroke="#F4A340" stroke-width="2.5" stroke-linecap="round"></path>
+
+  <path d="M72 70L78 84" stroke="#F4A340" stroke-width="2.5" stroke-linecap="round"></path>
+
+  <!-- Manual crank -->
+  <path d="M84 64H96" stroke="#F4A340" stroke-width="2.5" stroke-linecap="round"></path>
+
+  <circle cx="100" cy="64" r="6" stroke="#F4A340" stroke-width="2.5"></circle>
+
+  <path d="M100 58V52" stroke="#F4A340" stroke-width="2.5" stroke-linecap="round"></path>
+
+  <circle cx="100" cy="50" r="2.5" fill="#F4A340"></circle>
+
+</svg>

@@ -14,48 +14,58 @@ const categories = [
     products: [
       {
         id: 1,
-        title: "ZedSort the Loop – High-Speed Cross Belt Loop Sorter",
+        title: "ZedSort™ the Loop – High-Speed Cross Belt Loop Sorter",
         desc: "Muvro’s ZedSort – The Loop is a high-speed Cross Belt Sorter ensuring precise, quiet, and efficient warehouse automation.",
         img: "/images/ZedSort-the-Loop.webp",
         tag: "Speed. Precision. Power ",
         bg: "#eee",
-        link: "/high-speed-cross-belt-loop-sorter"
+        link: "/high-speed-cross-belt-loop-sorter",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Sorters",
       },
       {
         id: 2,
-        title: "Tilt Tray Sorter",
+        title: "ZedSort™ the Tilt Tray Sorter System",
         desc: " Tilt Tray Sorter System is a high-speed, modular, and flexible solution for automating sorting in warehouses, distribution centres, and logistics hubs.",
-        img: "/images/new-images/Tilt_Tray_Sorter.webp",
+        img: "/images/ZedSort-the-Tilt.webp",
         tag: "Smart. Scalable. Seamless.",
         bg: "#eee",
-        link: "/tilt-tray-sorter-system"
+        link: "/tilt-tray-sorter-system",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Sorters",
       },
       {
         id: 3,
-        title: "3D Smart Sorter",
+        title: "Trid with Zed Bot (3D smart sorter)",
         desc: "Muvro delivers an advanced modular sorting system with autonomous bots optimizing space, accuracy, and scalability for modern warehouses.",
-        img: "/images/new-images/3D-Smart-Sorter.webp",
+        img: "/images/Trid-with-Zed-Bot-3D-smart-sorter.webp",
         tag: "Smart. Scalable. Space-Savvy ",
         bg: "#eee",
-        link: "/3d-smart-sorter-ics"
+        link: "/3d-smart-sorter-ics",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Sorters",
       },
       {
         id: 4,
-        title: "Linear Cross Belt Sorter",
+        title: "ZedSort™ The LIN Linear Cross-Belt Sorter",
         desc: "Muvro’s ZedSort™ Cross-Belt Sorter powers modern logistics with unmatched speed, reliability, and flexibility for diverse industries.",
-        img: "/images/new-images/Linear-Cross-Sorter.webp",
+        img: "/images/ZedSort-the-lin.webp",
         tag: "High-Speed. Precision Space-Efficient.",
         bg: "#eee",
-        link: "/zedsort-the-lin-linear-cross-belt-sorter"
+        link: "/zedsort-the-lin-linear-cross-belt-sorter",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Sorters",
       },
       {
         id: 5,
         title: "Swing Wheel Sorter",
         desc: "Muvro’s Swing Wheel Sorter delivers high-speed, precise parcel handling, boosting efficiency across e-commerce, retail, and logistics operations.",
-        img: "/images/new-images/Swing-Wheel-Sorter.webp",
+        img: "/images/Swing-Wheel-Sorter.webp",
         tag: "Swift. Smart. Seamless ",
         bg: "#eee",
-        link: "/swing-wheel-sorter"
+        link: "/swing-wheel-sorter",
+        icon: "/images/sorter-icon.svg",
+        categoryTag: "Sorters",
       },
     ],
   },
@@ -181,7 +191,9 @@ const categories = [
         img: "/images/belt-conveyor.webp",
         tag: "Customizable & Scalable Design",
         bg: "rgba(255,193,0,0.2)",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
       {
         id: 2,
@@ -190,7 +202,9 @@ const categories = [
         img: "/images/Roller-Conveyor.webp",
         tag: "Simple & Robust Design",
         bg: "#F2F2F2",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
       {
         id: 3,
@@ -199,7 +213,9 @@ const categories = [
         img: "/images/Modular-Conveyor.webp",
         tag: "Application Versatility",
         bg: "#F2F2F2",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
       {
         id: 4,
@@ -208,7 +224,9 @@ const categories = [
         img: "/images/Chain-Conveyor.webp",
         tag: "Versatile Layout Capabilities",
         bg: "#F2F2F2",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
       {
         id: 5,
@@ -217,7 +235,9 @@ const categories = [
         img: "/images/Telescopic-Conveyor.webp",
         tag: "Flexible Design",
         bg: "#F2F2F2",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
       {
         id: 6,
@@ -226,7 +246,9 @@ const categories = [
         img: "/images/gravity-type-spiral-roller-conveyor-image.webp",
         tag: "Elevation & Angle Control",
         bg: "rgba(255,193,0,0.2)",
-        link: "/conveyor"
+        link: "/conveyor",
+        icon: "/images/conveyor.svg",
+        categoryTag: "Conveyors",
       },
     ],
   }
@@ -257,19 +279,21 @@ function ProductCard({ item, imageOnTop = false }) {
 
           <div className={styles.cardIcon}>
             <div className={styles.iconWrapper}>
-              <img src="images/sorter-icon.svg" alt="" className="img-fluid" />
+              <img src={item.icon} alt={item.title} className="img-fluid" />
             </div>
           </div>
           <div className={styles.cardText}>
             <h3>{item.title}</h3>
 
-              <p className="mb-3">{item.desc}</p>
+            <p className="mb-3">{item.desc}</p>
 
             <a href={item.link} className={styles.link}>
-                Explore More <RiArrowRightUpLine fontSize={12} />
-              </a>
+              Explore More <RiArrowRightUpLine fontSize={12} />
+            </a>
           </div>
-          <div className={styles.categorytag}>Sorter</div>
+          <div className={styles.categorytag}>
+            {item.categoryTag}
+          </div>
         </div>
         <div className={styles.cardImage}>
           <img src={item.img} alt={item.title} />
@@ -281,7 +305,7 @@ function ProductCard({ item, imageOnTop = false }) {
 
 export default function ProductsSection() {
   return (
-    <section>
+    <section className="customproductsection">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-9">
@@ -345,10 +369,10 @@ export default function ProductsSection() {
                               pagination={{ clickable: true }}
                               breakpoints={{
                                 0: { slidesPerView: 1 },
-                                576: { slidesPerView: 1.2 },
-                                768: { slidesPerView: 1.5 },
+                                576: { slidesPerView: 1 },
+                                768: { slidesPerView: 2 },
                                 1024: { slidesPerView: 2 },
-                                1200: { slidesPerView: 3 },
+                                1200: { slidesPerView: 2 },
                               }}
                             >
                               {category.products.map((item) => (

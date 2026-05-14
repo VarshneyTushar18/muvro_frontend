@@ -1,0 +1,5 @@
+@media (min-width: 768px) and (max-width:1199px) {
+    .customproductsection .col-md-9{
+        width: 100%!important;
+    }
+}
