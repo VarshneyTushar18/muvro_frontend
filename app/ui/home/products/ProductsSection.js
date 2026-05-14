@@ -49,7 +49,7 @@ const categories = [
         id: 4,
         title: "ZedSort™ The LIN Linear Cross-Belt Sorter",
         desc: "Muvro’s ZedSort™ Cross-Belt Sorter powers modern logistics with unmatched speed, reliability, and flexibility for diverse industries.",
-        img: "/images/new-images/ZedSort-the-lin.webp",
+        img: "/images/new-images/ZedSort-the-Lin.webp",
         tag: "High-Speed. Precision Space-Efficient.",
         bg: "#eee",
         link: "/zedsort-the-lin-linear-cross-belt-sorter",
