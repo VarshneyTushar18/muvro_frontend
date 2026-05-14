@@ -219,7 +219,7 @@ const categories = [
         id: 2,
         title: "Roller Conveyor",
         desc: "Designed for continuous and efficient material movement, driven by an AC geared motor, it operates without zone control, utilizing a chain or belt drive mechanism",
-        img: "/images/Roller-Conveyor-Image.webp",
+        img: "/images/Roller-Conveyor-Image-New.webp",
         tag: "Simple & Robust Design",
         bg: "#eee",
         link: "/conveyor",
