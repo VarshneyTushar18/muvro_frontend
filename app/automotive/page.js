@@ -136,14 +136,17 @@ export default function Automotive() {
           <div className="container">
             <div className="row align-items-center g-5">
               <div className="col-lg-6" data-aos="fade-right">
+                <br/>
                 <span className="section-label mb-3">Automotive Automation</span>
                 <h1>
                   Complete automation systems for modern automotive production
                 </h1>
                 <p>
+                  
                   MUVRO designs and manufactures integrated automotive
                   solutions across assembly lines, SPMs, mobile robots, EMS,
                   RGVs, sorting, ergonomic handling, fixtures, and grippers.
+                  <br/><br/>
                 </p>
                 {/* <div className={Style.heroActions}>
                   <Link href="/contact" className="mbtn mbtn-primary">
@@ -156,7 +159,7 @@ export default function Automotive() {
               </div>
 
               <div className="col-lg-6" data-aos="fade-left">
-                <div className={Style.heroImageWrap}>
+                {/* <div className={Style.heroImageWrap}>
                   <img
                     src="/images/automotive-industries.webp"
                     alt="Automotive automation production line"
@@ -165,7 +168,7 @@ export default function Automotive() {
                   <div className={Style.heroBadge}>
                     <span>From line concept to commissioning</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

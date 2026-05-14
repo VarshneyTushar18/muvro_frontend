@@ -18,6 +18,25 @@
     background-position: center;
 }
 
+.caseStudySection {
+    padding: 0;
+}
+
+.sectionHeader {
+    padding: 60px 0;
+}
+
+.testimonialHeader {
+    padding: 60px 0;
+}
+
+.testimonialBg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/case-study-testimonial-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0;
+}
+
 .imgWrapper {
     position: relative;
     overflow: hidden;
@@ -64,6 +83,14 @@
 
 .overlayContent a:hover {
     color: var(--color-secondary);
+}
+
+.testimonialCard {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    height: 100%;
 }
 
 .authorInfoWrapper {

@@ -6,8 +6,15 @@
   position: relative;
   padding: 80px 0 56px;
   background:
-    linear-gradient(120deg, rgba(0, 0, 0, 0.88), rgba(18, 22, 27, 0.72)),
-    url("/images/Conveyor-Banner.webp") center / cover;
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.88) 28%,
+      rgba(0, 0, 0, 0.55) 52%,
+      rgba(0, 0, 0, 0.18) 72%,
+      rgba(0, 0, 0, 0.02) 100%
+    ),
+    url("/images/automotive-bgimage.webp") center / cover no-repeat;
   color: #fff;
 }
 
@@ -476,7 +483,7 @@
 
 @media (max-width: 767px) {
   .hero h1 {
-    font-size: 42px;
+    font-size: 32px;
     line-height: 1.12;
   }
 
