@@ -18,11 +18,12 @@
 /* Modern Symmetric Card Design */
 .card {
     padding: 0;
-    border-radius: 0px;
+    border-radius: 10px;
     transition: all 0.3s ease;
     overflow: visible;
     margin: 1rem;
     margin-bottom: 0;
+    border: 1px solid #e0e0e0;
 }
 
 
@@ -81,6 +82,7 @@
     flex-shrink: 0;
     min-height: 280px;
     order: 1;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .cardText {
@@ -111,6 +113,7 @@
     width: auto;
     height: auto;
     object-fit: contain;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .tag {
