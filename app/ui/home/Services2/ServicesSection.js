@@ -434,7 +434,7 @@ export default function ServicesSectionTabs({ solutions = [] }) {
   };
 
   return (
-    <section className={`${styles.WrapperSlider} pb-0`}>
+    <section className={`${styles.WrapperSlider} pb-5`}>
       <div className="container mb-2">
         <span className="section-label" data-aos="fade-down">
           Efficiency, Flexibility & Reliability
