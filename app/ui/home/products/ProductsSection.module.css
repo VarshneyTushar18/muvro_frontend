@@ -23,7 +23,7 @@
     overflow: visible;
     margin: 1rem;
     margin-bottom: 0;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #d1d1d1;
 }
 
 
@@ -31,7 +31,7 @@
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 24px #ffbf0080;
     background: #f6f6f6 !important;
 }
 
@@ -45,6 +45,8 @@
     flex-direction: column;
     text-align: left;
     gap: 0rem;
+    background: #c5c5c5;
+    border-radius: 10px 10px  10px 10px;
 }
 
 
@@ -83,7 +85,11 @@
     min-height: 280px;
     order: 1;
     border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    background: #fff;
 }
+
+
 
 .cardText {
     width: 75%;
@@ -99,12 +105,13 @@
     margin-left: -40px;
     margin-right: 20px;
     width: 25%;
+    overflow: hidden;
 }
 
 .cardIcon img {
     height: 100px;
     width: 100px;
-    padding: 10px;
+    padding: 6px;
 }
 
 .cardImage img {
@@ -214,7 +221,7 @@
     top: 5px;
     z-index: 99;
     padding: 15px 20px;
-    background: #fff;
+    background: transparent;
     color: #000;
 }
 
@@ -263,6 +270,11 @@
 .imageOnTop .cardContent {
     width: 100%;
     order: 2;
+}
+
+.card:hover  .cardImage img {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
 }
 
 /* Mobile Responsive */
