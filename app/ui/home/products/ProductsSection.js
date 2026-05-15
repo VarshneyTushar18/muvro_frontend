@@ -86,7 +86,7 @@ const categories = [
         tag: "Ideal for high-density",
         bg: "#c5c5c5",
         link: "/vertixo-stack-sorter",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/vertixo.webp",
         categoryTag: "Secondary Sorters",
       },
       {
@@ -97,7 +97,7 @@ const categories = [
         tag: "Smart Parcel Tracking",
         bg: "#c5c5c5",
         link: "/vetro-micro-sort",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/vetro.webp",
         categoryTag: "Secondary Sorters",
       },
       {
@@ -108,7 +108,7 @@ const categories = [
         tag: "Multi-Layer High-Density Sorting",
         bg: "#c5c5c5",
         link: "/vorex",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/vorex.webp",
         categoryTag: "Secondary Sorters",
       },
 
@@ -127,7 +127,7 @@ const categories = [
         tag: "Smart. Scalable. Seamless.",
         bg: "#c5c5c5",
         link: "/navigo-pallet-shuttle-asrs-system",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/navigo.webp",
         categoryTag: "ASRS",
       },
       {
@@ -138,7 +138,7 @@ const categories = [
         tag: "Deep. Dynamic. Dependable.",
         bg: "#c5c5c5",
         link: "/radio-shuttle-system",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/radio.webp",
         categoryTag: "ASRS",
       },
       {
@@ -149,7 +149,7 @@ const categories = [
         tag: "Tall. Precise. Powerful.",
         bg: "#c5c5c5",
         link: "/asrs-stacker-cranes",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/ASRS.webp",
         categoryTag: "ASRS",
       },
       {
@@ -160,7 +160,7 @@ const categories = [
         tag: "Energy-Efficient Drives",
         bg: "#c5c5c5",
         link: "/mini-load-asrs-shuttle-system",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/Mini-Load.webp",
         categoryTag: "ASRS",
       }
     ],
@@ -178,7 +178,7 @@ const categories = [
         tag: "Smart. Smooth. Singular",
         bg: "#c5c5c5",
         link: "/parcel-singulator-system",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/parcel.webp",
         categoryTag: "Parcel Feeding / Handling",
       },
       {
@@ -189,7 +189,7 @@ const categories = [
         tag: "Universal Compatibility",
         bg: "#c5c5c5",
         link: "/tipper",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/Tipper.webp",
         categoryTag: "Parcel Feeding / Handling",
       },
       {
@@ -200,7 +200,7 @@ const categories = [
         tag: "Gentle Product Handling",
         bg: "#c5c5c5",
         link: "/volumetric-dimensioning-system",
-        icon: "/images/sorter-icon.svg",
+        icon: "/images/new-images/vds.webp",
         categoryTag: "Parcel Feeding / Handling",
       },
     ],
@@ -217,7 +217,7 @@ const categories = [
         tag: "Customizable & Scalable Design",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/belt-icon.webp",
         categoryTag: "Conveyors",
       },
       {
@@ -228,7 +228,7 @@ const categories = [
         tag: "Simple & Robust Design",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/roller-icon.webp",
         categoryTag: "Conveyors",
       },
       {
@@ -239,7 +239,7 @@ const categories = [
         tag: "Application Versatility",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/modular.webp",
         categoryTag: "Conveyors",
       },
       {
@@ -250,7 +250,7 @@ const categories = [
         tag: "Versatile Layout Capabilities",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/Chain.webp",
         categoryTag: "Conveyors",
       },
       {
