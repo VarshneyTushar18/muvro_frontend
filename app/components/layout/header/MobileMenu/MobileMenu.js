@@ -161,7 +161,7 @@ const megaMenuData = {
               name: "Packing & Put Away",
               subtitle: "Quick Commerce",
               image: "/images/pack-put.webp",
-              url: "#"
+              url: "/packing-and-put-away"
             },
             // {
             //   name: "Volume Distribution System",

@@ -261,7 +261,7 @@ const categories = [
         tag: "Flexible Design",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/Telescopic.webp",
         categoryTag: "Conveyors",
       },
       {
@@ -272,7 +272,7 @@ const categories = [
         tag: "Elevation & Angle Control",
         bg: "#c5c5c5",
         link: "/conveyor",
-        icon: "/images/conveyor.svg",
+        icon: "/images/new-images/Spiral.webp",
         categoryTag: "Conveyors",
       },
     ],
