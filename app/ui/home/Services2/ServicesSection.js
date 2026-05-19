@@ -151,7 +151,7 @@ const categories = {
       title: "Quick Commerce",
       description:
         "Compact Space, Semi-automated, Maximum Storage Utilization, Optimize warehouse efficiency with a high-density, semi-automated system that maximizes pallet storage in depth & height, with lower cost.",
-      image: "/images/quick-ecomm.webp",
+      image: "/images/quick-ecommone.webp",
       link: "/solutions#solution-quick-commerce",
     },
     {

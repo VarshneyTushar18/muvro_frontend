@@ -130,7 +130,7 @@ const megaMenuData = {
             {
               name: "Trid with Zed Bot",
               subtitle: "10Kg Max Weight",
-              image: "images/3d_sorter_bg_removed_c28b208916.png",
+              image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
             {
@@ -306,7 +306,7 @@ const megaMenuData = {
             {
               name: "Trid with Zed Bot",
               subtitle: "10Kg Max Weight",
-              image: "images/3d_sorter_bg_removed_c28b208916.png",
+              image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
             {

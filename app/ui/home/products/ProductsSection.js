@@ -80,7 +80,7 @@ const categories = [
     products: [
       {
         id: 1,
-        title: "Vertixo Stack Sorter",
+        title: "Vertixo™ Stack Sorter",
         desc: "The Vertixo™ Stack Sorter is a high-density, multi-level parcel sorting system engineered for modern warehouses.",
         img: "/images/new-images/finalimages/Vertixo-Stack-Sorter-Feature.webp",
         tag: "Ideal for high-density",
@@ -91,7 +91,7 @@ const categories = [
       },
       {
         id: 2,
-        title: "Vetro Micro Sort",
+        title: "Vetro™ Micro Sort",
         desc: "Vetro Micro Sort offers a compact yet powerful secondary sortotion solution designed specifically for space—constrained environments.",
         img: "/images/new-images/finalimages/Vetro-Micro-Sorter-Feature.webp",
         tag: "Smart Parcel Tracking",
@@ -102,13 +102,13 @@ const categories = [
       },
       {
         id: 3,
-        title: "VOREX",
+        title: "VOREX™",
         desc: "The VOREX™ Multi-Layer Multi-Bot Sorting System is Muvro’s most advanced 3D orbital sorter—engineered for operations.",
         img: "/images/new-images/finalimages/vorex-feature.webp",
         tag: "Multi-Layer High-Density Sorting",
         bg: "#c5c5c5",
         link: "/vorex",
-        icon: "/images/new-images/vorex.webp",
+        icon: "/images/new-images/Vorex.webp",
         categoryTag: "Secondary Sorters",
       },
 
@@ -127,7 +127,7 @@ const categories = [
         tag: "Smart. Scalable. Seamless.",
         bg: "#c5c5c5",
         link: "/navigo-pallet-shuttle-asrs-system",
-        icon: "/images/new-images/navigo.webp",
+        icon: "/images/new-images/Navigo.webp",
         categoryTag: "ASRS",
       },
       {
