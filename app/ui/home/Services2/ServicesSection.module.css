@@ -81,7 +81,7 @@
 
 .cardOverlay h3 {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     line-height: normal;
     text-align: center;
     margin: 0
@@ -416,10 +416,12 @@
   cursor: not-allowed !important;
   background-color: #d3d3d3 !important;
   color: #808080 !important;
+  display: none !important;
 }
 
 .disabledTab:hover {
   background: #d3d3d3 !important;
   color: #808080 !important;
   cursor: not-allowed;
+  display: none !important;
 }

@@ -35,7 +35,12 @@ export default function ContactUs() {
 
   return (
     <>
+      
+      <div>
+        <img src="/images/fulfilment-banner.png" alt="Fulfilment Solution Banner" className="img-fluid" />
+      </div>
       <BreadcrumbStrip crumbs={crumbs} />
+
 
       <section
         className={Style.contact_page}
@@ -125,7 +130,7 @@ export default function ContactUs() {
 
 
         <div className="container pt-5">
-       
+
           <div
             className="row justify-content-center"
             data-aos="fade-up"
@@ -216,16 +221,16 @@ export default function ContactUs() {
 
                 <h6>Applications:</h6>
 
-                
-                    <ul className={Style.TwoCol}>
-                      <li>Receiving docks</li>
-                      <li>Inspection zones</li>
-                      <li>Quality check areas</li>
-                      <li>Inventory staging</li>
-                    </ul>
-                
 
-              
+                <ul className={Style.TwoCol}>
+                  <li>Receiving docks</li>
+                  <li>Inspection zones</li>
+                  <li>Quality check areas</li>
+                  <li>Inventory staging</li>
+                </ul>
+
+
+
               </p>
 
             </div>
@@ -276,9 +281,7 @@ export default function ContactUs() {
                   <img src="/images/processing-7.webp" alt="Slide 7" style={{ width: '100%' }} />
                 </SwiperSlide>
 
-                <SwiperSlide>
-                  <img src="/images/processing-8.webp" alt="Slide 8" style={{ width: '100%' }} />
-                </SwiperSlide>
+
               </Swiper>
             </div>
             <div className="col-xl-6 pb-4">
@@ -304,16 +307,16 @@ export default function ContactUs() {
 
                 <h6>Applications:</h6>
 
-                
-                    <ul className={Style.TwoCol}>
-                      <li>Food & pharma processing</li>
-                      <li>Electronics assembly </li>
-                      <li>Packaging lines</li>
-                      <li>Quality inspection systems</li>
-                    </ul>
-                
 
-              
+                <ul className={Style.TwoCol}>
+                  <li>Food & pharma processing</li>
+                  <li>Electronics assembly </li>
+                  <li>Packaging lines</li>
+                  <li>Quality inspection systems</li>
+                </ul>
+
+
+
               </p>
 
             </div>
@@ -350,7 +353,7 @@ export default function ContactUs() {
                 <SwiperSlide>
                   <img src="/images/Outbound-4.webp" alt="Slide 4" style={{ width: '100%' }} />
                 </SwiperSlide>
-                
+
               </Swiper>
             </div>
             <div className="col-xl-6 pb-4">
@@ -374,16 +377,16 @@ export default function ContactUs() {
 
                 <h6>Applications:</h6>
 
-                
-                    <ul className={Style.TwoCol}>
-                      <li>Sorting & dispatch</li>
-                      <li>Parcel handling </li>
-                      <li>Shipping bays </li>
-                      <li>Cross-dock operations</li>
-                    </ul>
-                
 
-              
+                <ul className={Style.TwoCol}>
+                  <li>Sorting & dispatch</li>
+                  <li>Parcel handling </li>
+                  <li>Shipping bays </li>
+                  <li>Cross-dock operations</li>
+                </ul>
+
+
+
               </p>
 
             </div>

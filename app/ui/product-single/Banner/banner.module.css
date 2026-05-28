@@ -10,7 +10,7 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: none;
 }
 
 .bannerSection:after {
@@ -40,4 +40,10 @@
 @keyframes slide {
 	0% {transform:translateX(-100%);}
 	100% {transform:translateX(100%);}
+}
+
+@media (max-width:1180px){
+.bannerImage {
+  object-fit: contain;
+}
 }

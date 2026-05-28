@@ -309,12 +309,12 @@ const megaMenuData = {
               image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
-            {
-              name: "Fast Sorter (Micro Sorter)",
-              subtitle: "Up to 2,000 parcels/hour",
-              image: "images/product01_cf91e2b5ef.png",
-              url: "/fast-sorter-micro-sorter"
-            },
+            // {
+            //   name: "Fast Sorter (Micro Sorter)",
+            //   subtitle: "Up to 2,000 parcels/hour",
+            //   image: "images/product01_cf91e2b5ef.png",
+            //   url: "/fast-sorter-micro-sorter"
+            // },
             {
               name: "High Speed Cross Belt Loop Sorter",
               subtitle: "Interalogitics",

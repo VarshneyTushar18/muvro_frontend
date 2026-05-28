@@ -12,7 +12,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./CaseStudyTestimonial.module.css";
 
+
+
 export default function Testimonial({ slides }) {
+  
   return (
     <div className={styles.testimonialSection}>
       <div className="container">

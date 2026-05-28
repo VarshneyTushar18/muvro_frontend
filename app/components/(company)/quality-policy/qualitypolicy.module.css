@@ -32,8 +32,20 @@
 
 .quality_policy .image_block {
   position: relative;
-  width: 90%;
+  width: 60%;
   margin: 0 auto;
+}
+
+@media (max-width:1024px) {
+  .quality_policy .image_block {
+   width: 80%;
+  }
+}
+
+@media (max-width:767px) {
+  .quality_policy .image_block {
+   width: 100%;
+  }
 }
 
 .quality_policy .image_block:before {

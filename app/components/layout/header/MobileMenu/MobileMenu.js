@@ -140,7 +140,7 @@ const megaMenuData = {
               url: "/bin-to-person"
             },
             {
-              name: "Pick to Light",
+              name: "Pick/Put to Light",
               subtitle: "Quick Commerce",
               image: "/images/PTL.webp",
               url: "/pick-to-light"
@@ -309,12 +309,12 @@ const megaMenuData = {
               image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
-            {
-              name: "Fast Sorter (Micro Sorter)",
-              subtitle: "Up to 2,000 parcels/hour",
-              image: "https://muvro.tech2globe.co.in/uploads/product01_cf91e2b5ef.png",
-              url: "/fast-sorter-micro-sorter"
-            },
+            // {
+            //   name: "Fast Sorter (Micro Sorter)",
+            //   subtitle: "Up to 2,000 parcels/hour",
+            //   image: "https://muvro.tech2globe.co.in/uploads/product01_cf91e2b5ef.png",
+            //   url: "/fast-sorter-micro-sorter"
+            // },
             {
               name: "High Speed Cross Belt Loop Sorter",
               subtitle: "Interalogitics",
@@ -493,6 +493,14 @@ const companyLinks = [
   { label: "Quality Policy", href: "/company/quality-policy" },
   { label: "Why Muvro?", href: "/company/why-muvro" },
 ];
+const groupCompanyLinks = [
+  { label: "Muvro Technologies Pvt Ltd", href: "/about-us" },
+  { label: "PCL Computers", href: "#" },
+  { label: "Upper India Pvt Ltd", href: "#" },
+  { label: "Venus Pack System Pvt Ltd", href: "#" },
+  { label: "Nakamura Kiko Co. Ltd", href: "#" },
+  { label: "Takumi Technologies India Pvt. Ltd.", href: "#" },
+];
 const softwareLinks = [
   { label: "WCS", href: "/software/warehouse-control-systems" },
   { label: "WMS", href: "/software/warehouse-management-system" },
@@ -636,7 +644,14 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                                 Company <RiArrowRightSLine />
                             </button>
                         </li> */}
+
+            
             <li><Link href="/about-us">About Us</Link></li>
+            <li>
+              <button onClick={() => handleOpenSection("Group of Companies")}>
+                Group of Companies <RiArrowRightSLine />
+              </button>
+            </li>
             <li>
               <button onClick={() => handleOpenSection("Industries")}>
                 Industries <RiArrowRightSLine />
@@ -666,6 +681,8 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
           </ul>
         ) : activeSection === "Company" ? (
           <SubmenuScreen title="Company" links={companyLinks} onBack={handleBack} />
+        ) : activeSection === "Group of Companies" ? (
+          <SubmenuScreen title="Group of Companies" links={groupCompanyLinks} onBack={handleBack} />
         ) : activeSection === "Industries" ? (
           <SubmenuScreen title="Industries" links={industriesLinks} onBack={handleBack} />
         ) : activeSection === "Software" ? (
