@@ -169,7 +169,7 @@ export default async function SolutionsPage() {
                     )}
                 </div>
 
-                <TabsWithActive solutions={solutions} />
+                {/* <TabsWithActive solutions={solutions} /> */}
 
 
                 {solutions.map((solution, index) => {
