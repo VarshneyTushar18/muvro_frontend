@@ -17,29 +17,29 @@ import {
 import Link from "next/link";
 
 const events = [
+  // {
+  //   id: 1,
+  //   image: "/images/events/Invitation-For-Website-IWE.jpg",
+  //   title: "Intralogistics & Warehousing Expo, Mumbai | 2026",
+  //   date: "14 May - 16 May",
+  //   link: "#",
+  // },
   {
     id: 1,
-    image: "/images/events/Invitation-For-Website-IWE.jpg",
-    title: "Intralogistics & Warehousing Expo, Mumbai | 2026",
-    date: "14 May - 16 May",
-    link: "#",
-  },
-  {
-    id: 2,
     image: "/images/events/Invitation-IWS-Delhi.jpg",
     title: "India Warehousing Show, Delhi | 2026",
     date: "25 June - 27 June",
     link: "#",
   },
   {
-    id: 3,
+    id: 2,
     image: "/images/events/Modex-Atlanta-(USA)-13-16-Apr-26.jpg",
     title: "Modex Atlanta (USA) | 2026",
     date: "13 April - 16 April",
     link: "#",
   },
   {
-    id: 4,
+    id: 3,
     image: "/images/events/Mumbai-05-07-Feb-2026.jpg",
     title: "Intralogistics & Warehousing Expo, Mumbai | 2026",
     date: "05 February - 07 February",
