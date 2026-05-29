@@ -23,8 +23,6 @@ const categories = [
         icon: "/images/new-images/3D Smart.webp",
         categoryTag: "Sorters",
       },
-      
-      
 
       {
         id: 2,
@@ -37,6 +35,8 @@ const categories = [
         icon: "/images/new-images/High Speed.webp",
         categoryTag: "Sorters",
       },
+
+     
       
       {
         id: 3,
@@ -61,8 +61,20 @@ const categories = [
         categoryTag: "Sorters",
       },
 
-      {
+       {
         id: 5,
+        title: "Narrow Belt sorter",
+        desc: "ZedSort™ Narrow Cross-Belt Sorter is Muvro’s latest answer to sorting problems in tight spaces.",
+        img: "/images/narrow-home-card-img.webp",
+        tag: "Speed. Precision. Power ",
+        bg: "#c5c5c5",
+        link: "/narrow-cross-belt-sorter",
+        icon: "/images/new-images/narrow-icon.png",
+        categoryTag: "Sorters",
+      },
+
+      {
+        id: 6,
         title: "ZedSort™ the Tilt Tray Sorter System",
         desc: " Tilt Tray Sorter System is a high-speed, modular, and flexible solution for automating sorting in warehouses, distribution centres, and logistics hubs.",
         img: "/images/new-images/ZedSort-the-tilt.webp",

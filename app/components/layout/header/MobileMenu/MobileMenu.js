@@ -322,6 +322,12 @@ const megaMenuData = {
               url: "/high-speed-cross-belt-loop-sorter"
             },
             {
+              name: "Narrow Belt sorter",
+              subtitle: "Interalogitics",
+              image: "images/Narrow_Section_1_Feature.webp",
+              url: "/narrow-cross-belt-sorter"
+            },
+            {
               name: "ZedSort™ The LIN Linear Cross Belt Sorter",
               subtitle: "Fast. Precise. Compact.",
               image: "https://muvro.tech2globe.co.in/uploads/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",

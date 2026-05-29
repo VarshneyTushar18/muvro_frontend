@@ -102,7 +102,7 @@ const megaMenuData = {
             {
               name: "Secondary Sorting",
               subtitle: "Flexible Integration Capabilities",
-              image: "images/Secondary-Sorting-Image-1.webp",
+              image: "images/3dsmart-sorter-image.webp",
               url: "/secondary-sorting"
             },
           ]
@@ -209,14 +209,7 @@ const megaMenuData = {
         {
           name: "Automotive",
           products: [
-            { name: "Assembly Lines", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Sorting and Storage", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "SPMs", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Ergonomic Handling System", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "EMS System", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Mobile Robots", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Rail Guided Vehicle (RGVs)", subtitle: "Automotive", image: "/images/not_found.png", url: "#" },
-            { name: "Fixtures and Gripper", subtitle: "Automotive", image: "/images/not_found.png", url: "#" }
+            { name: "Automotive", subtitle: "Engineered to improve productivity", image: "/images/automotive-image-card.webp", url: "/automotive" },
           ],
         },
       ],
@@ -227,74 +220,64 @@ const megaMenuData = {
         {
           name: "White Goods",
           products: [
-            { name: "IDU _ VRV - Assembly Lines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "ODU _ VRV - Assembly Lines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "IDU _ RA - Assembly Lines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "ODU_ RA - Assembly Lines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "Refrigerator Assembly Lines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "Washing Machine Assy Line", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "Leak Testing Machines", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "FG Transfer System", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "Continuous Vertical Lift", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "Robotics Palletizer", subtitle: "White Goods", image: "/images/not_found.png", url: "#" },
-            { name: "ASRS System", subtitle: "White Goods", image: "/images/not_found.png", url: "#" }
+            { name: "White Goods", subtitle: " integrated white goods solutions", image: "/images/white-goods/white-goods-card-image.webp", url: "/white-goods" },
           ],
         },
       ],
     },
 
-    "Food & Beverages": {
-      categories: [
-        {
-          name: "Food & Beverages",
-          products: [
-            { name: "End of Line (Conveyor Line)", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
-            { name: "FG Lines", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
-            { name: "Spiral Conveyor", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
-          ],
-        },
-      ],
-    },
+    // "Food & Beverages": {
+    //   categories: [
+    //     {
+    //       name: "Food & Beverages",
+    //       products: [
+    //         { name: "End of Line (Conveyor Line)", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
+    //         { name: "FG Lines", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
+    //         { name: "Spiral Conveyor", subtitle: "Food & Beverages", image: "/images/not_found.png", url: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
 
-    "Waste Management": {
-      categories: [
-        {
-          name: "Waste Management",
-          products: [
-            { name: "Bulk Handling Conveyor", subtitle: "Waste Management", image: "/images/not_found.png", url: "#" },
-            { name: "Truckey Projects", subtitle: "Waste Management", image: "/images/not_found.png", url: "#" },
-          ],
-        },
-      ],
-    },
+    // "Waste Management": {
+    //   categories: [
+    //     {
+    //       name: "Waste Management",
+    //       products: [
+    //         { name: "Bulk Handling Conveyor", subtitle: "Waste Management", image: "/images/not_found.png", url: "#" },
+    //         { name: "Truckey Projects", subtitle: "Waste Management", image: "/images/not_found.png", url: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
 
-    "Packaging Industry": {
-      categories: [
-        {
-          name: "Packaging Industry",
-          products: [
-            { name: "Carton Handling Conveyor", subtitle: "Packaging Industry", image: "/images/not_found.png", url: "#" },
-            { name: "Special Low Profile RGV", subtitle: "Packaging Industry", image: "/images/not_found.png", url: "#" },
-          ],
-        },
-      ],
-    },
+    // "Packaging Industry": {
+    //   categories: [
+    //     {
+    //       name: "Packaging Industry",
+    //       products: [
+    //         { name: "Carton Handling Conveyor", subtitle: "Packaging Industry", image: "/images/not_found.png", url: "#" },
+    //         { name: "Special Low Profile RGV", subtitle: "Packaging Industry", image: "/images/not_found.png", url: "#" },
+    //       ],
+    //     },
+    //   ],
+    // },
 
-    "Airport": {
-      categories: [
-        {
-          name: "Airport",
-          products: [
-            { name: "Baggage Handling Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
-            { name: "Sorter System", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
-            { name: "Baggage Scanning Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
-            { name: "Spiral Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
-            { name: "Lifts", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
-            { name: "Continuous Vertical Lifts", subtitle: "Airport", image: "/images/not_found.png", url: "#" }
-          ],
-        },
-      ],
-    },
+    // "Airport": {
+    //   categories: [
+    //     {
+    //       name: "Airport",
+    //       products: [
+    //         { name: "Baggage Handling Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
+    //         { name: "Sorter System", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
+    //         { name: "Baggage Scanning Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
+    //         { name: "Spiral Conveyor", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
+    //         { name: "Lifts", subtitle: "Airport", image: "/images/not_found.png", url: "#" },
+    //         { name: "Continuous Vertical Lifts", subtitle: "Airport", image: "/images/not_found.png", url: "#" }
+    //       ],
+    //     },
+    //   ],
+    // },
 
   },
   Technologies: {
@@ -320,6 +303,12 @@ const megaMenuData = {
               subtitle: "Interalogitics",
               image: "images/high-speed-cross-belt-sorter-image.webp",
               url: "/high-speed-cross-belt-loop-sorter"
+            },
+            {
+              name: "Narrow Belt sorter",
+              subtitle: "Interalogitics",
+              image: "images/Narrow_Section_1_Feature.webp",
+              url: "/narrow-cross-belt-sorter"
             },
             {
               name: "ZedSort™ The LIN Linear Cross Belt Sorter",
