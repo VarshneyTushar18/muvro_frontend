@@ -167,7 +167,12 @@ export default async function AboutUs() {
                                 data-aos-delay="450"
                             ></div>
 
+
+
+
                             <div className={styles.muvroContainer}>
+
+
 
                                 {/* M */}
                                 <div
@@ -198,6 +203,7 @@ export default async function AboutUs() {
                                     <div className={`${styles.label} ${styles.top}`}>VENTURIOUS</div>
                                     <div className={styles.circle}>V</div>
                                 </div>
+
 
                                 {/* R */}
                                 <div
@@ -321,7 +327,7 @@ export default async function AboutUs() {
                         </div>
                     </div>
                 </div>
-                
+
             </section>
 
             <WhyMuvroFeatures />
@@ -381,7 +387,7 @@ export default async function AboutUs() {
 
             <WhyMuvro />
 
-            <BenchmarkCounter data={data}/>
+            <BenchmarkCounter data={data} />
 
             {/* <section className="pb-0">
                 <div className="container">

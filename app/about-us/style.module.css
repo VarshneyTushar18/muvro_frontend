@@ -2,6 +2,10 @@
     position: relative;
     padding: 80px 0;
     text-align: center;
+    width: max-content;
+    margin: auto;
+    padding: 100px;
+    background: linear-gradient(90deg, #ffc1002e 58%, #ff8a0869 42%);
 }
 
 .muvroContainer {
@@ -23,7 +27,7 @@
     z-index: 0;
     border-radius: 3px;
     transition: all 0.3s ease;
-    margin: auto
+    margin: auto;
 }
 
 .muvroItem {
@@ -237,11 +241,9 @@
 
 @media(min-width:1400px) {
     .line {
-        width: 60%;
+        width: 80%;
     }
 }
 
 
-@media (min-width:768px) and (max-width:1180px) {
-    
-}
+@media (min-width:768px) and (max-width:1180px) {}
