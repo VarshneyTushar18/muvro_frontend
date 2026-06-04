@@ -61,7 +61,7 @@ const solutionCards = [
   {
     title: "SPM's",
     icon: RiToolsLine,
-    image: "/images/SPM's.webp",
+    image: "/images/SPM-image-single-page.webp",
     description:
       "Special purpose machines built around your part, cycle time, and process sequence for repeatable output on demanding shop floors.",
     points: [
