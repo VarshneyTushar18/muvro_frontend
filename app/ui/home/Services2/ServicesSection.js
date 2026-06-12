@@ -134,7 +134,7 @@ const categories = {
       title: "Secondary Sorting Systems",
       description:
         "Our innovative gantry-based system delivers unmatched throughput, precision, and scalability for modern logistics operations.",
-      image: "/images/secondary-image-sorting.webp",
+      image: "/images/secondary-image-sorting-update.webp",
       link: "/solutions#solution-secondary-sorting-solutions",
     },
     {
