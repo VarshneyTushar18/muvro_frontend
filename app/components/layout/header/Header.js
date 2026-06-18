@@ -428,7 +428,7 @@ const megaMenuData = {
           name: "Lifters",
           products: [
             { name: "Continuous Vertical Lift", subtitle: "Lifters", image: "/images/technologies/lifters/Continuous-Lifter.webp", url: "#" },
-            { name: "Straight / Vertical Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Vertical-Lifter.webp", url: "#" },
+            { name: "Straight / Vertical Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/verticallifter.webp", url: "#" },
             
             { name: "Chain Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Chain-Lifter.webp", url: "#" },
             { name: "Belt Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Belt-Lifter.webp", url: "#" },
