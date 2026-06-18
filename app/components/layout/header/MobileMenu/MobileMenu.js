@@ -438,26 +438,26 @@ const megaMenuData = {
         {
           name: "Diverters & POP Up",
           products: [
-            { name: "Pop & Diverters", subtitle: "Diverters &POP Up", image: "/images/not_found.png", url: "#" },
+            { name: "Pop & Diverters", subtitle: "Diverters &POP Up", image: "/images/technologies/popup/diverter-popup.webp", url: "#" },
           ],
         },
         {
           name: "Lifters",
           products: [
-            { name: "Continuous Vertical Lift", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Straight / Vertical Lifter", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Spiral Conveyors", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Chain Lifter", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Belt Lifter", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Scissor Lifters", subtitle: "Lifters", image: "/images/not_found.png", url: "#" },
-            { name: "Zip Chain Lifters", subtitle: "Lifters", image: "/images/not_found.png", url: "#"  },
+            { name: "Continuous Vertical Lift", subtitle: "Lifters", image: "/images/technologies/lifters/Continuous-Lifter.webp", url: "#" },
+            { name: "Straight / Vertical Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Vertical-Lifter.webp", url: "#" },
+            
+            { name: "Chain Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Chain-Lifter.webp", url: "#" },
+            { name: "Belt Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/Belt-Lifter.webp", url: "#" },
+            { name: "IDU Lifter", subtitle: "Lifters", image: "/images/technologies/lifters/IDU-Lifter.webp", url: "#" },
+            { name: "Zip Chain Lifters", subtitle: "Lifters", image: "/images/technologies/lifters/zip-chain-lifter.webp", url: "#"  },
           ],
         },
         {
           name: "Mobile Robots",
           products: [
-            { name: "AGV", subtitle: "Mobile Robots", image: "https://muvro.tech2globe.co.in/uploads/agv_image_a157089136.webp", url: "/automated-guided-vehicle" },
-            { name: "AMR", subtitle: "Mobile Robots", image: "https://muvro.tech2globe.co.in/uploads/amr_image_10436d8ec7.webp", url: "/autonomous-mobile-robot" },
+            { name: "AGV", subtitle: "Mobile Robots", image: "images/agv_image_a157089136.webp", url: "/automated-guided-vehicle" },
+            { name: "AMR", subtitle: "Mobile Robots", image: "images/amr_image_10436d8ec7.webp", url: "/autonomous-mobile-robot" },
           ],
         },
         {
@@ -469,23 +469,23 @@ const megaMenuData = {
         {
           name: "SPMs",
           products: [
-            { name: "Components Assembly SPMs", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Gearbox Press and Assembly", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Differential Case Testing", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Lift Tables", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Tire & Wheel Conveyor System", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Sorting and Storage Technologies", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "EMS System", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Mobile Robots", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Rail Guided Vehicle (RGVs)", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Fixtures and Gripper", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Manipulators", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Turn Tables", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "TOD Turn Over Devise", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Flipper Device", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Diverter Technologies", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Stackers and De-Stacker", subtitle: "SPMs", image: "/images/not_found.png", url: "#" },
-            { name: "Gantry System", subtitle: "SPMs", image: "/images/not_found.png", url: "#" }
+            { name: "Components Assembly SPMs", subtitle: "SPMs", image: "/images/technologies/spm/Component-Assembly-SPM.webp", url: "#" },
+            { name: "Gearbox Press and Assembly", subtitle: "SPMs", image: "/images/technologies/spm/Gearbox-Press-Assembly.webp", url: "#" },
+            { name: "Differential Case Testing", subtitle: "SPMs", image: "/images/technologies/spm/Differential-Case-Testing.webp", url: "#" },
+            { name: "Lift Tables", subtitle: "SPMs", image: "/images/technologies/spm/Lift-Table.webp", url: "#" },
+            { name: "Tire & Wheel Conveyor System", subtitle: "SPMs", image: "/images/technologies/spm/Tire-wheel-Conveyor.webp", url: "#" },
+            { name: "Sorting and Storage Technologies", subtitle: "SPMs", image: "/images/technologies/spm/Sorting-Storage.webp", url: "#" },
+            { name: "EMS System", subtitle: "SPMs", image: "/images/technologies/spm/electrified-monorail-system-image.webp", url: "#" },
+            { name: "Mobile Robots", subtitle: "SPMs", image: "/images/technologies/spm/mobile-robots.webp", url: "#" },
+            { name: "Rail Guided Vehicle (RGVs)", subtitle: "SPMs", image: "/images/technologies/spm/rgv.webp", url: "#" },
+            { name: "Fixtures and Gripper", subtitle: "SPMs", image: "/images/technologies/spm/fixture-gripper.webp", url: "#" },
+            { name: "Manipulators", subtitle: "SPMs", image: "/images/technologies/spm/Manipulator.webp", url: "#" },
+            { name: "Turn Tables", subtitle: "SPMs", image: "/images/technologies/spm/Turn-Table.webp", url: "#" },
+            { name: "TOD Turn Over Devise", subtitle: "SPMs", image: "/images/technologies/spm/tod.webp", url: "#" },
+            { name: "Flipper Device", subtitle: "SPMs", image: "/images/technologies/spm/Flipper.webp", url: "#" },
+            { name: "Diverter Technologies", subtitle: "SPMs", image: "/images/technologies/spm/Diverter-Technology.webp", url: "#" },
+            { name: "Stackers and De-Stacker", subtitle: "SPMs", image: "/images/technologies/spm/De-Stacker.webp", url: "#" },
+            { name: "Gantry System", subtitle: "SPMs", image: "/images/technologies/spm/gantry.webp", url: "#" }
           ],
         },
 
@@ -651,7 +651,7 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                             </button>
                         </li> */}
 
-            
+
             <li><Link href="/about-us">About Us</Link></li>
             <li>
               <button onClick={() => handleOpenSection("Group of Companies")}>
