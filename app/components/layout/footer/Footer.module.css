@@ -2,7 +2,7 @@
 .footerWrapper {
   display: grid;
   /* grid-template-columns: 1.2fr 2fr 1.2fr; */
-  grid-template-columns: 1.4fr 2.4fr 1.4fr;
+  grid-template-columns: 1.2fr 1.2fr 1fr 1fr ;
   gap: 40px;
   margin: auto;
   padding-block: 20px;
@@ -99,6 +99,44 @@
   gap: 8px;
 }
 
+.certifications {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.certificationLogos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.certificationLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.certificationLogo:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.certificationLogo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .links li,
 .contact li {
   margin-bottom: 12px;
@@ -155,13 +193,18 @@
   text-align: center;
 }
 
+@media (max-width: 1200px) {
+  .footerWrapper {
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
 @media (max-width: 992px) {
   .footerWrapper {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
-
-
 }
 
 @media (max-width: 768px) {
@@ -179,6 +222,20 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+  }
+
+  .certifications {
+    align-items: center;
+    text-align: center;
+  }
+
+  .certifications {
+    align-items: center;
+    width: 100%;
+  }
+
+  .certificationLogos {
+    justify-content: center;
   }
 
   .links ul {

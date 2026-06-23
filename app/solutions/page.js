@@ -65,7 +65,7 @@ async function getSolutions() {
 
     const data = await res.json();
 
-    
+
     return data?.data;
 }
 
@@ -154,7 +154,7 @@ export default async function SolutionsPage() {
     const getManualLink = (item, solution) =>
         item.manualLink?.toString().trim() ||
         (formatSlug(solution.solutionName) === "automotive" ? "/automotive" : "") ||
-        (formatSlug(solution.solutionName) === "white-goods" ? "/white-goods" : "");
+        (formatSlug(solution.solutionName) === "white-goods" ? "/white-goods" : "") 
     const getButtonLabel = (item) =>
         item.manualButtonLabel?.toString().trim() ||
         item.buttonLabel?.toString().trim() ||

@@ -102,7 +102,7 @@ const megaMenuData = {
             {
               name: "Secondary Sorting",
               subtitle: "Flexible Integration Capabilities",
-              image: "images/Secondary-Sorting-Image-1.webp",
+              image: "images/3dsmart-sorter-image.webp",
               url: "/secondary-sorting"
             },
           ]
@@ -142,7 +142,7 @@ const megaMenuData = {
             {
               name: "Pick/Put to Light",
               subtitle: "Quick Commerce",
-              image: "/images/PTL.webp",
+              image: "/images/PTL2.webp",
               url: "/pick-to-light"
             },
             // {
@@ -659,11 +659,12 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                 Group of Companies <RiArrowRightSLine />
               </button>
             </li>
-            {/* <li>
+            <li>
               <button onClick={() => handleOpenSection("Industries")}>
                 Industries <RiArrowRightSLine />
               </button>
-            </li> */}
+            </li>
+          
             <li>
               <button onClick={() => handleOpenSection("Solutions")}>
                 Solutions <RiArrowRightSLine />

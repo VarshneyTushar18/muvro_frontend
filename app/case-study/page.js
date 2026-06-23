@@ -57,7 +57,7 @@ export default async function CaseStudyPage() {
             <section className={styles.wrapper}>
                 <div className="container">
                     <div className={styles.intro}>
-                        <span className="section-label-center">Our Case Study</span>
+                        <span className="section-label-center mb-3">Our Case Study</span>
                         <h2 className="text-center mb-3">
                             Automation <span>Success Stories</span>
                         </h2>

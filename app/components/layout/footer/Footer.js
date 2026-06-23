@@ -6,6 +6,25 @@ import Newsletter from "./Newsletter";
 import LocationsSlider from "./LocationsSlider";
 import FooterLinksSection from "./FooterLinksSection";
 
+const CERTIFICATIONS = [
+  {
+    title: "Avetta",
+    logo: "/images/avetta.webp",
+  },
+  {
+    title: "CE",
+    logo: "/images/CE.png",
+  },
+  {
+    title: "Tuvnord",
+    logo: "/images/tuvnord.webp",
+  },
+  {
+    title: "ISO",
+    logo: "/images/ISO.png",
+  },
+];
+
 
 async function getFooterData() {
   const backendBaseUrl = process.env.STRAPI_BACKEND_BASE_URL;
@@ -128,6 +147,21 @@ export default async function Footer() {
               />
             </div>
           )}
+
+          <div className={styles.certifications}>
+            <h4 className={styles.linksHeader}>Certifications</h4>
+            <div className={styles.certificationLogos}>
+              {CERTIFICATIONS.map((cert, index) => (
+                <div key={index} className={styles.certificationLogo}>
+                  <img
+                    src={cert.logo}
+                    alt={cert.title}
+                    title={cert.title}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
 
         </div>
       </div>

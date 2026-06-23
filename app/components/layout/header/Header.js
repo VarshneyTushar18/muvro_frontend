@@ -142,7 +142,7 @@ const megaMenuData = {
             {
               name: "Pick to Light",
               subtitle: "Quick Commerce",
-              image: "/images/PTL.webp",
+              image: "/images/PTL2.webp",
               url: "/pick-to-light"
             },
             // {
@@ -652,7 +652,7 @@ export default function Header() {
                 </li > */}
               </ul >
             </li >
-            {/* <li className={`nav-item dropdown ${styles.navItemDropdown}`}>
+            <li className={`nav-item dropdown ${styles.navItemDropdown}`}>
               <a
                 className={`${styles.navDropdown} nav-link dropdown-toggle`}
                 href="#"
@@ -701,7 +701,7 @@ export default function Header() {
                 </li >
               </ul >
 
-            </li > */}
+            </li >
             <li className="nav-item" onMouseEnter={() => setOpenMenu("Solutions")} onMouseLeave={() => setOpenMenu(null)}
             >
               <Link
