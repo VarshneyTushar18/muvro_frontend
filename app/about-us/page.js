@@ -155,20 +155,6 @@ export default async function AboutUs() {
                             </p>
                         </div>
 
-                        <section className="p-0">
-                            <div className="row justify-content-center">
-                                <div
-                                    className="col-xl-12 pb-4"
-                                >
-                                    <div className={styles.Muv}>
-                                        Movement
-                                    </div>
-                                    <div className={styles.Ro}>
-                                        Robotics
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
 
                         {/* MUVRO Section */}
                         <section

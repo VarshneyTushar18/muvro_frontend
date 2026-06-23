@@ -113,6 +113,7 @@ export default async function TechnologiesPage() {
               description={tech.description}
               imgSrc={tech.image?.url ? `${process.env.STRAPI_ASSETS_BASE_URL}${tech.image.url}` : ""}
               products={tech.products}
+              link={tech.link || "#"}
             />
           ))}
         </div>

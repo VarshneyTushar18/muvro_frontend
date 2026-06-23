@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/technologies",
         permanent: true,
       },
+      {
+        source: "/software/:slug",
+        destination: "/:slug",
+        permanent: true,
+      },
     ];
   },
 };

@@ -1,4 +1,5 @@
-import { RiLinkedinFill, RiYoutubeFill, RiInstagramFill, RiFacebookFill, RiTwitterXFill, RiPinterestFill } from "@remixicon/react";
+import { RiLinkedinFill, RiYoutubeFill, RiFacebookFill, RiTwitterXFill, RiPinterestFill } from "@remixicon/react";
+import { FaInstagram } from "react-icons/fa";
 
 import styles from "./Footer.module.css";
 import Newsletter from "./Newsletter";
@@ -61,72 +62,74 @@ export default async function Footer() {
 
   return (
     <footer className="bg-secondary">
-      <Newsletter heading={footerData.newsletterHeading} />
-      <div className={`${styles.footerWrapper} container`}>
-        <div className={styles.left}>
-          <img src={process.env.NEXT_PUBLIC_STRAPI_ASSETS_BASE_URL + footerData.logo.url} alt="Muvro Logo" />
-          <p>
-            {footerData.description}
-          </p>
-          <div className={styles.socials}>
-            {footerData.linkedinUrl && (
-              <a href={footerData.linkedinUrl} target="_blank" rel="noopener noreferrer">
-                <RiLinkedinFill size={22} />
-              </a>
-            )}
+      <div className={styles.footertop}>
 
-            {footerData.youtubeUrl && (
-              <a href={footerData.youtubeUrl} target="_blank" rel="noopener noreferrer">
-                <RiYoutubeFill size={22} />
-              </a>
-            )}
+        <div className={`${styles.footerWrapper} container`}>
+          <div className={styles.left}>
+            <img src={process.env.NEXT_PUBLIC_STRAPI_ASSETS_BASE_URL + footerData.logo.url} alt="Muvro Logo" />
+            <p>
+              {footerData.description}
+            </p>
+            <div className={styles.socials}>
+              {footerData.linkedinUrl && (
+                <a className={styles.linkedin} href={footerData.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <RiLinkedinFill size={22} />
+                </a>
+              )}
 
-            {footerData.InstagramUrl && (
-              <a href={footerData.InstagramUrl} target="_blank" rel="noopener noreferrer">
-                <RiInstagramFill size={22} />
-              </a>
-            )}
+              {footerData.youtubeUrl && (
+                <a className={styles.youtube} href={footerData.youtubeUrl} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <RiYoutubeFill size={22} />
+                </a>
+              )}
 
-            {footerData.facebookUrl && (
-              <a href={footerData.facebookUrl} target="_blank" rel="noopener noreferrer">
-                <RiFacebookFill size={22} />
-              </a>
-            )}
+              {footerData.InstagramUrl && (
+                <a className={styles.instagram} href={footerData.InstagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <FaInstagram size={22} />
+                </a>
+              )}
 
-            {footerData.xUrl && (
-              <a href={footerData.xUrl} target="_blank" rel="noopener noreferrer">
-                <RiTwitterXFill size={22} />
-              </a>
-            )}
+              {footerData.facebookUrl && (
+                <a className={styles.facebook} href={footerData.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <RiFacebookFill size={22} />
+                </a>
+              )}
 
-            {footerData.pinterestUrl && (
-              <a href={footerData.pinterestUrl} target="_blank" rel="noopener noreferrer">
-                <RiPinterestFill size={22} />
-              </a>
-            )}
+              {footerData.xUrl && (
+                <a className={styles.x} href={footerData.xUrl} target="_blank" rel="noopener noreferrer" aria-label="X">
+                  <RiTwitterXFill size={22} />
+                </a>
+              )}
+
+              {footerData.pinterestUrl && (
+                <a className={styles.pinterest} href={footerData.pinterestUrl} target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                  <RiPinterestFill size={22} />
+                </a>
+              )}
+            </div>
           </div>
-        </div>
 
-        <div className={styles.links}>
-          {otherMenuItems.map(item => (
-            <FooterLinksSection
-              key={item.id}
-              title={item.heading}
-              links={item.menuListItem}
-            />
-          ))}
-        </div>
-        {largestMenuItem && (
           <div className={styles.links}>
-            <FooterLinksSection
-              key={largestMenuItem.id}
-              title={largestMenuItem.heading}
-              links={largestMenuItem.menuListItem}
-              isLargest
-            />
+            {otherMenuItems.map(item => (
+              <FooterLinksSection
+                key={item.id}
+                title={item.heading}
+                links={item.menuListItem}
+              />
+            ))}
           </div>
-        )}
+          {largestMenuItem && (
+            <div className={styles.links}>
+              <FooterLinksSection
+                key={largestMenuItem.id}
+                title={largestMenuItem.heading}
+                links={largestMenuItem.menuListItem}
+                isLargest
+              />
+            </div>
+          )}
 
+        </div>
       </div>
       {
         footerData.location.length > 0 && (

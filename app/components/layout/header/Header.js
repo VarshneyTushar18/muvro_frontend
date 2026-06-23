@@ -394,7 +394,7 @@ const megaMenuData = {
             {
               name: "Tipper System",
               subtitle: "Automated parcel tipping system",
-              image: "images/Tipper_Image_17edee1f23.webp",
+              image: "images/tipper-menu-image.webp",
               url: "/tipper"
             },
             {
@@ -652,7 +652,7 @@ export default function Header() {
                 </li > */}
               </ul >
             </li >
-            <li className={`nav-item dropdown ${styles.navItemDropdown}`}>
+            {/* <li className={`nav-item dropdown ${styles.navItemDropdown}`}>
               <a
                 className={`${styles.navDropdown} nav-link dropdown-toggle`}
                 href="#"
@@ -701,7 +701,7 @@ export default function Header() {
                 </li >
               </ul >
 
-            </li >
+            </li > */}
             <li className="nav-item" onMouseEnter={() => setOpenMenu("Solutions")} onMouseLeave={() => setOpenMenu(null)}
             >
               <Link
@@ -735,27 +735,27 @@ export default function Header() {
               </a>
               <ul className={`${styles.dropdownMenu} dropdown-menu`} aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/software/warehouse-control-systems">
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/warehouse-control-systems">
                     WCS
                   </Link>
                 </li>
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/software/warehouse-management-system">
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/warehouse-management-system">
                     WMS
                   </Link>
                 </li >
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/software/inventory-management-system">
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/inventory-management-system">
                     IMS
                   </Link>
                 </li >
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/software/sap-integration">
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/sap-integration">
                     SAP Integration
                   </Link>
                 </li >
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/software/supervisory-control-and-data-acquisition">
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/supervisory-control-and-data-acquisition">
                     SCADA
                   </Link>
                 </li >
@@ -785,6 +785,11 @@ export default function Header() {
                 <li>
                   <Link className={`${styles.dropdownItem} dropdown-item`} href="/downloads">
                     Downloads
+                  </Link>
+                </li >
+                <li>
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/case-study">
+                    Case Study
                   </Link>
                 </li >
                 <li>

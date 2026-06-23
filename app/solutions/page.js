@@ -151,6 +151,15 @@ export default async function SolutionsPage() {
             .replace(/\s+/g, "-")
             .replace(/[^a-z0-9-]/g, "");
 
+    const getManualLink = (item, solution) =>
+        item.manualLink?.toString().trim() ||
+        (formatSlug(solution.solutionName) === "automotive" ? "/automotive" : "") ||
+        (formatSlug(solution.solutionName) === "white-goods" ? "/white-goods" : "");
+    const getButtonLabel = (item) =>
+        item.manualButtonLabel?.toString().trim() ||
+        item.buttonLabel?.toString().trim() ||
+        "Explore Now";
+
     return (
         <>
             <BreadcrumbStrip crumbs={crumbs} />
@@ -204,6 +213,8 @@ export default async function SolutionsPage() {
                             <div className="position-relative">
                                 {solution.solutionItem.map((item, i) => {
                                     const isEven = i % 2 === 0;
+                                    const manualLink = getManualLink(item, solution);
+                                    const buttonLabel = getButtonLabel(item);
 
                                     return (
                                         <div
@@ -232,21 +243,28 @@ export default async function SolutionsPage() {
                                                 <h3 className={styles.title}>{item.itemTitle}</h3>
                                                 <p>{item.itemDescription}</p>
 
-                                                {item.hasMultipleProduct && item.product_pages?.length > 0 ? (
+                                                {manualLink ? (
+                                                    <a
+                                                        href={manualLink}
+                                                        className="mbtn mbtn-primary"
+                                                    >
+                                                        {buttonLabel}
+                                                    </a>
+                                                ) : item.hasMultipleProduct && item.product_pages?.length > 0 ? (
                                                     <button
                                                         type="button"
                                                         className="mbtn mbtn-primary"
                                                         data-bs-toggle="modal"
                                                         data-bs-target={`#productsModal-${index}-${i}`}
                                                     >
-                                                        Explore Now
+                                                        {buttonLabel}
                                                     </button>
                                                 ) : item.product_page?.slug ? (
                                                     <a
                                                         href={`/${item.product_page.slug}`}
                                                         className="mbtn mbtn-primary"
                                                     >
-                                                        Explore Now
+                                                        {buttonLabel}
                                                     </a>
                                                 ) : null}
                                             </div>

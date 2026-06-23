@@ -1,0 +1,141 @@
+.wrapper {
+    padding: 60px 0;
+}
+
+.intro {
+    max-width: 720px;
+    margin: 0 auto 30px;
+}
+
+.intro p {
+    color: #686868;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #e0e0e0;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.imageWrapper {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: #f2f2f2;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .imageWrapper img {
+    transform: scale(1.04);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.meta span {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--color-dark);
+    background: var(--color-primary);
+    padding: 5px 8px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.card:hover .title {
+    color: var(--color-secondary);
+}
+
+.description {
+    color: #686868;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+}
+
+.footer svg {
+    width: 26px;
+    height: 26px;
+}
+
+.empty {
+    text-align: center;
+    color: #686868;
+    padding: 40px 0;
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        padding: 40px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

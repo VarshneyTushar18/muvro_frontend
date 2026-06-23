@@ -1,7 +1,7 @@
 // components/TechCard.jsx
 import styles from "./TechnologiesCard.module.css";
 import { RiArrowRightUpLine } from "@remixicon/react";
-export default function TechnologiesCard({ number, title, description, imgSrc, products = [] }) {
+export default function TechnologiesCard({ number, title, description, imgSrc, products = [], link = "#" }) {
   const safeProducts = (products || []).filter((prod) => prod && prod.slug);
 
   return (
@@ -15,7 +15,7 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         <hr className={styles.divider} />
-        {safeProducts.length > 0 && (
+        {safeProducts.length > 0 ? (
           <button
             type="button"
             className="mbtn mbtn-primary d-inline-block"
@@ -24,6 +24,10 @@ export default function TechnologiesCard({ number, title, description, imgSrc, p
           >
             Explore Now
           </button>
+        ) : (
+          <a href={link || "#"} className="mbtn mbtn-primary d-inline-block">
+            Explore Now
+          </a>
         )}
       </div>
 

@@ -8,6 +8,7 @@
   Version: 1.0
 */
 
+import Newsletter from "./components/layout/footer/Newsletter";
 import AboutUs from "./ui/home/AboutUs/AboutUs";
 import BlogsSection from "./ui/home/BlogsSlider/BlogsSection";
 import CaseStudyTestimonial from "./ui/home/CaseStudyTestimonial/CaseStudyTestimonial";
@@ -60,6 +61,7 @@ export default async function Home() {
       <EventsSection />
       <Certifications />
       <OurTeamSection />
+      <Newsletter heading="Stay updated with the latest insights and announcements from Muvro" />
     </>
   );
 }

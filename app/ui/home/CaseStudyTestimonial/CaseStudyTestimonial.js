@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import {
@@ -94,48 +95,41 @@ export default function CaseStudyTestimonial() {
             }}
             spaceBetween={30}
             slidesPerView={1}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
             loop={true}
             className="mt-5"
           >
             {slides.map((slide, i) => (
               <SwiperSlide key={slide.id}>
-                <div className="row justify-content-between">
+                <div className="row justify-content-center">
                   <div
-                    className="col-lg-6"
-                    data-aos="zoom-in"
-                    data-aos-delay={i * 100}
-                  >
-                    <div className={styles.imgWrapper}>
-                      <img
-                        src={slide.image}
-                        className="img-fluid"
-                        alt={slide.title}
-                      />
-                      <div className={styles.overlayContent}>
-                        <h3>{slide.title}</h3>
-                        {/* <a href={slide.link}>Explore More</a> */}
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="col-lg-5 mt-4 mt-lg-0"
+                    className="col-lg-12"
                     data-aos="fade-up"
                     data-aos-delay={i * 150}
                   >
-                    <div className={styles.feedbackContent}>
-                      <p>{slide.feedback}</p>
-                    </div>
-                    <div className={`mt-4 ${styles.authorInfoWrapper}`}>
-                      <div className={styles.authorInfo}>
-                        <p>{slide.author}</p>
-                        <div className={styles.rating}>
-                          {[...Array(5)].map((_, idx) => (
-                            <RiStarFill key={idx} />
-                          ))}
-                        </div>
+                    <div className={styles.testimonialCard}>
+                      <div className={styles.feedbackContent}>
+                        <p>{slide.feedback}</p>
                       </div>
-                      <div className={styles.quoteIcon}>
-                        <RiDoubleQuotesR />
+                      <div className={`mt-4 ${styles.authorInfoWrapper}`}>
+                        <div className={styles.authorInfo}>
+                          <p>{slide.author}</p>
+                          <div className={styles.rating}>
+                            {[...Array(5)].map((_, idx) => (
+                              <RiStarFill key={idx} />
+                            ))}
+                          </div>
+                        </div>
+                        <div className={styles.quoteIcon}>
+                          <RiDoubleQuotesR />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -143,8 +137,15 @@ export default function CaseStudyTestimonial() {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          <div className="text-center mt-4">
+            <Link href="/case-study" className="mbtn mbtn-primary">
+              View Case Study
+            </Link>
+          </div>
         </div>
       </div>
     </section>
+
   );
 }

@@ -93,6 +93,15 @@
     height: 100%;
 }
 
+.caseStudyTestimonial :global(.swiper-slide) {
+    height: auto;
+}
+
+.caseStudyTestimonial :global(.swiper-slide) > div,
+.caseStudyTestimonial :global(.swiper-slide) > div > div {
+    height: 100%;
+}
+
 .authorInfoWrapper {
     display: flex;
     align-items: center;

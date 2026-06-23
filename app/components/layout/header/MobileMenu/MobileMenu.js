@@ -312,7 +312,7 @@ const megaMenuData = {
             // {
             //   name: "Fast Sorter (Micro Sorter)",
             //   subtitle: "Up to 2,000 parcels/hour",
-            //   image: "https://muvro.tech2globe.co.in/uploads/product01_cf91e2b5ef.png",
+            //   image: "images/product01_cf91e2b5ef.png",
             //   url: "/fast-sorter-micro-sorter"
             // },
             {
@@ -330,19 +330,19 @@ const megaMenuData = {
             {
               name: "ZedSort™ The LIN Linear Cross Belt Sorter",
               subtitle: "Fast. Precise. Compact.",
-              image: "https://muvro.tech2globe.co.in/uploads/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
+              image: "images/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
               url: "/zedsort-the-lin-linear-cross-belt-sorter"
             },
             {
               name: "Swing Wheel Sorter",
               subtitle: "0.1 kg to 30 kg",
-              image: "https://muvro.tech2globe.co.in/uploads/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
+              image: "images/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
               url: "/swing-wheel-sorter"
             },
             {
               name: "Tilt Tray Sorter System",
               subtitle: "Smart. Scalable. Seamless.",
-              image: "https://muvro.tech2globe.co.in/uploads/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
+              image: "images/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
               url: "/tilt-tray-sorter-system"
             }
           ]
@@ -353,19 +353,19 @@ const megaMenuData = {
             {
               name: "Vertixo™ Stack Sorter",
               subtitle: "Ideal for high-density",
-              image: "https://muvro.tech2globe.co.in/uploads/Vertixo_Stack_Sorter_99cec857c3.webp",
+              image: "images/Vertixo_Stack_Sorter_99cec857c3.webp",
               url: "/vertixo-stack-sorter"
             },
             {
               name: "Vetro™ Micro Sort",
               subtitle: "Smart Parcel Tracking",
-              image: "https://muvro.tech2globe.co.in/uploads/Micro_SORT_The_Lite_fa865eccf1.webp",
+              image: "images/Micro_SORT_The_Lite_fa865eccf1.webp",
               url: "/vetro-micro-sort"
             },
             {
               name: "VOREX™",
               subtitle: "Multi-Layer High-Density Sorting",
-              image: "https://muvro.tech2globe.co.in/uploads/VOREX_Image_ab070505ba.webp",
+              image: "images/VOREX_Image_ab070505ba.webp",
               url: "/vorex"
             },
           ]
@@ -376,19 +376,19 @@ const megaMenuData = {
             {
               name: "NaviGO Pallet Shuttle ASRS System",
               subtitle: "High-Density Storage",
-              image: "https://muvro.tech2globe.co.in/uploads/Combine_2_250_17d1673e5b.png",
+              image: "images/Combine_2_250_17d1673e5b.png",
               url: "/navigo-pallet-shuttle-asrs-system"
             },
             {
               name: "Radio Shuttle System",
               subtitle: "NaviGO ASRS Shuttle",
-              image: "https://muvro.tech2globe.co.in/uploads/radio_shuttle_system_5c5b1105bb.webp",
+              image: "images/radio_shuttle_system_5c5b1105bb.webp",
               url: "/radio-shuttle-system"
             },
             {
               name: "Pallet ASRS Stacker Crane",
               subtitle: "Automated vertical storage crane",
-              image: "https://muvro.tech2globe.co.in/uploads/asrs_crne_e3f07fc651.png",
+              image: "images/asrs_crne_e3f07fc651.png",
               url: "/asrs-stacker-cranes"
             },
             {
@@ -405,13 +405,13 @@ const megaMenuData = {
             {
               name: "Singulator System",
               subtitle: "AI-Powered Detection",
-              image: "https://muvro.tech2globe.co.in/uploads/Singulator_07_scaled_removebg_preview_5deced7843.png",
+              image: "images/Singulator_07_scaled_removebg_preview_5deced7843.png",
               url: "/parcel-singulator-system"
             },
             {
               name: "Tipper System",
               subtitle: "Automated parcel tipping system",
-              image: "https://muvro.tech2globe.co.in/uploads/Tipper_Image_17edee1f23.webp",
+              image: "images/tipper-menu-image.webp",
               url: "/tipper"
             },
             {
@@ -508,16 +508,17 @@ const groupCompanyLinks = [
   { label: "Takumi Technologies India Pvt. Ltd.", href: "#" },
 ];
 const softwareLinks = [
-  { label: "WCS", href: "/software/warehouse-control-systems" },
-  { label: "WMS", href: "/software/warehouse-management-system" },
-  { label: "IMS", href: "/software/inventory-management-system" },
-  { label: "SAP Integration", href: "/software/sap-integration" },
-  { label: "SCADA", href: "/software/supervisory-control-and-data-acquisition" },
+  { label: "WCS", href: "/warehouse-control-systems" },
+  { label: "WMS", href: "/warehouse-management-system" },
+  { label: "IMS", href: "/inventory-management-system" },
+  { label: "SAP Integration", href: "/sap-integration" },
+  { label: "SCADA", href: "/supervisory-control-and-data-acquisition" },
 ];
 const resourceLinks = [
   { label: "Events", href: "/events" },
   { label: "Careers", href: "/careers" },
   { label: "Downloads", href: "/downloads" },
+  { label: "Case Study", href: "/case-study" },
   { label: "Blogs", href: "/blogs" },
 ];
 
@@ -658,11 +659,11 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                 Group of Companies <RiArrowRightSLine />
               </button>
             </li>
-            <li>
+            {/* <li>
               <button onClick={() => handleOpenSection("Industries")}>
                 Industries <RiArrowRightSLine />
               </button>
-            </li>
+            </li> */}
             <li>
               <button onClick={() => handleOpenSection("Solutions")}>
                 Solutions <RiArrowRightSLine />
