@@ -126,7 +126,7 @@ const categories = {
       title: "Sorting Solutions",
       description:
         "High Throughput, Compact & Low-Profile Design. It sorts 6,000-1,000 parcels/hour with high precision and efficiency in a space-saving design ideal for high-density operations.",
-      image: "/images/sorting.png",
+      image: "/images/solutions/sorting-solutions-homepage.webp",
       link: "/solutions#solution-sorting-solutions",
     },
     {
