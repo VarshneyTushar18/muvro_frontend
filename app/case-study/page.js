@@ -70,7 +70,7 @@ export default async function CaseStudyPage() {
                         <div className={styles.grid}>
                             {visibleCaseStudies.map((item) => (
                                 <Link
-                                    href={`/case-study/${item.slug}`}
+                                    href={`/${item.slug}`}
                                     className={styles.card}
                                     key={item.id || item.slug}
                                 >

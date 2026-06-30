@@ -20,6 +20,8 @@ import SwiperSlider from "../ui/product-single/ProductGallery/SwipeSlider";
 import { notFound, redirect } from 'next/navigation';
 import React from "react";
 import { renderBlock } from "blocks-html-renderer";
+import CaseStudyStyle from "../case-study/[slug]/singlecasestudy.module.css";
+
 async function fetchSlugs() {
     const res = await fetch(
         `${process.env.STRAPI_BACKEND_BASE_URL}/products?fields[0]=slug`
@@ -37,6 +39,17 @@ async function fetchSoftwareSlugs() {
     );
     if (!res.ok) {
         throw new Error("Failed to fetch software slugs");
+    }
+    const data = await res.json();
+    return data.data.map((item) => item.slug);
+}
+
+async function fetchCaseStudySlugs() {
+    const res = await fetch(
+        `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`
+    );
+    if (!res.ok) {
+        throw new Error("Failed to fetch case study slugs");
     }
     const data = await res.json();
     return data.data.map((item) => item.slug);
@@ -71,12 +84,27 @@ async function getSoftware(slug) {
     return data.data[0];
 }
 
+async function getCaseStudy(slug) {
+    const res = await fetch(
+        `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${slug}&populate=*`,
+        { next: { revalidate: 60 } }
+    );
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch case study');
+    }
+
+    const data = await res.json();
+    return data.data[0];
+}
+
 export async function generateStaticParams() {
-    const [productSlugs, softwareSlugs] = await Promise.all([
+    const [productSlugs, softwareSlugs, caseStudySlugs] = await Promise.all([
         fetchSlugs(),
         fetchSoftwareSlugs(),
+        fetchCaseStudySlugs(),
     ]);
-    const slugs = [...new Set([...productSlugs, ...softwareSlugs])];
+    const slugs = [...new Set([...productSlugs, ...softwareSlugs, ...caseStudySlugs])];
     return slugs.map((slug) => ({ slug }));
 }
 
@@ -171,6 +199,81 @@ function SoftwareSinglePage({ software }) {
     );
 }
 
+function CaseStudySinglePage({ caseStudy }) {
+    const crumbs = [
+        { label: "Home", link: "/" },
+        { label: "Case Study" },
+    ];
+
+    return (
+        <>
+            <BreadcrumbStrip crumbs={crumbs} />
+            <section className={CaseStudyStyle.case_study}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className={CaseStudyStyle.main_banner}>
+                                <img
+                                    src={
+                                        process.env.STRAPI_ASSETS_BASE_URL +
+                                        caseStudy.banner?.url
+                                    }
+                                    alt={
+                                        caseStudy.banner?.alternativeText ??
+                                        caseStudy.title
+                                    }
+                                />
+                            </div>
+                            <div className={CaseStudyStyle.project_details}>
+                                <div className={CaseStudyStyle.projectname}>
+                                    <h2>{caseStudy.projectName}</h2>
+                                </div>
+                                <div className={CaseStudyStyle.projectyear}>
+                                    <h2>{caseStudy.projectYear}</h2>
+                                </div>
+                            </div>
+                            <div className={CaseStudyStyle.project_overview}>
+                                <div className={CaseStudyStyle.title}>
+                                    <h1>{caseStudy.title}</h1>
+                                </div>
+                                <div className={CaseStudyStyle.description}>
+                                    <p>{caseStudy.shortDescription}</p>
+                                </div>
+                            </div>
+                            {caseStudy.feedbackAuthor && caseStudy.feedback && (
+                                <div className={CaseStudyStyle.project_testimonial}>
+                                    <div className={CaseStudyStyle.left_quote}>
+                                        <RiDoubleQuotesL />
+                                    </div>
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                            __html: renderBlock(caseStudy.feedback),
+                                        }}
+                                    />
+                                    <div className={CaseStudyStyle.author}>
+                                        {caseStudy.feedbackAuthor}
+                                    </div>
+                                    <div className={CaseStudyStyle.right_quote}>
+                                        <RiDoubleQuotesR />
+                                    </div>
+                                </div>
+                            )}
+
+                            <div
+                                className={CaseStudyStyle.project_conclusion}
+                                dangerouslySetInnerHTML={{
+                                    __html: renderBlock(caseStudy.content),
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <CTABanner content={caseStudy.ctaSection} />
+        </>
+    );
+}
+
 
 export default async function ProductSinglePage({ params }) {
     const { slug } = await params;
@@ -184,11 +287,16 @@ export default async function ProductSinglePage({ params }) {
     if (!product) {
         const software = await getSoftware(slug);
 
-        if (!software) {
-            return notFound();
+        if (software) {
+            return <SoftwareSinglePage software={software} />;
         }
 
-        return <SoftwareSinglePage software={software} />;
+        const caseStudy = await getCaseStudy(slug);
+        if (caseStudy) {
+            return <CaseStudySinglePage caseStudy={caseStudy} />;
+        }
+
+        return notFound();
     }
 
     const crumbs = [

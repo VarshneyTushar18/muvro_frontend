@@ -12,6 +12,7 @@
     text-align: center;
     border-bottom: 1px solid #d9d9d9;
     padding: 10px 0px;
+    display: none;
 }
 
 .project_details h2 {
@@ -31,8 +32,8 @@
 }
 
 .project_overview h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 50px;
+    line-height: 58px;
 }
 
 .project_overview p {
