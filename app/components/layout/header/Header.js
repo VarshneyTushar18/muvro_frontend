@@ -140,7 +140,7 @@ const megaMenuData = {
               url: "/bin-to-person"
             },
             {
-              name: "Pick to Light",
+              name: "Pick/Put to Light",
               subtitle: "Quick Commerce",
               image: "/images/PTL2.webp",
               url: "/pick-to-light"
