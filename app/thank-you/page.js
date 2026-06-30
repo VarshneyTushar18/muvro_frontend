@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import { RiCheckboxCircleFill } from "@remixicon/react";
 import Link from "next/link";
+import styles from "./thankyou.module.css";
 
 export default function ThankYou() {
     const [thankYouData, setThankYouData] = useState({ heading: "", content: "" });
+
     useEffect(() => {
         const data = sessionStorage.getItem("thankYouData");
         if (data) {
@@ -12,25 +14,37 @@ export default function ThankYou() {
             sessionStorage.removeItem("thankYouData");
         }
     }, []);
-    let heading = thankYouData.heading;
-    let content = thankYouData.content;
+
+    const heading = thankYouData.heading;
+    const content = thankYouData.content;
+
     return (
-        <div className="d-flex flex-column justify-content-center align-items-center text-center min-vh-100 p-4">
-            <RiCheckboxCircleFill
-                size={100}
-                className="text-success mb-4"
-            />
-            <h1 className="mb-2">
-                {heading ? heading : "Thank You For Contacting Us"}
-            </h1>
-            <p className="mb-4">
-                {content
-                    ? content
-                    : "We’ve received your message and our team will get back to you within 1 business day. We appreciate your interest!"}
-            </p>
-            <Link href="/" className="mbtn mbtn-primary">
-                Go Back
-            </Link>
-        </div>
+        <main className={styles.thankYouPage}>
+            <section className={styles.panel}>
+                <div className={styles.iconWrap}>
+                    <RiCheckboxCircleFill className={styles.icon} />
+                </div>
+
+                <h1 className={styles.heading}>
+                    {heading || "Thank You For Contacting Us"}
+                </h1>
+
+                <p className={styles.subheading}>
+                    {content
+                        ? content
+                        : "Our team will get back to you within 1 business day. Please check your junk folder and voicemail to ensure our communication is not blocked."}
+                </p>
+
+                <div className={styles.messageCard}>
+                    <p>
+                        If you do not hear from us within 1 business day, please send an email to <strong>info@muvro.com</strong> and we will attend to you at the earliest.
+                    </p>
+                </div>
+
+                <Link href="/" className={`mbtn mbtn-primary ${styles.ctaButton}`}>
+                   Go Back to Homepage
+                </Link>
+            </section>
+        </main>
     );
 }

@@ -1,0 +1,97 @@
+.thankYouPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background-color: var(--color-gray-light);
+}
+
+.panel {
+  width: min(100%, 980px);
+  text-align: center;
+  background-color: #ffffff;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  border-radius: 32px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.12);
+}
+
+.iconWrap {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: rgba(255, 193, 0, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--color-secondary);
+  width: 72px;
+  height: 72px;
+}
+
+.heading {
+  margin: 0 0 1rem;
+  font-size: clamp(2.65rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-secondary);
+}
+
+.subheading {
+  margin: 0 auto 0.75rem;
+  max-width: 780px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-dark-alt);
+  font-weight: 500;
+}
+
+.note {
+  margin: 0 auto 2rem;
+  max-width: 760px;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--color-dark-alt);
+}
+
+.messageCard {
+  display: inline-flex;
+  width: 100%;
+  max-width: 820px;
+  text-align: left;
+  background-color: rgba(255, 193, 0, 0.12);
+  border-left: 5px solid var(--color-secondary);
+  border-radius: 24px;
+  padding: 1.6rem 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--color-dark-alt);
+}
+
+.messageCard p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.ctaButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9rem 2.25rem;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .panel {
+    padding: 2rem 1.25rem;
+  }
+
+  .messageCard {
+    padding: 1.4rem 1.4rem;
+  }
+}
