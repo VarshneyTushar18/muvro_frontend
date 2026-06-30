@@ -267,7 +267,7 @@ export default async function AboutUs() {
                                 >
                                     Muvro has <span>array of solutions</span>
                                 </h5>
-                                <p>High Speed Cross Belt Sorters, Linear Sorter , Trid with Zed Bot , Fast Sorter , Swivel Wheel Sorter, Volume Distribution Systems ( VDS), ASRS Systems, Conveyor Systems  Powered Roller Conveyors, PVC & Modular Belt Conveyors, Curve & Merger Conveyors,  ZPA Roller Conveyors. By these Solution we contribute to increase the efficiency, Just in Time Delivery, and competitiveness of our customers.</p>
+                                <p>High Speed Cross Belt Sorters, Linear Sorter , 3D Smart Sorter , Fast Sorter , Swivel Wheel Sorter, Volume Distribution Systems ( VDS), ASRS Systems, Conveyor Systems  Powered Roller Conveyors, PVC & Modular Belt Conveyors, Curve & Merger Conveyors,  ZPA Roller Conveyors. By these Solution we contribute to increase the efficiency, Just in Time Delivery, and competitiveness of our customers.</p>
                             </div>
                         </div>
                     </div>

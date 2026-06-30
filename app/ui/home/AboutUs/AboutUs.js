@@ -44,7 +44,7 @@ export default function AboutUs() {
               <p>
                 Muvro Technologies is a global leader in warehouse automation and intralogistics, delivering futuristic, innovative, and modular solutions for fulfilment centres, distribution centres, last-mile delivery stations, dark stores, and quick commerce.<br/><br/>
                 With 23+ years of expertise, in-house manufacturing, and a global support network, we empower industries including e-commerce, parcels & postal, 3PL, retail, FMCG, automotive, and more to move smarter, faster, and more efficiently.<br/><br/>
-                Our portfolio spans high- High-Speed Cross-Belt Sorters, Linear Sorters, Swivel Wheel Sorters,Trid with Zed Bots, ASRS Systems (Pallet ASRS & Bin-to-Person ASRS), Smart & High-Speed Conveying Systems, Electrical Control Systems and advanced automation software. <br/><br/>
+                Our portfolio spans high- High-Speed Cross-Belt Sorters, Linear Sorters, Swivel Wheel Sorters,3D Smart Sorters, ASRS Systems (Pallet ASRS & Bin-to-Person ASRS), Smart & High-Speed Conveying Systems, Electrical Control Systems and advanced automation software. <br/><br/>
 At Muvro, our mission is clear — to help businesses optimize operations, enhance efficiency, and gain a sustainable competitive edge in an ever-evolving market.<br/><br/>
 Muvro - Automating the Future of Logistics
 

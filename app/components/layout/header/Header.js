@@ -47,7 +47,7 @@ const megaMenuData = {
           name: "Sorting Solutions",
           products: [
             // {
-            //   name: "Trid with Zed Bot",
+            //   name: "3D Smart Sorter",
             //   subtitle: "10Kg Max Weight",
             //   image: "images/3d_sorter_bg_removed_c28b208916.png",
             //   url: "/3d-smart-sorter-ics"
@@ -128,7 +128,7 @@ const megaMenuData = {
               url: "/micro-fulfilment"
             },
             {
-              name: "Trid with Zed Bot",
+              name: "3D Smart Sorter",
               subtitle: "10Kg Max Weight",
               image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
@@ -287,7 +287,7 @@ const megaMenuData = {
           name: "Sorters",
           products: [
             {
-              name: "Trid with Zed Bot",
+              name: "3D Smart Sorter",
               subtitle: "10Kg Max Weight",
               image: "images/tred-image.webp",
               url: "/3d-smart-sorter-ics"

@@ -65,7 +65,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -80,7 +80,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -95,7 +95,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -110,7 +110,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -125,7 +125,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -140,7 +140,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -155,7 +155,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -170,7 +170,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -185,7 +185,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -200,7 +200,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -215,7 +215,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
@@ -230,7 +230,7 @@ export default function Industries() {
       link: "#",
       products: [
         {
-          name: "Trid with Zed Bot ",
+          name: "3D Smart Sorter ",
           img: "/images/3d_sorter_bg_removed_c28b208916.png",
           tagline: "10Kg Max Weight",
           link: "/3d-smart-sorter-ics",
