@@ -10,25 +10,6 @@ const getImageUrl = (image) => {
     return `${process.env.STRAPI_ASSETS_BASE_URL}${image.url}`;
 };
 
-const CASE_STUDY_POPULATE = [
-    "populate[banner]=true",
-    "populate[ctaSection]=true",
-    "populate[seo]=true",
-    "populate[pageSections][populate][stats]=true",
-    "populate[pageSections][populate][introParagraphs]=true",
-    "populate[pageSections][populate][objectives]=true",
-    "populate[pageSections][populate][challengesHeader]=true",
-    "populate[pageSections][populate][challenges]=true",
-    "populate[pageSections][populate][solutionsHeader]=true",
-    "populate[pageSections][populate][solutions][populate][items]=true",
-    "populate[pageSections][populate][performanceHeader]=true",
-    "populate[pageSections][populate][performance]=true",
-    "populate[pageSections][populate][benefitsHeader]=true",
-    "populate[pageSections][populate][benefits]=true",
-    "populate[pageSections][populate][deploymentHeader]=true",
-    "populate[pageSections][populate][deployment]=true",
-].join("&");
-
 async function fetchSlugs() {
     try {
         const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`;
@@ -53,18 +34,19 @@ export async function generateStaticParams() {
 
 async function getCaseStudy(slug) {
     try {
-        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${encodeURIComponent(slug)}&${CASE_STUDY_POPULATE}`;
+        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${encodeURIComponent(slug)}&populate=*`;
         const res = await fetch(url, { next: { revalidate: 60 } });
 
         if (!res.ok) {
-            throw new Error(`Failed to fetch case study details: ${res.status}`);
+            console.error("getCaseStudy API error:", res.status, await res.text());
+            return null;
         }
 
         const data = await res.json();
         return data.data && data.data.length > 0 ? data.data[0] : null;
     } catch (error) {
         console.error("getCaseStudy error:", error);
-        throw error;
+        return null;
     }
 }
 
