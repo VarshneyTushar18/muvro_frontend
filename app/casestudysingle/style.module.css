@@ -17,6 +17,15 @@
     object-position: center;
 }
 
+.heroImageStatic {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .heroOverlay {
     position: absolute;
     inset: 0;
@@ -523,6 +532,75 @@
     margin-bottom: 0;
 }
 
+.dynamicContent {
+    color: #404040;
+    line-height: 1.8;
+}
+
+.dynamicContent :global(h2),
+.dynamicContent :global(h3),
+.dynamicContent :global(h4) {
+    margin-bottom: 16px;
+}
+
+.dynamicContent :global(p) {
+    margin-bottom: 16px;
+}
+
+.dynamicContent :global(ul),
+.dynamicContent :global(ol) {
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.dynamicContent :global(li) {
+    margin-bottom: 8px;
+}
+
+.testimonialBox {
+    position: relative;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 120px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+}
+
+.testimonialText {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #1d1d1d;
+}
+
+.testimonialText :global(p:last-child) {
+    margin-bottom: 0;
+}
+
+.testimonialAuthor {
+    margin-top: 24px;
+    font-size: 20px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+}
+
+.testimonialQuoteLeft svg,
+.testimonialQuoteRight svg {
+    height: 80px;
+    width: 80px;
+    color: var(--color-primary);
+    position: absolute;
+}
+
+.testimonialQuoteLeft svg {
+    top: 0;
+    left: 0;
+}
+
+.testimonialQuoteRight svg {
+    bottom: 0;
+    right: 0;
+}
+
 /* ── Background intro ── */
 .introBlock {
     display: grid;
@@ -657,5 +735,23 @@
     .conclusionText {
         font-size: 15px;
         line-height: 26px;
+    }
+
+    .testimonialBox {
+        padding: 24px 16px;
+    }
+
+    .testimonialText {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .testimonialQuoteLeft svg,
+    .testimonialQuoteRight svg {
+        position: static;
+        display: block;
+        margin: 0 auto 12px;
+        height: 48px;
+        width: 48px;
     }
 }
