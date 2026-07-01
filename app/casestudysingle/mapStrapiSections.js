@@ -28,6 +28,13 @@ import {
     RiVolumeMuteLine,
     Ri24HoursLine,
 } from "@remixicon/react";
+import { renderBlock } from "blocks-html-renderer";
+
+const getAssetUrl = (image) => {
+    if (!image?.url) return null;
+    if (image.url.startsWith("http")) return image.url;
+    return `${process.env.STRAPI_ASSETS_BASE_URL}${image.url}`;
+};
 
 const ICON_MAP = {
     RiSpeedUpLine,
@@ -99,6 +106,7 @@ export function mapStrapiPageSections(pageSections) {
         pageSections.performance?.length ||
         pageSections.benefits?.length ||
         pageSections.deployment?.length ||
+        pageSections.contentSliderSections?.length ||
         pageSections.conclusionText;
 
     if (!hasStructuredContent) return null;
@@ -159,6 +167,19 @@ export function mapStrapiPageSections(pageSections) {
         ),
         deploymentIntro: pageSections.deploymentHeader?.description || "",
         deployment: mapIconTextItems(pageSections.deployment),
+        contentSliderSections:
+            pageSections.contentSliderSections?.map((section) => ({
+                label: section.label || "",
+                heading: section.heading || "",
+                contentHtml: section.content ? renderBlock(section.content) : "",
+                imagePosition: section.imagePosition || "right",
+                images: (section.images || [])
+                    .map((img) => ({
+                        src: getAssetUrl(img),
+                        alt: img.alternativeText || section.heading || "Case study image",
+                    }))
+                    .filter((img) => img.src),
+            })) || [],
         conclusionText: pageSections.conclusionText || "",
         conclusionLabel: pageSections.conclusionLabel || "07 — Conclusion",
     };
