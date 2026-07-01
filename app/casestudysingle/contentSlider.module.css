@@ -1,0 +1,72 @@
+.swiper {
+    padding-bottom: 48px;
+}
+
+.slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 10px 10px 20px;
+}
+
+.reverse .content {
+    order: 2;
+}
+
+.reverse .media {
+    order: 1;
+}
+
+.heading {
+    margin-bottom: 16px;
+}
+
+.content {
+    color: #404040;
+    line-height: 1.8;
+}
+
+.richText :global(p) {
+    margin-bottom: 16px;
+}
+
+.richText :global(ul),
+.richText :global(ol) {
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.richText :global(li) {
+    margin-bottom: 8px;
+}
+
+.media {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.media img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+@media (max-width: 767px) {
+    .slide {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 0 20px;
+    }
+
+    .reverse .content,
+    .reverse .media {
+        order: initial;
+    }
+
+    .media img {
+        height: 260px;
+    }
+}

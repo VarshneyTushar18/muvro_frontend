@@ -171,14 +171,19 @@ export function mapStrapiPageSections(pageSections) {
             pageSections.contentSliderSections?.map((section) => ({
                 label: section.label || "",
                 heading: section.heading || "",
-                contentHtml: section.content ? renderBlock(section.content) : "",
-                imagePosition: section.imagePosition || "right",
-                images: (section.images || [])
-                    .map((img) => ({
-                        src: getAssetUrl(img),
-                        alt: img.alternativeText || section.heading || "Case study image",
+                slides: (section.slides || [])
+                    .map((slide) => ({
+                        heading: slide.heading || "",
+                        contentHtml: slide.content ? renderBlock(slide.content) : "",
+                        imagePosition: slide.imagePosition || "right",
+                        image: slide.image
+                            ? {
+                                  src: getAssetUrl(slide.image),
+                                  alt: slide.image.alternativeText || slide.heading || "Case study image",
+                              }
+                            : null,
                     }))
-                    .filter((img) => img.src),
+                    .filter((slide) => slide.contentHtml || slide.image?.src),
             })) || [],
         conclusionText: pageSections.conclusionText || "",
         conclusionLabel: pageSections.conclusionLabel || "07 — Conclusion",

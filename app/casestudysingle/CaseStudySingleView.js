@@ -2,7 +2,7 @@ import Link from "next/link";
 import { RiArrowRightLine, RiCheckboxCircleLine, RiDoubleQuotesL, RiDoubleQuotesR } from "@remixicon/react";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
 import CTABanner from "../components/cta/CTABanner";
-import SwiperSlider from "../ui/product-single/ProductGallery/SwipeSlider";
+import ContentSlider from "./ContentSlider";
 import styles from "./style.module.css";
 
 function formatHeading(text = "") {
@@ -332,51 +332,34 @@ export default function CaseStudySingleView({
                         )}
 
                         {sections.contentSliderSections?.map((sliderSection, i) => (
-                            <section
-                                key={`slider-${i}`}
-                                className={`${styles.section} ${i % 2 === 1 ? styles.sectionAlt : ""}`}
-                            >
-                                <div className="container">
-                                    {(sliderSection.label || sliderSection.heading) && (
-                                        <div className={styles.sectionHeader} data-aos="fade-up">
-                                            {sliderSection.label && (
-                                                <span className="section-label-center mb-3">
-                                                    {sliderSection.label}
-                                                </span>
-                                            )}
-                                            {sliderSection.heading && (
-                                                <h2
-                                                    dangerouslySetInnerHTML={{
-                                                        __html: formatHeading(sliderSection.heading),
-                                                    }}
-                                                />
-                                            )}
-                                        </div>
-                                    )}
-                                    <div
-                                        className={`${styles.sliderBlock} ${sliderSection.imagePosition === "left" ? styles.sliderBlockReverse : ""}`}
-                                    >
-                                        {sliderSection.contentHtml && (
-                                            <div
-                                                className={styles.sliderContent}
-                                                data-aos="fade-right"
-                                                dangerouslySetInnerHTML={{ __html: sliderSection.contentHtml }}
-                                            />
-                                        )}
-                                        {sliderSection.images?.length > 0 && (
-                                            <div className={styles.sliderMedia} data-aos="fade-left">
-                                                <SwiperSlider
-                                                    images={sliderSection.images}
-                                                    galleryName={`case-study-slider-${i}`}
-                                                    slidesPerViewMobile={1}
-                                                    slidesPerViewTablet={1}
-                                                    slidesPerViewDesktop={1}
-                                                />
+                            sliderSection.slides?.length > 0 && (
+                                <section
+                                    key={`slider-${i}`}
+                                    className={`${styles.section} ${i % 2 === 1 ? styles.sectionAlt : ""}`}
+                                >
+                                    <div className="container">
+                                        {(sliderSection.label || sliderSection.heading) && (
+                                            <div className={styles.sectionHeader} data-aos="fade-up">
+                                                {sliderSection.label && (
+                                                    <span className="section-label-center mb-3">
+                                                        {sliderSection.label}
+                                                    </span>
+                                                )}
+                                                {sliderSection.heading && (
+                                                    <h2
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: formatHeading(sliderSection.heading),
+                                                        }}
+                                                    />
+                                                )}
                                             </div>
                                         )}
+                                        <div data-aos="fade-up">
+                                            <ContentSlider slides={sliderSection.slides} />
+                                        </div>
                                     </div>
-                                </div>
-                            </section>
+                                </section>
+                            )
                         ))}
 
                         {sections.conclusionText && (
