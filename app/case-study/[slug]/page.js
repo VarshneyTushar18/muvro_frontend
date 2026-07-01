@@ -1,17 +1,33 @@
 import { notFound } from "next/navigation";
 import { renderBlock } from "blocks-html-renderer";
 import CaseStudySingleView from "../../casestudysingle/CaseStudySingleView";
-import {
-    DEFAULT_CASE_STUDY_SLUG,
-    defaultCtaContent,
-    defaultSections,
-} from "../../casestudysingle/defaultSections";
+import { mapStrapiPageSections } from "../../casestudysingle/mapStrapiSections";
+import { defaultCtaContent } from "../../casestudysingle/defaultSections";
 
 const getImageUrl = (image) => {
     if (!image?.url) return "/images/case-study-1.png";
     if (image.url.startsWith("http")) return image.url;
     return `${process.env.STRAPI_ASSETS_BASE_URL}${image.url}`;
 };
+
+const CASE_STUDY_POPULATE = [
+    "populate[banner]=true",
+    "populate[ctaSection]=true",
+    "populate[seo]=true",
+    "populate[pageSections][populate][stats]=true",
+    "populate[pageSections][populate][introParagraphs]=true",
+    "populate[pageSections][populate][objectives]=true",
+    "populate[pageSections][populate][challengesHeader]=true",
+    "populate[pageSections][populate][challenges]=true",
+    "populate[pageSections][populate][solutionsHeader]=true",
+    "populate[pageSections][populate][solutions][populate][items]=true",
+    "populate[pageSections][populate][performanceHeader]=true",
+    "populate[pageSections][populate][performance]=true",
+    "populate[pageSections][populate][benefitsHeader]=true",
+    "populate[pageSections][populate][benefits]=true",
+    "populate[pageSections][populate][deploymentHeader]=true",
+    "populate[pageSections][populate][deployment]=true",
+].join("&");
 
 async function fetchSlugs() {
     try {
@@ -37,7 +53,7 @@ export async function generateStaticParams() {
 
 async function getCaseStudy(slug) {
     try {
-        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${encodeURIComponent(slug)}&populate=*`;
+        const url = `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?filters[slug][$eq]=${encodeURIComponent(slug)}&${CASE_STUDY_POPULATE}`;
         const res = await fetch(url, { next: { revalidate: 60 } });
 
         if (!res.ok) {
@@ -86,7 +102,7 @@ export default async function CaseStudy({ params }) {
     if (!pageData) return notFound();
 
     const bannerUrl = getImageUrl(pageData.banner);
-    const useDefaultSections = slug === DEFAULT_CASE_STUDY_SLUG;
+    const sections = mapStrapiPageSections(pageData.pageSections);
     const contentHtml = pageData.content ? renderBlock(pageData.content) : "";
     const feedbackHtml =
         pageData.feedback && pageData.feedbackAuthor ? renderBlock(pageData.feedback) : "";
@@ -95,7 +111,7 @@ export default async function CaseStudy({ params }) {
         <CaseStudySingleView
             caseStudy={pageData}
             bannerUrl={bannerUrl}
-            sections={useDefaultSections ? defaultSections : null}
+            sections={sections}
             contentHtml={contentHtml}
             feedbackHtml={feedbackHtml}
             ctaContent={pageData.ctaSection || defaultCtaContent}

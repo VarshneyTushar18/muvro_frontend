@@ -39,7 +39,8 @@ export const defaultSections = {
         { value: "~28%", label: "Space Saved" },
         { value: "98.7%", label: "Availability" },
     ],
-    introHeading: "From Congestion to <span>High Performance</span>",
+    introLabel: "01 — Project Background",
+    introHeading: "From Congestion to [High Performance]",
     introParagraphs: [
         "An e-commerce fulfillment center handling 15,000–20,000 parcels/hour faced increasing volumes, leading to congestion, high manpower dependency, missorts, and space limitations.",
         "A High-Speed Cross Belt Loop Sorter was selected to meet ambitious growth targets — transforming a labor-intensive operation into a highly automated fulfillment center without warehouse expansion.",
@@ -52,6 +53,10 @@ export const defaultSections = {
         { icon: RiMoneyDollarCircleLine, text: "Achieve ROI within 30 months" },
         { icon: Ri24HoursLine, text: "Deploy a stable 24/7 automated solution" },
     ],
+    challengesHeader: {
+        label: "02 — Key Challenges",
+        heading: "Operational [Bottlenecks]",
+    },
     challengesIntro:
         "The facility faced multiple constraints that demanded a comprehensive automation solution beyond conventional sorting systems.",
     challenges: [
@@ -63,6 +68,10 @@ export const defaultSections = {
         { icon: RiScales3Line, text: "Manual shipment profiling and weighing causing billing inaccuracies" },
         { icon: RiRefreshLine, text: "High missort rates and parcel rehandling" },
     ],
+    solutionsHeader: {
+        label: "03 — Solutions Implemented",
+        heading: "Integrated [Automation Strategy]",
+    },
     solutionsIntro:
         "A multi-layered approach combining layout engineering, smart induction, advanced controls, and automated profiling to deliver end-to-end performance gains.",
     solutions: [
@@ -108,6 +117,10 @@ export const defaultSections = {
             result: "Sorting manpower reduced from 48 to 26 operators (~45%).",
         },
     ],
+    performanceHeader: {
+        label: "04 — Performance Achieved",
+        heading: "Measurable [Results]",
+    },
     performanceIntro:
         "The deployed system exceeded performance targets across throughput, accuracy, efficiency, and operational reliability.",
     performance: [
@@ -118,6 +131,10 @@ export const defaultSections = {
         { icon: RiBarChartBoxLine, value: "98.7%", label: "System Availability" },
         { icon: RiVolumeMuteLine, value: "<72 dBA", label: "Noise Level" },
     ],
+    benefitsHeader: {
+        label: "05 — Business Benefits",
+        heading: "Tangible [Business Impact]",
+    },
     benefitsIntro:
         "Beyond operational metrics, the project delivered significant commercial advantages and long-term competitive positioning.",
     benefits: [
@@ -128,6 +145,10 @@ export const defaultSections = {
         { icon: RiTimeLine, title: "Same-Day Dispatch", desc: "Enabled same-day order fulfillment capability" },
         { icon: RiFundsLine, title: "22–26 Month ROI", desc: "Return on investment achieved ahead of target" },
     ],
+    deploymentHeader: {
+        label: "06 — Deployment Strategy",
+        heading: "Structured [Go-Live Approach]",
+    },
     deploymentIntro:
         "A phased deployment methodology ensured smooth transition, operator readiness, and sustained system reliability from day one.",
     deployment: [
@@ -137,6 +158,7 @@ export const defaultSections = {
         { icon: RiShieldCheckLine, text: "Preventive maintenance program" },
         { icon: RiGraduationCapLine, text: "Operator certification and hypercare support" },
     ],
+    conclusionLabel: "07 — Conclusion",
     conclusionText:
         "The High-Speed Cross Belt Loop Sorter transformed the facility from a labor-intensive operation into a highly automated fulfillment center, delivering 40,000 PPH throughput, >99.99% sort accuracy, 45% manpower reduction, and ROI within 2 years while supporting future growth without warehouse expansion.",
 };

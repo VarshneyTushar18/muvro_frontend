@@ -16,6 +16,40 @@ function getBreadcrumbLabel(caseStudy) {
     return (caseStudy.title || "Case Study").split("–")[0].split("-")[0].trim();
 }
 
+function SectionHeader({ header, intro }) {
+    if (!header?.label && !header?.heading && !intro) return null;
+
+    return (
+        <div className={styles.sectionHeader} data-aos="fade-up">
+            {header?.label && <span className="section-label-center mb-3">{header.label}</span>}
+            {header?.heading && (
+                <h2
+                    dangerouslySetInnerHTML={{
+                        __html: formatHeading(header.heading),
+                    }}
+                />
+            )}
+            {intro && <p>{intro}</p>}
+        </div>
+    );
+}
+
+function hasSectionContent(sections) {
+    if (!sections) return false;
+
+    return Boolean(
+        sections.stats?.length ||
+        sections.introParagraphs?.length ||
+        sections.objectives?.length ||
+        sections.challenges?.length ||
+        sections.solutions?.length ||
+        sections.performance?.length ||
+        sections.benefits?.length ||
+        sections.deployment?.length ||
+        sections.conclusionText
+    );
+}
+
 export default function CaseStudySingleView({
     caseStudy,
     bannerUrl,
@@ -31,7 +65,7 @@ export default function CaseStudySingleView({
         { label: breadcrumbLabel },
     ];
 
-    const hasStructuredSections = Boolean(sections?.stats?.length);
+    const hasStructuredSections = hasSectionContent(sections);
     const hasFeedback = Boolean(feedbackHtml && caseStudy.feedbackAuthor);
     const hasDynamicContent = Boolean(contentHtml) && !hasStructuredSections;
 
@@ -94,13 +128,17 @@ export default function CaseStudySingleView({
                             <div className="container">
                                 <div className={styles.introBlock}>
                                     <div className={styles.introText} data-aos="fade-right">
-                                        <span className="section-label mb-3">01 — Project Background</span>
-                                        <h2
-                                            className="mb-3"
-                                            dangerouslySetInnerHTML={{
-                                                __html: sections.introHeading,
-                                            }}
-                                        />
+                                        <span className="section-label mb-3">
+                                            {sections.introLabel || "01 — Project Background"}
+                                        </span>
+                                        {sections.introHeading && (
+                                            <h2
+                                                className="mb-3"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: formatHeading(sections.introHeading),
+                                                }}
+                                            />
+                                        )}
                                         {sections.introParagraphs.map((paragraph) => (
                                             <p key={paragraph}>{paragraph}</p>
                                         ))}
@@ -149,13 +187,10 @@ export default function CaseStudySingleView({
                         {sections.challenges?.length > 0 && (
                             <section className={`${styles.section} ${styles.sectionAlt}`}>
                                 <div className="container">
-                                    <div className={styles.sectionHeader} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">02 — Key Challenges</span>
-                                        <h2>
-                                            Operational <span>Bottlenecks</span>
-                                        </h2>
-                                        {sections.challengesIntro && <p>{sections.challengesIntro}</p>}
-                                    </div>
+                                    <SectionHeader
+                                        header={sections.challengesHeader}
+                                        intro={sections.challengesIntro}
+                                    />
                                     <div className={styles.challengesGrid}>
                                         {sections.challenges.map((item, i) => (
                                             <div
@@ -178,13 +213,10 @@ export default function CaseStudySingleView({
                         {sections.solutions?.length > 0 && (
                             <section className={styles.section}>
                                 <div className="container">
-                                    <div className={styles.sectionHeader} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">03 — Solutions Implemented</span>
-                                        <h2>
-                                            Integrated <span>Automation Strategy</span>
-                                        </h2>
-                                        {sections.solutionsIntro && <p>{sections.solutionsIntro}</p>}
-                                    </div>
+                                    <SectionHeader
+                                        header={sections.solutionsHeader}
+                                        intro={sections.solutionsIntro}
+                                    />
                                     <div className={styles.solutionsGrid}>
                                         {sections.solutions.map((sol, i) => (
                                             <div
@@ -220,13 +252,10 @@ export default function CaseStudySingleView({
                         {sections.performance?.length > 0 && (
                             <section className={`${styles.section} ${styles.sectionAlt}`}>
                                 <div className="container">
-                                    <div className={styles.sectionHeader} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">04 — Performance Achieved</span>
-                                        <h2>
-                                            Measurable <span>Results</span>
-                                        </h2>
-                                        {sections.performanceIntro && <p>{sections.performanceIntro}</p>}
-                                    </div>
+                                    <SectionHeader
+                                        header={sections.performanceHeader}
+                                        intro={sections.performanceIntro}
+                                    />
                                     <div className={styles.metricsGrid}>
                                         {sections.performance.map((metric, i) => (
                                             <div
@@ -250,13 +279,10 @@ export default function CaseStudySingleView({
                         {sections.benefits?.length > 0 && (
                             <section className={styles.section}>
                                 <div className="container">
-                                    <div className={styles.sectionHeader} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">05 — Business Benefits</span>
-                                        <h2>
-                                            Tangible <span>Business Impact</span>
-                                        </h2>
-                                        {sections.benefitsIntro && <p>{sections.benefitsIntro}</p>}
-                                    </div>
+                                    <SectionHeader
+                                        header={sections.benefitsHeader}
+                                        intro={sections.benefitsIntro}
+                                    />
                                     <div className={styles.benefitsGrid}>
                                         {sections.benefits.map((benefit, i) => (
                                             <div
@@ -280,13 +306,10 @@ export default function CaseStudySingleView({
                         {sections.deployment?.length > 0 && (
                             <section className={`${styles.section} ${styles.sectionAlt}`}>
                                 <div className="container">
-                                    <div className={styles.sectionHeader} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">06 — Deployment Strategy</span>
-                                        <h2>
-                                            Structured <span>Go-Live Approach</span>
-                                        </h2>
-                                        {sections.deploymentIntro && <p>{sections.deploymentIntro}</p>}
-                                    </div>
+                                    <SectionHeader
+                                        header={sections.deploymentHeader}
+                                        intro={sections.deploymentIntro}
+                                    />
                                     <div className={styles.deploymentGrid}>
                                         {sections.deployment.map((step, i) => (
                                             <div
@@ -310,7 +333,9 @@ export default function CaseStudySingleView({
                             <section className={styles.conclusionSection}>
                                 <div className="container">
                                     <div className={styles.conclusionBox} data-aos="fade-up">
-                                        <span className="section-label-center mb-3">07 — Conclusion</span>
+                                        <span className="section-label-center mb-3">
+                                            {sections.conclusionLabel || "07 — Conclusion"}
+                                        </span>
                                         <h2 className="text-center mb-4">Conclusion</h2>
                                         <p className={styles.conclusionText}>{sections.conclusionText}</p>
                                     </div>
