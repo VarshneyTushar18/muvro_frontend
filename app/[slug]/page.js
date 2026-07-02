@@ -99,12 +99,11 @@ async function getCaseStudy(slug) {
 }
 
 export async function generateStaticParams() {
-    const [productSlugs, softwareSlugs, caseStudySlugs] = await Promise.all([
+    const [productSlugs, softwareSlugs] = await Promise.all([
         fetchSlugs(),
         fetchSoftwareSlugs(),
-        fetchCaseStudySlugs(),
     ]);
-    const slugs = [...new Set([...productSlugs, ...softwareSlugs, ...caseStudySlugs])];
+    const slugs = [...new Set([...productSlugs, ...softwareSlugs])];
     return slugs.map((slug) => ({ slug }));
 }
 
@@ -293,7 +292,7 @@ export default async function ProductSinglePage({ params }) {
 
         const caseStudy = await getCaseStudy(slug);
         if (caseStudy) {
-            return <CaseStudySinglePage caseStudy={caseStudy} />;
+            redirect(`/case-study/${slug}`);
         }
 
         return notFound();
