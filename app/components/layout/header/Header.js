@@ -633,6 +633,12 @@ export default function Header() {
                     <li>
                       <Link className={`${styles.dropdownItem} dropdown-item`} href="#">Venus Pack System Pvt Ltd</Link>
                     </li>
+                    <li>
+                      <Link className={`${styles.dropdownItem} dropdown-item`} href="#">Nakamura Kiko Co. Ltd</Link>
+                    </li>
+                    <li>
+                      <Link className={`${styles.dropdownItem} dropdown-item`} href="#">Takumi Technologies India Pvt. Ltd.</Link>
+                    </li>
                   </ul>
                 </li>
                 <li>

@@ -57,8 +57,8 @@ export default function CaseStudyTestimonial() {
           <div className="row justify-content-between">
             <div className="col-lg-7" data-aos="fade-right">
               <div className={styles.wrapper}>
-                <span className="section-label text-white">Our Case Study</span>
-                <h2 className="text-white">Case Studies & Testimonials</h2>
+                <span className="section-label text-white">Our Case Studies & Testimonials</span>
+                <h2 className="text-white">Testimonials</h2>
                 <p className="text-white">
                   Explore real-world case studies and authentic client testimonials
                   that highlight our proven expertise, measurable results, and the

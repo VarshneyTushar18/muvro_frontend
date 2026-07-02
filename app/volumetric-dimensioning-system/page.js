@@ -38,6 +38,8 @@ export default function VolumetricDimensioningSystem() {
     <>
       <BreadcrumbStrip crumbs={crumbs} />
 
+      <img src="/images/banners/VDS.webp" alt="Volumetric Dimensioning System" className="img-fluid" />
+
       <section
         className={Style.contact_page}
         data-aos="fade-up"
