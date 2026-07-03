@@ -131,8 +131,8 @@ export default async function OurHistory() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-              <img src="images/Timeline-Image-1.webp" alt="Timeline" className="img-fluid desktopimage"/>
-              <img src="images/Timeline-Mob.webp" alt="Timeline" className="img-fluid mobileimage"/>
+              <img src="images/Timeline-Image-Updated.webp" alt="Timeline" className="img-fluid desktopimage"/>
+              <img src="images/Timeline-MobUpdated.webp" alt="Timeline" className="img-fluid mobileimage"/>
             </div>
             {/* <div className="DiagonalSection">
               <div className="Line">
