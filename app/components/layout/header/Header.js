@@ -14,25 +14,25 @@ const megaMenuData = {
             {
               name: "NaviGO Pallet Shuttle ASRS System",
               subtitle: "High-Density Storage",
-              image: "images/navigo-solution.webp",
+              image: "/images/navigo-solution.webp",
               url: "/navigo-pallet-shuttle-asrs-system"
             },
             {
               name: "Radio Shuttle System",
               subtitle: "ASRS Solutions",
-              image: "images/radio-shuttle-system.webp",
+              image: "/images/radio-shuttle-system.webp",
               url: "/radio-shuttle-system"
             },
             {
               name: "Pallet ASRS Stacker Crane",
               subtitle: "Maximize Vertical Storage",
-              image: "images/Pallet-ASRS-Stacker-Crane-Image.webp",
+              image: "/images/Pallet-ASRS-Stacker-Crane-Image.webp",
               url: "/asrs-stacker-cranes"
             },
             {
               name: "Mini Load ASRS Shuttle System",
               subtitle: "ASRS Solutions",
-              image: "images/Mini-Load-ASRS-Shuttle-System.webp",
+              image: "/images/Mini-Load-ASRS-Shuttle-System.webp",
               url: "/mini-load-asrs-shuttle-system"
             },
             // {
@@ -49,37 +49,37 @@ const megaMenuData = {
             // {
             //   name: "3D Smart Sorter",
             //   subtitle: "10Kg Max Weight",
-            //   image: "images/3d_sorter_bg_removed_c28b208916.png",
+            //   image: "/images/3d_sorter_bg_removed_c28b208916.png",
             //   url: "/3d-smart-sorter-ics"
             // },
             {
               name: "High Speed Cross Belt Loop Sorter",
               subtitle: "Interalogitics",
-              image: "images/high-speed-cross-belt-sorter-image.webp",
+              image: "/images/high-speed-cross-belt-sorter-image.webp",
               url: "/high-speed-cross-belt-loop-sorter"
             },
             {
               name: "ZedSort™ The LIN Linear Cross Belt Sorter",
               subtitle: "Fast. Precise. Compact.",
-              image: "images/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
+              image: "/images/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
               url: "/zedsort-the-lin-linear-cross-belt-sorter"
             },
             {
               name: "Swing Wheel Sorter",
               subtitle: "0.1 kg to 30 kg",
-              image: "images/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
+              image: "/images/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
               url: "/swing-wheel-sorter"
             },
             {
               name: "Tilt Tray Sorter System",
               subtitle: "Sorting Solutions",
-              image: "images/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
+              image: "/images/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
               url: "/tilt-tray-sorter-system"
             },
             // {
             //   name: "Fast Sorter (Micro Sorter)",
             //   subtitle: "Sorting Solutions",
-            //   image: "images/product01_cf91e2b5ef.png",
+            //   image: "/images/product01_cf91e2b5ef.png",
             //   url: "/fast-sorter-micro-sorter"
             // },
             // {
@@ -102,7 +102,7 @@ const megaMenuData = {
             {
               name: "Secondary Sorting",
               subtitle: "Flexible Integration Capabilities",
-              image: "images/3dsmart-sorter-image.webp",
+              image: "/images/3dsmart-sorter-image.webp",
               url: "/secondary-sorting"
             },
           ]
@@ -124,13 +124,13 @@ const megaMenuData = {
             {
               name: "Micro Fulfilment",
               subtitle: "Solutions",
-              image: "images/micro-fulfil-main-image.webp",
+              image: "/images/micro-fulfil-main-image.webp",
               url: "/micro-fulfilment"
             },
             {
               name: "3D Smart Sorter",
               subtitle: "10Kg Max Weight",
-              image: "images/tred-image.webp",
+              image: "/images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
             {
@@ -178,19 +178,19 @@ const megaMenuData = {
             {
               name: "AMR",
               subtitle: "Mobile Robots",
-              image: "images/amr_image_10436d8ec7.webp",
+              image: "/images/amr_image_10436d8ec7.webp",
               url: "/autonomous-mobile-robot"
             },
             {
               name: "AGV",
               subtitle: "Mobile Robots",
-              image: "images/agv_image_a157089136.webp",
+              image: "/images/agv_image_a157089136.webp",
               url: "/automated-guided-vehicle"
             },
             {
               name: "AGV Stacker Crane",
               subtitle: "Mobile Robots",
-              image: "images/Mini-Load-ASRS-Shuttle-System.webp",
+              image: "/images/Mini-Load-ASRS-Shuttle-System.webp",
               url: "/mini-load-asrs-shuttle-system"
             },
             // {
@@ -289,43 +289,43 @@ const megaMenuData = {
             {
               name: "3D Smart Sorter",
               subtitle: "10Kg Max Weight",
-              image: "images/tred-image.webp",
+              image: "/images/tred-image.webp",
               url: "/3d-smart-sorter-ics"
             },
             // {
             //   name: "Fast Sorter (Micro Sorter)",
             //   subtitle: "Up to 2,000 parcels/hour",
-            //   image: "images/product01_cf91e2b5ef.png",
+            //   image: "/images/product01_cf91e2b5ef.png",
             //   url: "/fast-sorter-micro-sorter"
             // },
             {
               name: "High Speed Cross Belt Loop Sorter",
               subtitle: "Interalogitics",
-              image: "images/high-speed-cross-belt-sorter-image.webp",
+              image: "/images/high-speed-cross-belt-sorter-image.webp",
               url: "/high-speed-cross-belt-loop-sorter"
             },
             {
               name: "Narrow Belt sorter",
               subtitle: "Interalogitics",
-              image: "images/Narrow_Section_1_Feature.webp",
+              image: "/images/Narrow_Section_1_Feature.webp",
               url: "/narrow-cross-belt-sorter"
             },
             {
               name: "ZedSort™ The LIN Linear Cross Belt Sorter",
               subtitle: "Fast. Precise. Compact.",
-              image: "images/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
+              image: "/images/zedsort_the_lin_linear_cross_belt_sorter_b8655352da.webp",
               url: "/zedsort-the-lin-linear-cross-belt-sorter"
             },
             {
               name: "Swing Wheel Sorter",
               subtitle: "0.1 kg to 30 kg",
-              image: "images/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
+              image: "/images/Swing_Wheel_Sorter_Assemly_04_2048x1396_removebg_preview_0684caaa0e.png",
               url: "/swing-wheel-sorter"
             },
             {
               name: "Tilt Tray Sorter System",
               subtitle: "Smart. Scalable. Seamless.",
-              image: "images/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
+              image: "/images/Tilt_Tray_Sorter_Assy_07_1_e1741257962489_removebg_preview_925cd8dee5.png",
               url: "/tilt-tray-sorter-system"
             }
           ]
@@ -336,19 +336,19 @@ const megaMenuData = {
             {
               name: "Vertixo™ Stack Sorter",
               subtitle: "Ideal for high-density",
-              image: "images/Vertixo_Stack_Sorter_99cec857c3.webp",
+              image: "/images/Vertixo_Stack_Sorter_99cec857c3.webp",
               url: "/vertixo-stack-sorter"
             },
             {
               name: "Vetro™ Micro Sort",
               subtitle: "Smart Parcel Tracking",
-              image: "images/Micro_SORT_The_Lite_fa865eccf1.webp",
+              image: "/images/Micro_SORT_The_Lite_fa865eccf1.webp",
               url: "/vetro-micro-sort"
             },
             {
               name: "VOREX™",
               subtitle: "Multi-Layer High-Density Sorting",
-              image: "images/VOREX_Image_ab070505ba.webp",
+              image: "/images/VOREX_Image_ab070505ba.webp",
               url: "/vorex"
             },
           ]
@@ -359,25 +359,25 @@ const megaMenuData = {
             {
               name: "NaviGO Pallet Shuttle ASRS System",
               subtitle: "High-Density Storage",
-              image: "images/Combine_2_250_17d1673e5b.png",
+              image: "/images/Combine_2_250_17d1673e5b.png",
               url: "/navigo-pallet-shuttle-asrs-system"
             },
             {
               name: "Radio Shuttle System",
               subtitle: "NaviGO ASRS Shuttle",
-              image: "images/radio_shuttle_system_5c5b1105bb.webp",
+              image: "/images/radio_shuttle_system_5c5b1105bb.webp",
               url: "/radio-shuttle-system"
             },
             {
               name: "Pallet ASRS Stacker Crane",
               subtitle: "Automated vertical storage crane",
-              image: "images/asrs_crne_e3f07fc651.png",
+              image: "/images/asrs_crne_e3f07fc651.png",
               url: "/asrs-stacker-cranes"
             },
             {
               name: "Mini Load ASRS Shuttle System",
               subtitle: "ASRS Solutions",
-              image: "images/Mini-Load-ASRS-Shuttle-System.webp",
+              image: "/images/Mini-Load-ASRS-Shuttle-System.webp",
               url: "/mini-load-asrs-shuttle-system"
             },
           ]
@@ -388,31 +388,31 @@ const megaMenuData = {
             {
               name: "Singulator System",
               subtitle: "AI-Powered Detection",
-              image: "images/Singulator_07_scaled_removebg_preview_5deced7843.png",
+              image: "/images/Singulator_07_scaled_removebg_preview_5deced7843.png",
               url: "/parcel-singulator-system"
             },
             {
               name: "Tipper System",
               subtitle: "Automated parcel tipping system",
-              image: "images/tipper-menu-image.webp",
+              image: "/images/tipper-menu-image.webp",
               url: "/tipper"
             },
             {
               name: "Volumetric Dimensioning System VDS",
               subtitle: "Advanced Automated Solution",
-              image: "images/vds_main.webp",
+              image: "/images/vds_main.webp",
               url: "/volumetric-dimensioning-system"
             },
             // {
             //   name: "VDS - Smart Gate",
             //   subtitle: "Integrated Gating Mechanism",
-            //   image: "images/Gated_Tilted_Conveyor_0acfc8dc7c.webp",
+            //   image: "/images/Gated_Tilted_Conveyor_0acfc8dc7c.webp",
             //   url: "/gated-tilted-conveyor"
             // },
             // {
             //   name: "VDS - Swing Arm",
             //   subtitle: "Baggage Handling Systems",
-            //   image: "images/transparent_b85a297768.webp",
+            //   image: "/images/transparent_b85a297768.webp",
             //   url: "/swing-arm"
             // },
 
@@ -439,8 +439,8 @@ const megaMenuData = {
         {
           name: "Mobile Robots",
           products: [
-            { name: "AGV", subtitle: "Mobile Robots", image: "images/agv_image_a157089136.webp", url: "/automated-guided-vehicle" },
-            { name: "AMR", subtitle: "Mobile Robots", image: "images/amr_image_10436d8ec7.webp", url: "/autonomous-mobile-robot" },
+            { name: "AGV", subtitle: "Mobile Robots", image: "/images/agv_image_a157089136.webp", url: "/automated-guided-vehicle" },
+            { name: "AMR", subtitle: "Mobile Robots", image: "/images/amr_image_10436d8ec7.webp", url: "/autonomous-mobile-robot" },
           ],
         },
         {
