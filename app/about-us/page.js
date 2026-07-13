@@ -139,7 +139,7 @@ export default async function AboutUs() {
                             </span>
 
                             <h2
-                                className="mb-5 text-center"
+                                className="mb-3 text-center"
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
@@ -363,7 +363,7 @@ export default async function AboutUs() {
                 <div className="container">
                     <div className="row g-4">
                         <h3
-                            className="mb-5 text-center"
+                            className="mb-3 text-center"
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >

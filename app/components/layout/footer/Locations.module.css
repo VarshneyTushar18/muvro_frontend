@@ -1,6 +1,14 @@
+.locationsList {
+    width: 100%;
+    padding-bottom: 8px;
+}
+
 .locationsList .locationItem {
     display: flex;
-    gap: 20px;
+    gap: 16px;
+    align-items: stretch;
+    padding: 4px 4px 12px;
+    height: 100%;
 }
 
 .locationsList .locationItem .mapFrame,
@@ -8,15 +16,31 @@
     width: 50%;
 }
 
+.locationsList .locationItem .mapFrame {
+    min-height: 140px;
+    overflow: hidden;
+}
+
 .locationsList .locationItem .mapFrame iframe {
-    border-block: 1px solid #46505A;
+    border: 1px solid #46505A;
+    width: 100%;
+    height: 100%;
+    min-height: 140px;
+    display: block;
+}
+
+.locationsList .locationItem .locationDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 2px 0;
 }
 
 .locationsList .locationItem .locationDetails .locationTitle {
     font-size: 14px;
     font-family: var(--font-display);
-    line-height: 16px;
-    margin-bottom: 6px;
+    line-height: 1.3;
+    margin: 0 0 4px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -24,18 +48,22 @@
 
 .locationsList .locationItem .locationDetails .locationAddress {
     font-size: 13px;
-    line-height: 20px;
-    margin-bottom: 6px;
+    line-height: 1.45;
+    margin: 0 0 8px;
+    white-space: pre-line;
 }
 
 .locationsList .locationItem .locationDetails .locationContacts {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 .locationsList .locationItem .locationDetails .locationContact {
-    margin-bottom: 0
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .locationsList .locationItem .locationDetails .locationContact a {
@@ -51,12 +79,58 @@
     width: 25px;
     height: 25px;
     margin-right: 6px;
+    flex-shrink: 0;
 }
 
 .locationFlag {
     width: 25px;
+    height: auto;
+    object-fit: contain;
+}
+
+.locationsList :global(.swiper) {
+    padding-bottom: 28px;
 }
 
 .locationsList :global(.swiper-pagination) {
-    margin-top: 10px;
+    bottom: 0;
+    margin-top: 0;
+}
+
+.locationsList :global(.swiper-slide) {
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .locationsList .locationItem {
+        gap: 12px;
+        padding: 0 0 8px;
+    }
+
+    .locationsList .locationItem .mapFrame {
+        min-height: 120px;
+    }
+
+    .locationsList .locationItem .mapFrame iframe {
+        min-height: 120px;
+    }
+
+    .locationsList .locationItem .locationDetails .locationTitle {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .locationsList .locationItem .locationDetails .locationAddress {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 6px;
+    }
+
+    .locationsList .locationItem .locationDetails .locationContacts {
+        gap: 8px;
+    }
+
+    .locationsList :global(.swiper) {
+        padding-bottom: 32px;
+    }
 }

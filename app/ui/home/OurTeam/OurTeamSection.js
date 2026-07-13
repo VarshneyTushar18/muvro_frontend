@@ -1,12 +1,18 @@
 "use client";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { RiArrowLeftLine, RiArrowRightLine } from "@remixicon/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./OurTeamSection.module.css";
 
 export default function OurTeamSection() {
+  const swiperRef = useRef(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
   const members = [
     {
       name: "Mr. Ajay Yadav",
@@ -85,6 +91,11 @@ export default function OurTeamSection() {
     },
   ];
 
+  const updateNavState = (swiper) => {
+    setIsBeginning(swiper.isBeginning);
+    setIsEnd(swiper.isEnd);
+  };
+
   return (
     <section className="py-5" data-aos="fade-up" data-aos-duration="1000">
       <div className="container">
@@ -99,45 +110,76 @@ export default function OurTeamSection() {
           </p>
         </div>
 
-        <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={30}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 },
-            1400: { slidesPerView: 5 },
-          }}
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          {members.map((member, index) => (
-            <SwiperSlide key={index}>
-              <figure
-                className={styles.card}
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-              >
-                <div className={styles.cardImage}>
-                  <div className={styles.cardImageInner}>
-                    <img
-                      src={member.image}
-                      alt={`${member.name} - ${member.role}`}
-                      loading="lazy"
-                    />
+        <div className={styles.sliderWrap}>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{ clickable: true }}
+            spaceBetween={30}
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              576: { slidesPerView: 2 },
+              768: { slidesPerView: 3 },
+              1024: { slidesPerView: 4 },
+              1400: { slidesPerView: 5 },
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              updateNavState(swiper);
+            }}
+            onSlideChange={updateNavState}
+            onResize={updateNavState}
+            className={styles.teamSwiper}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            {members.map((member, index) => (
+              <SwiperSlide key={index}>
+                <figure
+                  className={styles.card}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
+                >
+                  <div className={styles.cardImage}>
+                    <div className={styles.cardImageInner}>
+                      <img
+                        src={member.image}
+                        alt={`${member.name} - ${member.role}`}
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
-                </div>
-                <figcaption className="text-center">
-                  <h5 className={styles.cardTitle}>{member.name}</h5>
-                  <p className={styles.cardText}>{member.role}</p>
-                </figcaption>
-              </figure>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                  <figcaption className="text-center">
+                    <h5 className={styles.cardTitle}>{member.name}</h5>
+                    <p className={styles.cardText}>{member.role}</p>
+                  </figcaption>
+                </figure>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Mobile-only custom arrows */}
+          <div className={styles.navButtons}>
+            <button
+              type="button"
+              className={`${styles.navButton} ${isBeginning ? styles.navDisabled : ""}`}
+              aria-label="Previous team member"
+              disabled={isBeginning}
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              <RiArrowLeftLine />
+            </button>
+            <button
+              type="button"
+              className={`${styles.navButton} ${isEnd ? styles.navDisabled : ""}`}
+              aria-label="Next team member"
+              disabled={isEnd}
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              <RiArrowRightLine />
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

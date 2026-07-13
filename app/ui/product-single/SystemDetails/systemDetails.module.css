@@ -27,6 +27,7 @@
 .title {
   margin-bottom: 24px;
   font-size: 40px;
+  line-height: 1.25;
 }
 
 
@@ -45,6 +46,11 @@
 @media(max-width:768px) {
   .content {
     padding: 50px 30px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.35;
   }
 }
 

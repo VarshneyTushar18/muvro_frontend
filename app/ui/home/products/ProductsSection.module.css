@@ -211,28 +211,46 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    min-height: 48px;
+    padding-right: 120px;
+}
+
+.categoryTitle {
+    margin-bottom: 0 !important;
+    line-height: 1.25;
 }
 
 .navButtons {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 0.75rem;
     position: absolute;
     right: 0;
-    top: 5px;
+    top: 0;
     z-index: 99;
-    padding: 15px 20px;
+    padding: 0;
+    height: 48px;
     background: transparent;
     color: #000;
 }
 
 .navButton {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     border: 0;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 1rem;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px;
+    padding: 0 !important;
+    box-shadow: 4px 4px #000 !important;
+}
+
+.navButton svg {
+    width: 22px;
+    height: 22px;
 }
 
 .navButton:global(.swiper-button-disabled) {
@@ -244,14 +262,69 @@
     position: relative;
 }
 
-@media (max-width: 767px) {
-    .navButtons {
-        top: 0;
-        padding: 5px 20px;
+@media (max-width: 991px) {
+    .categoryHeader {
+        min-height: 44px;
+        padding-right: 108px;
+        margin-bottom: 1.5rem;
     }
 
-    .categoryHeader h3 {
-        width: 80%;
+    .navButtons {
+        height: 44px;
+        gap: 0.55rem;
+    }
+
+    .navButton {
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px;
+        box-shadow: 3px 3px #000 !important;
+    }
+
+    .navButton svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+@media (max-width: 767px) {
+    .categoryHeader {
+        min-height: 40px;
+        margin-bottom: 1.25rem;
+        padding-right: 96px;
+        align-items: center;
+    }
+
+    .categoryTitle {
+        width: auto;
+        max-width: 100%;
+        font-size: clamp(22px, 6vw, 28px);
+        line-height: 1.25;
+    }
+
+    .navButtons {
+        top: 0;
+        height: 40px;
+        gap: 0.45rem;
+        padding: 0;
+    }
+
+    .navButton {
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px;
+        padding: 0 !important;
+        box-shadow: 3px 3px #000 !important;
+    }
+
+    .navButton:active {
+        transform: translate(2px, 2px);
+        box-shadow: none !important;
+    }
+
+    .navButton svg {
+        width: 17px;
+        height: 17px;
     }
 }
 
