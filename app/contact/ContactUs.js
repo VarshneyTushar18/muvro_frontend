@@ -173,8 +173,7 @@ export default function ContactUs({ locations = [] }) {
               data-aos-delay="500"
               data-aos-duration="900"
             >
-              {/* Form kept in DOM but hidden — do not remove */}
-              <div className={`${Style.form_block} ${Style.form_hidden}`} aria-hidden="true">
+              <div className={Style.form_block}>
                 <h4 data-aos="fade-up" data-aos-delay="550">
                   {formHeading}
                 </h4>
@@ -275,7 +274,8 @@ export default function ContactUs({ locations = [] }) {
                 </form>
               </div>
 
-              <div className={Style.presence_block}>
+              {/* Locations kept in DOM but hidden — do not remove */}
+              <div className={`${Style.presence_block} ${Style.form_hidden}`} aria-hidden="true">
                 {locations.length > 0 ? (
                   <ul className={Style.presence_list}>
                     {locations.map((loc, index) => (
