@@ -1,3 +1,7 @@
+.form_hidden {
+  display: none !important;
+}
+
 .form_block {
   background: #F2F2F2;
   padding: 50px 50px;
@@ -5,6 +9,108 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.presence_block {
+  background: #F2F2F2;
+  padding: 50px 50px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.presence_block h4 {
+  margin-bottom: 12px;
+}
+
+.presence_block > p {
+  margin-bottom: 24px;
+  width: 90%;
+}
+
+.presence_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.presence_item {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-left: 3px solid var(--color-primary);
+}
+
+.presence_title {
+  font-size: 16px;
+  font-family: var(--font-display);
+  line-height: 22px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.presence_flag {
+  width: 24px;
+  height: auto;
+  object-fit: contain;
+}
+
+.presence_address {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+  color: var(--color-dark);
+}
+
+.presence_address svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: var(--color-secondary);
+}
+
+.presence_contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.presence_contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.presence_contact:hover {
+  color: var(--color-secondary);
+}
+
+.presence_contact svg {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.presence_fallback {
+  margin: 0;
+  font-size: 14px;
 }
 
 .form_block h4 {
@@ -127,6 +233,15 @@
     height: 80px;
   }
 
+  .presence_block h4 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .presence_block > p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 /* Small Screens */
@@ -143,6 +258,19 @@
   }
 
   .form_block p {
+    margin-bottom: 18px;
+    width: 95%;
+  }
+
+  .presence_block {
+    padding: 30px 30px;
+  }
+
+  .presence_block h4 {
+    margin-bottom: 12px;
+  }
+
+  .presence_block > p {
     margin-bottom: 18px;
     width: 95%;
   }
