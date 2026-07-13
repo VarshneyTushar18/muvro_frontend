@@ -105,13 +105,14 @@ export default async function Careers() {
             </div>
           </div>
 
-          <div
+          
+          {/* <div
             data-aos="fade-up"
             data-aos-delay="400"
             data-aos-duration="800"
           >
             <CareersTable careersData={careersData} />
-          </div>
+          </div> */}
         </div>
       </section>
 
