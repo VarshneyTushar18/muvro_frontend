@@ -57,10 +57,10 @@ export default function ContactUs() {
             <div className="col-xl-6 pb-4">
               <img src="/images/Muvro-Fulfilment-Center.webp" alt="" className="img-fluid" />
             </div>
-            <div className="col-xl-6 pb-4">
+            <div className={`col-xl-6 pb-4 ${Style.sectionIntro}`}>
 
               <span
-                className="section-label mb-0"
+                className="section-label"
                 data-aos="zoom-in"
                 data-aos-delay="150"
               >
@@ -68,13 +68,14 @@ export default function ContactUs() {
               </span>
 
               <h2
-                className="mb-3"
+                className={Style.pageTitle}
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
                 Overview
               </h2>
 
+              <div className={Style.sectionBody}>
               <p
                 className=""
                 data-aos="fade-up"
@@ -89,6 +90,7 @@ export default function ContactUs() {
               >
                 At MUVRO Technologies, we deliver smart, efficient, modular, and scalable automation solutions tailored to the diverse needs of fulfillment applications. Our systems are designed to optimize performance across industries such as e-commerce, packaging, food processing, manufacturing, pharmaceuticals, assembly lines, parcel distribution, and warehouse automation.
               </p>
+              </div>
             </div>
           </div>
 
@@ -100,11 +102,11 @@ export default function ContactUs() {
         <div className="container">
           {/* Header Section */}
           <div
-            className="row justify-content-center"
+            className={`row justify-content-center ${Style.sectionBody}`}
             data-aos="fade-up"
             data-aos-delay="100">
             <h5
-              className="mb-3"
+              className={Style.subTitle}
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -132,11 +134,11 @@ export default function ContactUs() {
         <div className="container pt-5">
 
           <div
-            className="row justify-content-center"
+            className={`row justify-content-center ${Style.sectionIntro}`}
             data-aos="fade-up"
             data-aos-delay="100">
             <span
-              className="section-label-center mb-0"
+              className="section-label-center"
               data-aos="zoom-in"
               data-aos-delay="150"
             >
@@ -144,7 +146,7 @@ export default function ContactUs() {
             </span>
 
             <h3
-              className=" text-center mb-3"
+              className={`${Style.sectionTitle} text-center`}
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -203,7 +205,7 @@ export default function ContactUs() {
             <div className="col-xl-6 pb-4">
 
               <h4
-                className="mb-3"
+                className={Style.blockTitle}
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -287,7 +289,7 @@ export default function ContactUs() {
             <div className="col-xl-6 pb-4">
 
               <h4
-                className="mb-3"
+                className={Style.blockTitle}
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -359,7 +361,7 @@ export default function ContactUs() {
             <div className="col-xl-6 pb-4">
 
               <h4
-                className="mb-3"
+                className={Style.blockTitle}
                 data-aos="fade-up"
                 data-aos-delay="200"
               >

@@ -381,7 +381,7 @@ export default function ProductsSection() {
                   <SwiperSlide key={category.id}>
                     <div className="category-block">
                       <div className={styles.categoryHeader}>
-                        <h3 className="text-left mb-4">{category.name}</h3>
+                        <h3 className={`text-left ${styles.categoryTitle}`}>{category.name}</h3>
                       </div>
 
                       {category.products.length === 0 ? (

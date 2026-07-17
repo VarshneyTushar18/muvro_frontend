@@ -26,7 +26,7 @@ export default async function WhyMuvro() {
   return (
     <>
 
-      <section className={Style.contact_page}>
+      <section className={Style.contact_page} style={{ paddingBottom: 0 }}>
         <div className="container">
           {/* Section Header */}
           <div className="row">

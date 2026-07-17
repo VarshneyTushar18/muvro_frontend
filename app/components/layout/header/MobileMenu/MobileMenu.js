@@ -538,7 +538,7 @@ const industriesLinks = [
 ];
 
 
-function SubmenuScreen({ title, links, onBack }) {
+function SubmenuScreen({ title, links, onBack, onClose }) {
   return (
     <div className={styles.submenuWrapper}>
       <button className={styles.backBtn} onClick={onBack}>
@@ -548,7 +548,7 @@ function SubmenuScreen({ title, links, onBack }) {
       <ul className={styles.submenuLinks}>
         {links.map((link) => (
           <li key={link.label}>
-            <a href={link.href}>{link.label}</a>
+            <a href={link.href} onClick={onClose}>{link.label}</a>
           </li>
         ))}
       </ul>
@@ -563,6 +563,10 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
 
   const handleOpenSection = (menu) => setActiveSection(menu);
   const handleBack = () => setActiveSection(null);
+  const handleClose = () => {
+    setActiveSection(null);
+    onClose();
+  };
 
   const renderProducts = (menu) => {
     const currentTopTab = topTab[menu];
@@ -617,8 +621,8 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                       <a
                         href={prod.url}
                         className="stretched-link"
-                        target="_blank"
                         rel="noopener noreferrer"
+                        onClick={handleClose}
                       ></a>
                     </div>
                   ))}
@@ -637,7 +641,7 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
       {/* Header */}
       <div className={styles.header}>
         <h3>Menu</h3>
-        <button onClick={onClose} className={styles.closeBtn}>
+        <button onClick={handleClose} className={styles.closeBtn}>
           <RiCloseLine />
         </button>
       </div>
@@ -653,7 +657,7 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                         </li> */}
 
 
-            <li><Link href="/about-us">About Us</Link></li>
+            <li><Link href="/about-us" onClick={handleClose}>About Us</Link></li>
             <li>
               <button onClick={() => handleOpenSection("Group of Companies")}>
                 Group of Companies <RiArrowRightSLine />
@@ -685,18 +689,18 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
                 Resources <RiArrowRightSLine />
               </button>
             </li>
-            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/contact" onClick={handleClose}>Contact Us</Link></li>
           </ul>
         ) : activeSection === "Company" ? (
-          <SubmenuScreen title="Company" links={companyLinks} onBack={handleBack} />
+          <SubmenuScreen title="Company" links={companyLinks} onBack={handleBack} onClose={handleClose} />
         ) : activeSection === "Group of Companies" ? (
-          <SubmenuScreen title="Group of Companies" links={groupCompanyLinks} onBack={handleBack} />
+          <SubmenuScreen title="Group of Companies" links={groupCompanyLinks} onBack={handleBack} onClose={handleClose} />
         ) : activeSection === "Industries" ? (
-          <SubmenuScreen title="Industries" links={industriesLinks} onBack={handleBack} />
+          <SubmenuScreen title="Industries" links={industriesLinks} onBack={handleBack} onClose={handleClose} />
         ) : activeSection === "Software" ? (
-          <SubmenuScreen title="Software" links={softwareLinks} onBack={handleBack} />
+          <SubmenuScreen title="Software" links={softwareLinks} onBack={handleBack} onClose={handleClose} />
         ) : activeSection === "Resources" ? (
-          <SubmenuScreen title="Resources" links={resourceLinks} onBack={handleBack} />
+          <SubmenuScreen title="Resources" links={resourceLinks} onBack={handleBack} onClose={handleClose} />
         ) : (
           renderProducts(activeSection)
         )}

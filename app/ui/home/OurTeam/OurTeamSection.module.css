@@ -10,6 +10,68 @@
   color: #686868
 }
 
+.sliderWrap {
+  position: relative;
+}
+
+/* Desktop/tablet: keep default Swiper arrows + bullets */
+.navButtons {
+  display: none;
+}
+
+.teamSwiper :global(.swiper-button-next),
+.teamSwiper :global(.swiper-button-prev) {
+  display: flex !important;
+}
+
+.teamSwiper :global(.swiper-pagination) {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: static !important;
+  margin-top: 20px;
+}
+
+.navButton {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+}
+
+.navButton svg {
+  width: 22px;
+  height: 22px;
+}
+
+.navButton:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.navButton:disabled,
+.navDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.navButton:disabled:hover,
+.navDisabled:hover {
+  background-color: #E0E0E0;
+  transform: none;
+}
+
 .card {
   background: transparent;
   border: none;
@@ -70,4 +132,37 @@
   font-size: 14px;
   font-weight: 400;
   color: #000;
+}
+
+/* Mobile only: custom bottom arrows, hide default arrows + bullets */
+@media (max-width: 767px) {
+  .card {
+    padding: 10px;
+  }
+
+  .teamSwiper :global(.swiper-button-next),
+  .teamSwiper :global(.swiper-button-prev),
+  .teamSwiper :global(.swiper-pagination) {
+    display: none !important;
+  }
+
+  .navButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .navButton {
+    width: 48px;
+    height: 48px;
+  }
+
+  .navButton svg {
+    width: 24px;
+    height: 24px;
+  }
 }

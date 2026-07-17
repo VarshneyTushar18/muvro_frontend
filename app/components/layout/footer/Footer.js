@@ -167,7 +167,7 @@ export default async function Footer() {
       </div>
       {
         footerData.location.length > 0 && (
-          <div className={`${styles.locations} container px-0`}>
+          <div className={`${styles.locations} container`}>
             <h4 className={styles.linksHeader} >
               Our Global Presence
             </h4>
@@ -183,6 +183,15 @@ export default async function Footer() {
             new Date().getFullYear()
           )
         }
+        {" | Design & Developed by "}
+        <a
+          href="https://tech2globe.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.devCredit}
+        >
+          Tech2Globe
+        </a>
       </div>
     </footer >
   );

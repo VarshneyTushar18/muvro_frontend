@@ -55,11 +55,11 @@ export default function LocationsSlider({ locations }) {
     return (
         <div className={styles.locationsList}>
             <Swiper
-                spaceBetween={4}
+                spaceBetween={20}
                 breakpoints={{
-                    320: { slidesPerView: 1 }, // Mobile
-                    768: { slidesPerView: 2 }, // Tablet
-                    1024: { slidesPerView: 3 }, // Desktop/Laptop
+                    320: { slidesPerView: 1, spaceBetween: 12 },
+                    768: { slidesPerView: 2, spaceBetween: 16 },
+                    1024: { slidesPerView: 3, spaceBetween: 20 },
                 }}
                 navigation={false}
                 modules={[Pagination]}

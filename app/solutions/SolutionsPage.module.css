@@ -225,6 +225,38 @@
   gap: 10px;
 }
 
+@media (max-width: 767px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .productName {
+    font-size: 11px!important;
+    line-height: 13px!important;
+    margin-bottom: 2px;
+  }
+
+  .productSubtitle {
+    font-size: 8px!important;
+    line-height: 9px!important;
+    padding: 3px;
+  }
+
+  .arrow svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .productCard {
+    padding: 6px;
+  }
+
+  .productCardImage img {
+    max-width: 75%;
+  }
+}
+
 /* Product card container */
 .productCard {
   position: relative;
@@ -271,6 +303,8 @@
 .productName {
   margin-bottom: 6px;
   font-size: 16px;
+  position: relative;
+  z-index: 2;
 }
 
 .productSubtitle {
