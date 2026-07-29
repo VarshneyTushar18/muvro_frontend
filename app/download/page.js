@@ -1,8 +1,9 @@
 import { RiDownload2Line } from "@remixicon/react";
+import { notFound } from "next/navigation";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
 import Style from "./download.module.css";
 
-async function getDownloads() {
+async function getDownloadPage() {
   const res = await fetch(`${process.env.STRAPI_BACKEND_BASE_URL}/download-page?populate=*`,
     { next: { revalidate: 60 } }
   );
@@ -15,14 +16,14 @@ async function getDownloads() {
   return data.data;
 }
 
-export default async function Downloads() {
-  const pageData = await getDownloads();
+export default async function DownloadPage() {
+  const pageData = await getDownloadPage();
 
   if (!pageData) return notFound();
 
   const crumbs = [
     { label: "Home", link: "/" },
-    { label: "Downloads" },
+    { label: "Download" },
   ];
 
   const sectionHeader = pageData.sectionHeader;

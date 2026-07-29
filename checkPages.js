@@ -7,7 +7,7 @@ const pages = [
   "/careers",
   "/contact",
   "/conveyor",
-  "/downloads",
+  "/download",
   "/events",
   "/industries",
   "/secondary-sorting",

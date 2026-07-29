@@ -517,7 +517,7 @@ const softwareLinks = [
 const resourceLinks = [
   { label: "Events", href: "/events" },
   { label: "Careers", href: "/careers" },
-  { label: "Downloads", href: "/downloads" },
+  { label: "Download", href: "/download" },
   { label: "Case Study", href: "/case-study" },
   { label: "Blogs", href: "/blogs" },
 ];

@@ -789,8 +789,8 @@ export default function Header() {
                   </Link>
                 </li >
                 <li>
-                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/downloads">
-                    Downloads
+                  <Link className={`${styles.dropdownItem} dropdown-item`} href="/download">
+                    Download
                   </Link>
                 </li >
                 <li>
