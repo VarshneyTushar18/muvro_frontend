@@ -1,0 +1,133 @@
+.downloadBtn {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: underline;
+  font: inherit;
+}
+
+.downloadBtn:hover {
+  color: var(--color-primary, #c41230);
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modalContent {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #333;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.closeBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modalHint {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.form_block {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_block ::placeholder {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.form_block input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #686868;
+  border-radius: 0;
+  padding: 12px 0;
+  outline: none;
+}
+
+.form_block input:focus {
+  background: transparent;
+  border-bottom: 1px solid var(--color-primary);
+  outline: none;
+  box-shadow: none !important;
+}
+
+.form_block input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.errorText {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 4px;
+  display: block;
+}
+
+.successText {
+  color: #2e7d32;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .form_block input {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
