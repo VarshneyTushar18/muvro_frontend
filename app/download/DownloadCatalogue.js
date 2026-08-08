@@ -173,8 +173,8 @@ export default function DownloadCatalogue({ items = [] }) {
             </div>
 
             <p className={Style.modalHint}>
-              Enter your email to receive <strong>{selected.title}</strong>. We will
-              send the download link to your inbox.
+              Please enter your email address and we will send the catalogue
+              download link to your inbox.
             </p>
 
             <form onSubmit={handleSubmit} noValidate>
