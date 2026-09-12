@@ -190,6 +190,21 @@
   box-shadow: none !important;
 }
 
+.turnstileContainer {
+  margin: 16px 0 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 65px;
+}
+
+.turnstileContainer,
+.turnstileContainer:focus,
+.turnstileContainer *:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
 .image_block {
   height: 100%;
 }

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { RiDownload2Line, RiCloseLine } from "@remixicon/react";
+import TurnstileWidget from "../components/common/TurnstileWidget";
 import Style from "./download.module.css";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -10,6 +11,9 @@ export default function DownloadCatalogue({ items = [] }) {
   const [showModal, setShowModal] = useState(false);
   const [selected, setSelected] = useState(null);
   const [email, setEmail] = useState("");
+  const [companyWebsite, setCompanyWebsite] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
   const [error, setError] = useState("");
   const [status, setStatus] = useState({ type: "", message: "" });
   const [loading, setLoading] = useState(false);
@@ -17,6 +21,8 @@ export default function DownloadCatalogue({ items = [] }) {
   const openModal = (catalogue) => {
     setSelected(catalogue);
     setEmail("");
+    setCompanyWebsite("");
+    setTurnstileToken("");
     setError("");
     setStatus({ type: "", message: "" });
     setShowModal(true);
@@ -27,6 +33,8 @@ export default function DownloadCatalogue({ items = [] }) {
     setShowModal(false);
     setSelected(null);
     setEmail("");
+    setCompanyWebsite("");
+    setTurnstileToken("");
     setError("");
     setStatus({ type: "", message: "" });
   };
@@ -47,6 +55,11 @@ export default function DownloadCatalogue({ items = [] }) {
       return;
     }
 
+    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken) {
+      setError("Please complete the CAPTCHA verification.");
+      return;
+    }
+
     if (!selected?.url) {
       setError("Catalogue file is unavailable. Please try again later.");
       return;
@@ -64,6 +77,8 @@ export default function DownloadCatalogue({ items = [] }) {
           catalogueTitle: selected.title,
           catalogueFileName: selected.fileName,
           catalogueUrl: selected.url,
+          turnstileToken,
+          companyWebsite,
         }),
       });
 
@@ -75,18 +90,23 @@ export default function DownloadCatalogue({ items = [] }) {
           message: `Thank you! Your free download link has been sent to ${email.trim()}. Please check your inbox.`,
         });
         setEmail("");
+        setTurnstileToken("");
         setTimeout(() => {
           setShowModal(false);
           setSelected(null);
           setStatus({ type: "", message: "" });
         }, 3500);
       } else {
+        setTurnstileToken("");
+        turnstileRef.current?.reset();
         setStatus({
           type: "error",
           message: data.error || "Failed to send download. Please try again.",
         });
       }
     } catch {
+      setTurnstileToken("");
+      turnstileRef.current?.reset();
       setStatus({
         type: "error",
         message: "Something went wrong. Please try again later.",
@@ -178,6 +198,17 @@ export default function DownloadCatalogue({ items = [] }) {
             </p>
 
             <form onSubmit={handleSubmit} noValidate>
+              <input
+                type="text"
+                name="companyWebsite"
+                value={companyWebsite}
+                onChange={(e) => setCompanyWebsite(e.target.value)}
+                style={{ display: "none", position: "absolute", left: "-9999px" }}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
+
               <div className="mb-3">
                 <input
                   type="email"
@@ -192,8 +223,21 @@ export default function DownloadCatalogue({ items = [] }) {
                   autoFocus
                   autoComplete="email"
                 />
-                {error && <small className={Style.errorText}>{error}</small>}
               </div>
+
+              <div className={Style.turnstileContainer}>
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  onVerify={(token) => {
+                    setTurnstileToken(token);
+                    if (error) setError("");
+                  }}
+                  onExpire={() => setTurnstileToken("")}
+                  onError={() => setTurnstileToken("")}
+                />
+              </div>
+
+              {error && <small className={Style.errorText}>{error}</small>}
 
               {status.message && (
                 <p

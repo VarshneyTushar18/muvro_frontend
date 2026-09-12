@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import BreadcrumbStrip from "../components/layout/BreadcrumbStrip/BreadcrumbStrip";
+import TurnstileWidget from "../components/common/TurnstileWidget";
 import Style from "./contactus.module.css";
 import { useRouter } from "next/navigation";
 import { RiMailLine, RiPhoneLine, RiMapPinLine } from "@remixicon/react";
@@ -33,7 +34,11 @@ export default function ContactUs({ locations = [] }) {
     email: "",
     enquiryType: "",
     message: "",
+    companyWebsite: "",
   });
+
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState({ type: "", message: "" });
@@ -50,6 +55,9 @@ export default function ContactUs({ locations = [] }) {
     if (!emailRegex.test(email)) return "Please enter a valid email.";
     if (!enquiryType) return "Please select enquiry type.";
     if (!message.trim()) return "Please enter your message.";
+    if (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && !turnstileToken) {
+      return "Please complete the CAPTCHA verification.";
+    }
     return null;
   };
 
@@ -68,7 +76,10 @@ export default function ContactUs({ locations = [] }) {
       const res = await fetch("/api/contact-enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken,
+        }),
       });
 
       const data = await res.json();
@@ -87,14 +98,21 @@ export default function ContactUs({ locations = [] }) {
           email: "",
           enquiryType: "",
           message: "",
+          companyWebsite: "",
         });
+        setTurnstileToken("");
+        turnstileRef.current?.reset();
         setTimeout(() => {
           router.push("/thank-you");
         }, 2000);
       } else {
+        setTurnstileToken("");
+        turnstileRef.current?.reset();
         setStatus({ type: "error", message: data.error || "Submission failed." });
       }
     } catch (err) {
+      setTurnstileToken("");
+      turnstileRef.current?.reset();
       setStatus({ type: "error", message: "Something went wrong." });
     }
 
@@ -248,6 +266,30 @@ export default function ContactUs({ locations = [] }) {
                     data-aos="fade-up"
                     data-aos-delay="900"
                   ></textarea>
+
+                  <input
+                    type="text"
+                    name="companyWebsite"
+                    value={formData.companyWebsite}
+                    onChange={handleChange}
+                    style={{ display: "none", position: "absolute", left: "-9999px" }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
+
+                  <div
+                    className={Style.turnstileContainer}
+                    data-aos="fade-up"
+                    data-aos-delay="920"
+                  >
+                    <TurnstileWidget
+                      ref={turnstileRef}
+                      onVerify={(token) => setTurnstileToken(token)}
+                      onExpire={() => setTurnstileToken("")}
+                      onError={() => setTurnstileToken("")}
+                    />
+                  </div>
 
                   {status.message && (
                     <p

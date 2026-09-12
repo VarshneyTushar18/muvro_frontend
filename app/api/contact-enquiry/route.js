@@ -1,8 +1,27 @@
 import { NextResponse } from "next/server";
+import { verifyTurnstileToken } from "../../utilities/turnstile";
 
 export async function POST(req) {
     try {
         const body = await req.json();
+        const { turnstileToken, companyWebsite, ...enquiryData } = body || {};
+
+        // Honeypot check: Bots auto-fill hidden fields; real users leave them empty
+        if (companyWebsite) {
+            return NextResponse.json({
+                success: true,
+                message: "Enquiry submitted successfully!",
+            });
+        }
+
+        const verification = await verifyTurnstileToken(turnstileToken);
+        if (!verification.success) {
+            return NextResponse.json(
+                { error: verification.error },
+                { status: 400 }
+            );
+        }
+
         const strapiBaseUrl = process.env.STRAPI_BACKEND_BASE_URL;
         const strapiApiToken = process.env.STRAPI_API_TOKEN;
 
@@ -19,7 +38,7 @@ export async function POST(req) {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${strapiApiToken}`
             },
-            body: JSON.stringify({ data: body })
+            body: JSON.stringify({ data: enquiryData })
         });
 
         if (!res.ok) {

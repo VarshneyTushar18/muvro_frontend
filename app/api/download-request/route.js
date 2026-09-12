@@ -1,11 +1,28 @@
 import { NextResponse } from "next/server";
+import { verifyTurnstileToken } from "../../utilities/turnstile";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { email, catalogueTitle, catalogueFileName, catalogueUrl } = body || {};
+    const { email, catalogueTitle, catalogueFileName, catalogueUrl, turnstileToken, companyWebsite } = body || {};
+
+    // Honeypot check: Bots auto-fill hidden fields; real users leave them empty
+    if (companyWebsite) {
+      return NextResponse.json({
+        success: true,
+        message: "Your download link has been sent.",
+      });
+    }
+
+    const verification = await verifyTurnstileToken(turnstileToken);
+    if (!verification.success) {
+      return NextResponse.json(
+        { error: verification.error },
+        { status: 400 }
+      );
+    }
 
     if (!email || !String(email).trim()) {
       return NextResponse.json(

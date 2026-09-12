@@ -7,6 +7,7 @@ import styles from "./Newsletter.module.css";
 export default function Newsletter({ heading }) {
   const router = useRouter();
   const [email, setEmail] = useState("");
+  const [companyWebsite, setCompanyWebsite] = useState("");
   const [message, setMessage] = useState("");
   const [isError, setIsError] = useState(false);
 
@@ -18,7 +19,7 @@ export default function Newsletter({ heading }) {
       const res = await fetch("/api/subscribe-newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, companyWebsite }),
       });
 
       const data = await res.json();
@@ -61,6 +62,16 @@ export default function Newsletter({ heading }) {
         {/* Right Form */}
         <div className="col-lg-5 col-md-12">
           <form onSubmit={handleSubmit} className={`${styles.newsletterForm}`}>
+            <input
+              type="text"
+              name="companyWebsite"
+              value={companyWebsite}
+              onChange={(e) => setCompanyWebsite(e.target.value)}
+              style={{ display: "none", position: "absolute", left: "-9999px" }}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+            />
             <input
               type="email"
               placeholder="Enter email address"

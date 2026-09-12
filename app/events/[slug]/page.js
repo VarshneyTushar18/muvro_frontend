@@ -4,14 +4,20 @@ import SocialShare from "../../utilities/SocialShare";
 import Style from "./singleevent.module.css";
 
 async function fetchSlugs() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/events?fields[0]=slug`
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch events slugs");
+    try {
+        if (!process.env.STRAPI_BACKEND_BASE_URL) return [];
+        const res = await fetch(
+            `${process.env.STRAPI_BACKEND_BASE_URL}/events?fields[0]=slug`
+        );
+        if (!res.ok) {
+            return [];
+        }
+        const data = await res.json();
+        return (data.data || []).map((item) => item.slug).filter(Boolean);
+    } catch (error) {
+        console.error("fetchSlugs error in events:", error.message);
+        return [];
     }
-    const data = await res.json();
-    return data.data.map((item) => item.slug);
 }
 async function getEvents(slug) {
     const res = await fetch(

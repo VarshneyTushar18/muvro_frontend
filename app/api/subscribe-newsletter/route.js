@@ -1,6 +1,13 @@
 export async function POST(req) {
   try {
-    const { email } = await req.json();
+    const { email, companyWebsite } = await req.json();
+
+    if (companyWebsite) {
+      return new Response(
+        JSON.stringify({ message: "You have been subscribed successfully!" }),
+        { status: 200 }
+      );
+    }
 
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       return new Response(

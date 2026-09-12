@@ -6,14 +6,20 @@ import Banner from "../../ui/product-single/Banner/Banner";
 import { notFound } from 'next/navigation';
 
 async function fetchSlugs() {
-  const res = await fetch(
-    `${process.env.STRAPI_BACKEND_BASE_URL}/software-pages?fields[0]=slug`
-  );
-  if (!res.ok) {
-    throw new Error("Failed to fetch software slugs");
+  try {
+    if (!process.env.STRAPI_BACKEND_BASE_URL) return [];
+    const res = await fetch(
+      `${process.env.STRAPI_BACKEND_BASE_URL}/software-pages?fields[0]=slug`
+    );
+    if (!res.ok) {
+      return [];
+    }
+    const data = await res.json();
+    return (data.data || []).map((item) => item.slug).filter(Boolean);
+  } catch (error) {
+    console.error("fetchSlugs error in software:", error.message);
+    return [];
   }
-  const data = await res.json();
-  return data.data.map((item) => item.slug);
 }
 
 async function fetchSoftware(slug) {

@@ -23,36 +23,54 @@ import { renderBlock } from "blocks-html-renderer";
 import CaseStudyStyle from "../case-study/[slug]/singlecasestudy.module.css";
 
 async function fetchSlugs() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/products?fields[0]=slug`
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch product slugs");
+    try {
+        if (!process.env.STRAPI_BACKEND_BASE_URL) return [];
+        const res = await fetch(
+            `${process.env.STRAPI_BACKEND_BASE_URL}/products?fields[0]=slug`
+        );
+        if (!res.ok) {
+            return [];
+        }
+        const data = await res.json();
+        return (data.data || []).map((item) => item.slug).filter(Boolean);
+    } catch (error) {
+        console.error("fetchSlugs error in products:", error.message);
+        return [];
     }
-    const data = await res.json();
-    return data.data.map((item) => item.slug);
 }
 
 async function fetchSoftwareSlugs() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/software-pages?fields[0]=slug`
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch software slugs");
+    try {
+        if (!process.env.STRAPI_BACKEND_BASE_URL) return [];
+        const res = await fetch(
+            `${process.env.STRAPI_BACKEND_BASE_URL}/software-pages?fields[0]=slug`
+        );
+        if (!res.ok) {
+            return [];
+        }
+        const data = await res.json();
+        return (data.data || []).map((item) => item.slug).filter(Boolean);
+    } catch (error) {
+        console.error("fetchSoftwareSlugs error:", error.message);
+        return [];
     }
-    const data = await res.json();
-    return data.data.map((item) => item.slug);
 }
 
 async function fetchCaseStudySlugs() {
-    const res = await fetch(
-        `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`
-    );
-    if (!res.ok) {
-        throw new Error("Failed to fetch case study slugs");
+    try {
+        if (!process.env.STRAPI_BACKEND_BASE_URL) return [];
+        const res = await fetch(
+            `${process.env.STRAPI_BACKEND_BASE_URL}/case-studies?fields[0]=slug`
+        );
+        if (!res.ok) {
+            return [];
+        }
+        const data = await res.json();
+        return (data.data || []).map((item) => item.slug).filter(Boolean);
+    } catch (error) {
+        console.error("fetchCaseStudySlugs error:", error.message);
+        return [];
     }
-    const data = await res.json();
-    return data.data.map((item) => item.slug);
 }
 
 async function getProduct(slug) {
