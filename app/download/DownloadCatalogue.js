@@ -3,9 +3,8 @@
 import { useState, useRef } from "react";
 import { RiDownload2Line, RiCloseLine } from "@remixicon/react";
 import TurnstileWidget from "../components/common/TurnstileWidget";
+import { validateBusinessEmail } from "../utilities/businessEmail";
 import Style from "./download.module.css";
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function DownloadCatalogue({ items = [] }) {
   const [showModal, setShowModal] = useState(false);
@@ -39,17 +38,11 @@ export default function DownloadCatalogue({ items = [] }) {
     setStatus({ type: "", message: "" });
   };
 
-  const validateEmail = (value) => {
-    if (!value.trim()) return "Please enter your email address.";
-    if (!EMAIL_REGEX.test(value.trim())) return "Please enter a valid email address.";
-    return null;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ type: "", message: "" });
 
-    const validationError = validateEmail(email);
+    const validationError = validateBusinessEmail(email);
     if (validationError) {
       setError(validationError);
       return;
@@ -193,8 +186,9 @@ export default function DownloadCatalogue({ items = [] }) {
             </div>
 
             <p className={Style.modalHint}>
-              Please enter your email address and we will send the catalogue
-              download link to your inbox.
+              Please enter your company email address and we will send the
+              catalogue download link to your inbox. Personal emails (Gmail,
+              Yahoo, Outlook, etc.) are not accepted.
             </p>
 
             <form onSubmit={handleSubmit} noValidate>
@@ -213,7 +207,7 @@ export default function DownloadCatalogue({ items = [] }) {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email Address"
+                  placeholder="Company Email Address"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);

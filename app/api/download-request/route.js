@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { verifyTurnstileToken } from "../../utilities/turnstile";
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { validateBusinessEmail } from "../../utilities/businessEmail";
 
 export async function POST(req) {
   try {
@@ -24,18 +23,9 @@ export async function POST(req) {
       );
     }
 
-    if (!email || !String(email).trim()) {
-      return NextResponse.json(
-        { error: "Please enter your email address." },
-        { status: 400 }
-      );
-    }
-
-    if (!EMAIL_REGEX.test(String(email).trim())) {
-      return NextResponse.json(
-        { error: "Please enter a valid email address." },
-        { status: 400 }
-      );
+    const emailError = validateBusinessEmail(email);
+    if (emailError) {
+      return NextResponse.json({ error: emailError }, { status: 400 });
     }
 
     if (!catalogueUrl || !catalogueTitle) {
