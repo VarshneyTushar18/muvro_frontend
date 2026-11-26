@@ -89,21 +89,19 @@ export default function MobileMenu({ isOpenMobileMenu, onClose }) {
           <RiArrowLeftLine /> Back
         </button>
 
-        {/* Show only 2 top-level tabs */}
         <div className={styles.topTabs}>
-          {Object.keys(megaMenuData[menu])
-            .slice(0, 2) // limit to 2
-            .map((tab) => (
-              <button
-                key={tab}
-                className={topTab[menu] === tab ? styles.activeTopTab : ""}
-                onClick={() => {
-                  setTopTab({ ...topTab, [menu]: tab });
-                }}
-              >
-                {tab}
-              </button>
-            ))}
+          {Object.keys(megaMenuData[menu]).map((tab) => (
+            <button
+              key={tab}
+              className={topTab[menu] === tab ? styles.activeTopTab : ""}
+              onClick={() => {
+                setTopTab({ ...topTab, [menu]: tab });
+                setLeftTab({ ...leftTab, [menu]: 0 });
+              }}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
 
         {/* Accordions for categories */}

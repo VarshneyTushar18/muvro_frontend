@@ -203,9 +203,74 @@ const megaMenuData = {
         {
           name: "Automotive",
           products: [
-            { name: "Automotive", subtitle: "Engineered to improve productivity", image: "/images/automotive-image-card.webp", url: "/automotive" },
+            {
+              name: "Gearbox Press & Assembly",
+              subtitle: "Used for assembling gearboxes",
+              image: "/uploads/Gearbox_Press_and_Assembly_Transparent_Image_10ea4be0a1.webp",
+              url: "/gearbox-press-and-assembly"
+            },
+
+            {
+              name: "Differential Assembly Line",
+              subtitle: "Designed to assemble differentials",
+              image: "/uploads/diff_assy_line_01_1a9b3594d6.webp",
+              url: "/differential-assembly-line"
+            },
+
+            {
+              name: "Engine Assembly Line",
+              subtitle: "Increased production throughput",
+              image: "/uploads/Engine_Assembly_Line_Transparent_2fa8a1285f.webp",
+              url: "/engine-assembly-line"
+            },
+
+            {
+              name: "Tyre & Wheel Assembly Line",
+              subtitle: "Achieve fast and accurate assembly",
+              image: "/uploads/Tyre_and_Wheel_Assembly_Line_Feature_Image_a9ac6e22fb.webp",
+              url: "/tyre-and-wheel-assembly-line"
+            },
+
+            {
+              name: "Axle Assembly Line",
+              subtitle: "Linear or u-shaped configuration",
+              image: "/uploads/Axle_Assembly_Line_Feature_Image_76ab681c3d.webp",
+              url: "/axle-assembly-line"
+            },
+
+            {
+              name: "Electric Monorail System (EMS)",
+              subtitle: "Automated material handling system",
+              image: "/uploads/ems_transparent_ed0e61115f.webp",
+              url: "/electric-monorail-system"
+            },
+
+            {
+              name: "Sorting & Storage",
+              subtitle: "Backbone of warehouse operations",
+              image: "/uploads/Sorting_and_Storage_Feature_Image_8bf68a3b87.webp",
+              url: "/sorting-and-storage"
+            },
+
+            {
+              name: "Special Purpose Machine (SPM)",
+              subtitle: "Meet particular production requirements",
+              image: "/uploads/SPM_79f965fde8.webp",
+              url: "/special-purpose-machine"
+            },
+
+            {
+              name: "Ergonomic Handling System",
+              subtitle: "Perform complex tasks",
+              image: "/uploads/Ergonomic_Handling_System_ca53d73cad.webp",
+              url: "/ergonomic-handling-system"
+            },
+
+            // { name: "Automotive", subtitle: "Engineered to improve productivity", image: "/images/automotive-image-card.webp", url: "/automotive" },
+            
           ],
         },
+        
       ],
     },
 
